@@ -1,0 +1,43 @@
+{
+  "CONFIG": {
+    "seed": 42,
+    "device": "cuda",
+    "deterministic": false,
+    "amp_enabled": true,
+    "num_workers": 0,
+    "pin_memory": true,
+    "model_name": "deit_small_distilled_patch16_224",
+    "img_size": 224,
+    "batch_size": 64,
+    "epochs": 100,
+    "lr": 0.0005,
+    "weight_decay": 0.01,
+    "warmup_epochs": 10,
+    "patience": 10,
+    "label_smoothing": 0.1,
+    "grad_clip_norm": 1.0,
+    "freeze_backbone": true,
+    "adapt_mid_dim": 64,
+    "adapt_scale": 0.1,
+    "adapt_dropout": 0.0,
+    "adapt_start_layer": 0,
+    "adapt_end_layer": null,
+    "use_class_balanced_weights": true,
+    "cb_beta": 0.9999,
+    "use_weighted_sampler": true,
+    "sampler_min_count": 20,
+    "sampler_imbalance_ratio": 10.0,
+    "use_temperature_scaling": true,
+    "bench_warmup_iters": 30,
+    "bench_timed_iters": 150,
+    "bench_latency_batch": 1,
+    "bench_throughput_batch": 64,
+    "runs_root": "runs",
+    "save_adapter_only": true
+  },
+  "DATASET_CFG": {
+    "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+    "pad_to_square": true,
+    "cache_in_ram": true
+  }
+}

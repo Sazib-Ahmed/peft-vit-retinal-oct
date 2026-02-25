@@ -1,0 +1,226 @@
+
+=== DATASET RUN START: Srinivasan_2014 ===
+
+[DATA] Split/Class counts:
+class  AMD  DME  NORMAL  TOTAL
+split                         
+test   109  165     211    485
+train  506  770     985   2261
+val    108  166     211    485
+[DATA] Train imbalance: min=506, max=985, ratio=1.95
+[RAM] Caching split='train' images=2261 as uint8 tensors. Estimated RAM ~ 0.32 GB
+[RAM] Cached 2261 images for split='train'
+[RAM] Caching split='val' images=485 as uint8 tensors. Estimated RAM ~ 0.07 GB
+[RAM] Cached 485 images for split='val'
+[RAM] Caching split='test' images=485 as uint8 tensors. Estimated RAM ~ 0.07 GB
+[RAM] Cached 485 images for split='test'
+[IMB] Train class counts: [506, 770, 985]
+[IMB] Class-Balanced weights (mean~1): [1.3687, 0.9113, 0.72]
+[IMB] Sampler disabled. min=506 max=985 ratio=1.95
+
+[DATASET] Srinivasan_2014
+ - root: D:\AIUB\DSP\Code\Datasets\Srinivasan_2014\Srinivasan_2014_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (3): ['AMD', 'DME', 'NORMAL']
+ - split sizes: train=2261 val=485 test=485
+
+[MODEL] Creating resnet50 (FULL fine-tuning, unfrozen)
+[PARAMS] total=23,514,179 trainable=23,514,179 (100.00%)
+[IMB] Train class counts: [506, 770, 985]
+[IMB] Class-Balanced weights (mean~1): [1.3687, 0.9113, 0.72]
+[IMB] Sampler disabled. min=506 max=985 ratio=1.95
+[Srinivasan_2014] Epoch 001/100 | lr=1.00e-04 | train_loss=1.0972 train_acc=47.46% | val_loss=1.0987 val_acc=52.99% val_macroF1=48.20% | ep_time=6.2s peakVRAM=3.02GB
+[ES] New best val_loss=1.098651 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 002/100 | lr=1.50e-04 | train_loss=1.0572 train_acc=65.90% | val_loss=1.0657 val_acc=58.97% val_macroF1=53.27% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=1.065657 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 003/100 | lr=2.00e-04 | train_loss=0.8773 train_acc=80.80% | val_loss=0.7543 val_acc=78.56% val_macroF1=75.64% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.754320 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 004/100 | lr=2.50e-04 | train_loss=0.5702 train_acc=89.25% | val_loss=0.6276 val_acc=81.44% val_macroF1=79.27% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.627559 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 005/100 | lr=3.00e-04 | train_loss=0.4350 train_acc=94.25% | val_loss=0.6419 val_acc=79.38% val_macroF1=77.45% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 006/100 | lr=3.50e-04 | train_loss=0.4205 train_acc=94.52% | val_loss=0.4290 val_acc=95.46% val_macroF1=95.24% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.428981 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 007/100 | lr=4.00e-04 | train_loss=0.4288 train_acc=93.81% | val_loss=0.3941 val_acc=97.53% val_macroF1=97.06% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.394117 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 008/100 | lr=4.50e-04 | train_loss=0.3841 train_acc=96.42% | val_loss=0.4368 val_acc=94.23% val_macroF1=94.47% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 009/100 | lr=5.00e-04 | train_loss=0.3648 train_acc=97.74% | val_loss=0.3712 val_acc=98.76% val_macroF1=98.53% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.371213 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 010/100 | lr=5.00e-04 | train_loss=0.3504 train_acc=98.45% | val_loss=0.3426 val_acc=99.59% val_macroF1=99.64% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.342613 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 011/100 | lr=5.00e-04 | train_loss=0.3746 train_acc=96.59% | val_loss=0.3393 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.339334 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 012/100 | lr=4.99e-04 | train_loss=0.3552 train_acc=97.88% | val_loss=0.3392 val_acc=99.79% val_macroF1=99.82% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.339217 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 013/100 | lr=4.99e-04 | train_loss=0.3544 train_acc=97.57% | val_loss=0.3686 val_acc=99.18% val_macroF1=99.01% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 014/100 | lr=4.98e-04 | train_loss=0.3543 train_acc=98.01% | val_loss=0.3778 val_acc=97.94% val_macroF1=97.57% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 015/100 | lr=4.96e-04 | train_loss=0.3421 train_acc=98.67% | val_loss=0.3435 val_acc=99.38% val_macroF1=99.24% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 016/100 | lr=4.95e-04 | train_loss=0.3362 train_acc=98.81% | val_loss=0.3368 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.336804 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 017/100 | lr=4.93e-04 | train_loss=0.3581 train_acc=97.48% | val_loss=0.3422 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 018/100 | lr=4.90e-04 | train_loss=0.3631 train_acc=97.79% | val_loss=0.3481 val_acc=99.38% val_macroF1=99.30% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 019/100 | lr=4.88e-04 | train_loss=0.3363 train_acc=98.94% | val_loss=0.3421 val_acc=99.38% val_macroF1=99.24% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 020/100 | lr=4.85e-04 | train_loss=0.3229 train_acc=99.43% | val_loss=0.3327 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.332655 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 021/100 | lr=4.82e-04 | train_loss=0.3665 train_acc=97.13% | val_loss=0.3356 val_acc=99.79% val_macroF1=99.82% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 022/100 | lr=4.78e-04 | train_loss=0.3267 train_acc=99.34% | val_loss=0.3348 val_acc=99.79% val_macroF1=99.82% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 023/100 | lr=4.75e-04 | train_loss=0.3359 train_acc=98.89% | val_loss=0.3315 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.331492 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 024/100 | lr=4.71e-04 | train_loss=0.3405 train_acc=98.50% | val_loss=0.3527 val_acc=98.76% val_macroF1=98.92% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 025/100 | lr=4.67e-04 | train_loss=0.3242 train_acc=99.43% | val_loss=0.3411 val_acc=99.59% val_macroF1=99.59% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 026/100 | lr=4.62e-04 | train_loss=0.3471 train_acc=98.14% | val_loss=0.3376 val_acc=99.79% val_macroF1=99.82% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 027/100 | lr=4.57e-04 | train_loss=0.3221 train_acc=99.56% | val_loss=0.3362 val_acc=99.79% val_macroF1=99.75% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 028/100 | lr=4.52e-04 | train_loss=0.3263 train_acc=99.29% | val_loss=0.3315 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 029/100 | lr=4.47e-04 | train_loss=0.3239 train_acc=99.29% | val_loss=0.3315 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.331472 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 030/100 | lr=4.42e-04 | train_loss=0.3214 train_acc=99.47% | val_loss=0.3407 val_acc=99.59% val_macroF1=99.59% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 031/100 | lr=4.36e-04 | train_loss=0.3200 train_acc=99.56% | val_loss=0.3310 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.331032 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 032/100 | lr=4.30e-04 | train_loss=0.3218 train_acc=99.34% | val_loss=0.3329 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 033/100 | lr=4.24e-04 | train_loss=0.3404 train_acc=98.50% | val_loss=0.3513 val_acc=98.97% val_macroF1=98.82% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 034/100 | lr=4.17e-04 | train_loss=0.3178 train_acc=99.73% | val_loss=0.3333 val_acc=99.79% val_macroF1=99.77% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 035/100 | lr=4.11e-04 | train_loss=0.3151 train_acc=99.73% | val_loss=0.3310 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330971 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 036/100 | lr=4.04e-04 | train_loss=0.3168 train_acc=99.73% | val_loss=0.3344 val_acc=99.79% val_macroF1=99.77% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 037/100 | lr=3.97e-04 | train_loss=0.3253 train_acc=99.25% | val_loss=0.3351 val_acc=99.79% val_macroF1=99.77% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 038/100 | lr=3.90e-04 | train_loss=0.3134 train_acc=99.91% | val_loss=0.3314 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 039/100 | lr=3.82e-04 | train_loss=0.3231 train_acc=99.43% | val_loss=0.3314 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 040/100 | lr=3.75e-04 | train_loss=0.3199 train_acc=99.65% | val_loss=0.3325 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 041/100 | lr=3.67e-04 | train_loss=0.3170 train_acc=99.73% | val_loss=0.3308 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330839 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 042/100 | lr=3.60e-04 | train_loss=0.3210 train_acc=99.51% | val_loss=0.3320 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 043/100 | lr=3.52e-04 | train_loss=0.3157 train_acc=99.73% | val_loss=0.3314 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 044/100 | lr=3.44e-04 | train_loss=0.3161 train_acc=99.82% | val_loss=0.3308 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330802 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 045/100 | lr=3.36e-04 | train_loss=0.3187 train_acc=99.78% | val_loss=0.3325 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 046/100 | lr=3.27e-04 | train_loss=0.3252 train_acc=99.38% | val_loss=0.3310 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 047/100 | lr=3.19e-04 | train_loss=0.3192 train_acc=99.60% | val_loss=0.3352 val_acc=99.59% val_macroF1=99.53% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 048/100 | lr=3.10e-04 | train_loss=0.3157 train_acc=99.82% | val_loss=0.3342 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 049/100 | lr=3.02e-04 | train_loss=0.3149 train_acc=99.82% | val_loss=0.3306 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330616 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 050/100 | lr=2.93e-04 | train_loss=0.3195 train_acc=99.51% | val_loss=0.3328 val_acc=99.79% val_macroF1=99.82% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 051/100 | lr=2.85e-04 | train_loss=0.3153 train_acc=99.73% | val_loss=0.3327 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 052/100 | lr=2.76e-04 | train_loss=0.3162 train_acc=99.69% | val_loss=0.3306 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 053/100 | lr=2.67e-04 | train_loss=0.3192 train_acc=99.51% | val_loss=0.3309 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 054/100 | lr=2.59e-04 | train_loss=0.3179 train_acc=99.65% | val_loss=0.3359 val_acc=99.59% val_macroF1=99.53% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 055/100 | lr=2.50e-04 | train_loss=0.3156 train_acc=99.73% | val_loss=0.3308 val_acc=100.00% val_macroF1=100.00% | ep_time=5.4s peakVRAM=3.02GB
+[ES] No improve 6/10
+[Srinivasan_2014] Epoch 056/100 | lr=2.41e-04 | train_loss=0.3136 train_acc=99.87% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330306 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 057/100 | lr=2.33e-04 | train_loss=0.3133 train_acc=99.96% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 058/100 | lr=2.24e-04 | train_loss=0.3122 train_acc=99.96% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 059/100 | lr=2.15e-04 | train_loss=0.3113 train_acc=99.96% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 060/100 | lr=2.07e-04 | train_loss=0.3177 train_acc=99.60% | val_loss=0.3314 val_acc=100.00% val_macroF1=100.00% | ep_time=5.4s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 061/100 | lr=1.98e-04 | train_loss=0.3116 train_acc=99.96% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.4s peakVRAM=3.02GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 062/100 | lr=1.90e-04 | train_loss=0.3115 train_acc=100.00% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 6/10
+[Srinivasan_2014] Epoch 063/100 | lr=1.81e-04 | train_loss=0.3113 train_acc=99.96% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330297 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 064/100 | lr=1.73e-04 | train_loss=0.3132 train_acc=99.82% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330295 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 065/100 | lr=1.64e-04 | train_loss=0.3120 train_acc=99.91% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.4s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 066/100 | lr=1.56e-04 | train_loss=0.3147 train_acc=99.82% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 067/100 | lr=1.48e-04 | train_loss=0.3128 train_acc=99.87% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 068/100 | lr=1.40e-04 | train_loss=0.3134 train_acc=99.78% | val_loss=0.3315 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 069/100 | lr=1.33e-04 | train_loss=0.3128 train_acc=99.96% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 070/100 | lr=1.25e-04 | train_loss=0.3118 train_acc=100.00% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 6/10
+[Srinivasan_2014] Epoch 071/100 | lr=1.18e-04 | train_loss=0.3110 train_acc=99.96% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330291 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 072/100 | lr=1.10e-04 | train_loss=0.3119 train_acc=99.96% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330267 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 073/100 | lr=1.03e-04 | train_loss=0.3114 train_acc=99.96% | val_loss=0.3302 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] New best val_loss=0.330245 -> saved runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112\best_model.pth
+[Srinivasan_2014] Epoch 074/100 | lr=9.61e-05 | train_loss=0.3144 train_acc=99.78% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 075/100 | lr=8.93e-05 | train_loss=0.3384 train_acc=98.45% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.2s peakVRAM=3.02GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 076/100 | lr=8.27e-05 | train_loss=0.3107 train_acc=100.00% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 077/100 | lr=7.63e-05 | train_loss=0.3144 train_acc=99.82% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 078/100 | lr=7.02e-05 | train_loss=0.3134 train_acc=99.87% | val_loss=0.3306 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 079/100 | lr=6.42e-05 | train_loss=0.3147 train_acc=99.69% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.2s peakVRAM=3.02GB
+[ES] No improve 6/10
+[Srinivasan_2014] Epoch 080/100 | lr=5.85e-05 | train_loss=0.3164 train_acc=99.69% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 7/10
+[Srinivasan_2014] Epoch 081/100 | lr=5.30e-05 | train_loss=0.3160 train_acc=99.73% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 8/10
+[Srinivasan_2014] Epoch 082/100 | lr=4.77e-05 | train_loss=0.3111 train_acc=100.00% | val_loss=0.3306 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 9/10
+[Srinivasan_2014] Epoch 083/100 | lr=4.27e-05 | train_loss=0.3121 train_acc=99.87% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=5.3s peakVRAM=3.02GB
+[ES] No improve 10/10
+[Srinivasan_2014] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.2754
+
+------------------------------------------------------------------------------------------
+[Srinivasan_2014] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         AMD     1.0000    1.0000    1.0000       109
+         DME     1.0000    1.0000    1.0000       165
+      NORMAL     1.0000    1.0000    1.0000       211
+
+    accuracy                         1.0000       485
+   macro avg     1.0000    1.0000    1.0000       485
+weighted avg     1.0000    1.0000    1.0000       485
+
+
+==========================================================================================
+[Srinivasan_2014] TEST summary (uncalibrated): Acc=100.00% MacroF1=100.00% ECE=0.0798 NLL=0.0835 Brier=0.0106
+[Srinivasan_2014] Macro-AUC=1.0000
+[Srinivasan_2014] TEMP-SCALED (T=0.275): ECE=0.0000 NLL=0.0000 Brier=0.0000
+[Srinivasan_2014] Params trainable: 23,514,179 (100.00%)
+[Srinivasan_2014] Inference latency (B=1): 12.218 ms/img (81.8 imgs/s), peakVRAM=0.25GB
+[Srinivasan_2014] Inference throughput (B=64): 1446.7 imgs/s, peakVRAM=0.60GB
+[Srinivasan_2014] Outputs saved in: runs\Srinivasan_2014\resnet50_fullft_3c\20251224-182112
+==========================================================================================
+

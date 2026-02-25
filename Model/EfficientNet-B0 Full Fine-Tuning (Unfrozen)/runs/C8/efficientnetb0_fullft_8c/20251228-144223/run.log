@@ -1,0 +1,103 @@
+
+=== DATASET RUN START: C8 ===
+
+[DATA] Split/Class counts:
+class   AMD   CNV   CSR   DME    DR  DRUSEN    MH  NORMAL  TOTAL
+split                                                           
+test    350   350   350   349   350     349   350     349   2797
+train  2300  2257  2300  2272  2300    2233  2300    2298  18260
+val     350   347   350   349   350     348   350     349   2793
+[DATA] Train imbalance: min=2233, max=2300, ratio=1.03
+[RAM] Caching split='train' images=18260 as uint8 tensors. Estimated RAM ~ 2.56 GB
+[RAM] Cached 18260 images for split='train'
+[RAM] Caching split='val' images=2793 as uint8 tensors. Estimated RAM ~ 0.39 GB
+[RAM] Cached 2793 images for split='val'
+[RAM] Caching split='test' images=2797 as uint8 tensors. Estimated RAM ~ 0.39 GB
+[RAM] Cached 2797 images for split='test'
+[IMB] Train class counts: [2300, 2257, 2300, 2272, 2300, 2233, 2300, 2298]
+[IMB] Class-Balanced weights (mean~1): [0.9931, 1.01, 0.9931, 1.004, 0.9931, 1.0196, 0.9931, 0.9939]
+[IMB] Sampler disabled. min=2233 max=2300 ratio=1.03
+
+[DATASET] C8
+ - root: D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (8): ['AMD', 'CNV', 'CSR', 'DME', 'DR', 'DRUSEN', 'MH', 'NORMAL']
+ - split sizes: train=18260 val=2793 test=2797
+
+[MODEL] Creating efficientnet_b0 (FULL fine-tuning, unfrozen)
+[PARAMS] total=4,017,796 trainable=4,017,796 (100.00%)
+[IMB] Train class counts: [2300, 2257, 2300, 2272, 2300, 2233, 2300, 2298]
+[IMB] Class-Balanced weights (mean~1): [0.9931, 1.01, 0.9931, 1.004, 0.9931, 1.0196, 0.9931, 0.9939]
+[IMB] Sampler disabled. min=2233 max=2300 ratio=1.03
+[C8] Epoch 001/100 | lr=1.00e-04 | train_loss=1.4875 train_acc=63.46% | val_loss=0.9212 val_acc=84.25% val_macroF1=84.27% | ep_time=34.0s peakVRAM=2.79GB
+[ES] New best val_loss=0.921220 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 002/100 | lr=1.50e-04 | train_loss=0.8540 train_acc=84.34% | val_loss=0.6990 val_acc=92.27% val_macroF1=92.27% | ep_time=30.0s peakVRAM=2.79GB
+[ES] New best val_loss=0.698952 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 003/100 | lr=2.00e-04 | train_loss=0.7159 train_acc=89.79% | val_loss=0.6075 val_acc=94.70% val_macroF1=94.72% | ep_time=31.1s peakVRAM=2.79GB
+[ES] New best val_loss=0.607460 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 004/100 | lr=2.50e-04 | train_loss=0.6456 train_acc=92.66% | val_loss=0.5975 val_acc=94.24% val_macroF1=94.26% | ep_time=31.1s peakVRAM=2.79GB
+[ES] New best val_loss=0.597534 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 005/100 | lr=3.00e-04 | train_loss=0.6433 train_acc=92.64% | val_loss=0.5860 val_acc=94.74% val_macroF1=94.74% | ep_time=30.0s peakVRAM=2.79GB
+[ES] New best val_loss=0.585979 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 006/100 | lr=3.50e-04 | train_loss=0.6122 train_acc=93.85% | val_loss=0.5916 val_acc=95.06% val_macroF1=95.08% | ep_time=30.2s peakVRAM=2.79GB
+[ES] No improve 1/10
+[C8] Epoch 007/100 | lr=4.00e-04 | train_loss=0.5909 train_acc=94.80% | val_loss=0.5720 val_acc=95.56% val_macroF1=95.57% | ep_time=30.1s peakVRAM=2.79GB
+[ES] New best val_loss=0.572008 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 008/100 | lr=4.50e-04 | train_loss=0.6020 train_acc=94.13% | val_loss=0.5527 val_acc=95.99% val_macroF1=95.99% | ep_time=29.0s peakVRAM=2.79GB
+[ES] New best val_loss=0.552651 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 009/100 | lr=5.00e-04 | train_loss=0.6103 train_acc=93.86% | val_loss=0.5446 val_acc=96.74% val_macroF1=96.74% | ep_time=29.2s peakVRAM=2.79GB
+[ES] New best val_loss=0.544590 -> saved runs\C8\efficientnetb0_fullft_8c\20251228-144223\best_model.pth
+[C8] Epoch 010/100 | lr=5.00e-04 | train_loss=0.5879 train_acc=94.93% | val_loss=0.5865 val_acc=95.49% val_macroF1=95.52% | ep_time=29.5s peakVRAM=2.79GB
+[ES] No improve 1/10
+[C8] Epoch 011/100 | lr=5.00e-04 | train_loss=0.5741 train_acc=95.48% | val_loss=0.5686 val_acc=95.74% val_macroF1=95.74% | ep_time=30.0s peakVRAM=2.79GB
+[ES] No improve 2/10
+[C8] Epoch 012/100 | lr=4.99e-04 | train_loss=0.5878 train_acc=94.99% | val_loss=0.6094 val_acc=94.13% val_macroF1=94.11% | ep_time=29.4s peakVRAM=2.79GB
+[ES] No improve 3/10
+[C8] Epoch 013/100 | lr=4.99e-04 | train_loss=0.5721 train_acc=95.70% | val_loss=0.5512 val_acc=96.49% val_macroF1=96.49% | ep_time=28.7s peakVRAM=2.79GB
+[ES] No improve 4/10
+[C8] Epoch 014/100 | lr=4.98e-04 | train_loss=0.5643 train_acc=95.89% | val_loss=0.6194 val_acc=93.48% val_macroF1=93.40% | ep_time=28.5s peakVRAM=2.79GB
+[ES] No improve 5/10
+[C8] Epoch 015/100 | lr=4.96e-04 | train_loss=0.5612 train_acc=95.93% | val_loss=0.5616 val_acc=96.13% val_macroF1=96.13% | ep_time=29.2s peakVRAM=2.79GB
+[ES] No improve 6/10
+[C8] Epoch 016/100 | lr=4.95e-04 | train_loss=0.5690 train_acc=95.46% | val_loss=0.6280 val_acc=93.59% val_macroF1=93.71% | ep_time=29.6s peakVRAM=2.79GB
+[ES] No improve 7/10
+[C8] Epoch 017/100 | lr=4.93e-04 | train_loss=0.5525 train_acc=96.46% | val_loss=0.5620 val_acc=96.20% val_macroF1=96.21% | ep_time=29.9s peakVRAM=2.79GB
+[ES] No improve 8/10
+[C8] Epoch 018/100 | lr=4.90e-04 | train_loss=0.5536 train_acc=96.25% | val_loss=0.5584 val_acc=96.53% val_macroF1=96.53% | ep_time=30.0s peakVRAM=2.79GB
+[ES] No improve 9/10
+[C8] Epoch 019/100 | lr=4.88e-04 | train_loss=0.5557 train_acc=96.10% | val_loss=0.5533 val_acc=96.42% val_macroF1=96.41% | ep_time=30.4s peakVRAM=2.79GB
+[ES] No improve 10/10
+[C8] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.6525
+
+------------------------------------------------------------------------------------------
+[C8] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         AMD     1.0000    1.0000    1.0000       350
+         CNV     0.9452    0.9371    0.9412       350
+         CSR     1.0000    1.0000    1.0000       350
+         DME     0.9878    0.9312    0.9587       349
+          DR     1.0000    0.9943    0.9971       350
+      DRUSEN     0.9403    0.9026    0.9211       349
+          MH     0.9943    1.0000    0.9972       350
+      NORMAL     0.8990    0.9943    0.9442       349
+
+    accuracy                         0.9700      2797
+   macro avg     0.9708    0.9699    0.9699      2797
+weighted avg     0.9709    0.9700    0.9700      2797
+
+
+==========================================================================================
+[C8] TEST summary (uncalibrated): Acc=97.00% MacroF1=96.99% ECE=0.0762 NLL=0.1675 Brier=0.0544
+[C8] Macro-AUC=0.9980
+[C8] TEMP-SCALED (T=0.653): ECE=0.0080 NLL=0.1085 Brier=0.0489
+[C8] Params trainable: 4,017,796 (100.00%)
+[C8] Inference latency (B=1): 19.444 ms/img (51.4 imgs/s), peakVRAM=0.06GB
+[C8] Inference throughput (B=64): 3489.1 imgs/s, peakVRAM=0.45GB
+[C8] Outputs saved in: runs\C8\efficientnetb0_fullft_8c\20251228-144223
+==========================================================================================
+

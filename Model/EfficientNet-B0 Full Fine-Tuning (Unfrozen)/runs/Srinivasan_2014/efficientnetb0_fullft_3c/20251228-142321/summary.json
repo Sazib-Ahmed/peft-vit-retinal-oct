@@ -1,0 +1,62 @@
+{
+  "dataset": "Srinivasan_2014",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+  "classes": [
+    "AMD",
+    "DME",
+    "NORMAL"
+  ],
+  "model": "efficientnet_b0",
+  "method": "EfficientNet-B0 Full Fine-Tuning (unfrozen)",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.0001
+  },
+  "params": {
+    "total": 4011391,
+    "trainable": 4011391,
+    "trainable_pct": 100.0
+  },
+  "training": {
+    "epochs_ran": 45,
+    "best_val_loss": 0.33058570500501655,
+    "best_val_macro_f1": 1.0,
+    "total_train_time_sec": 164.19667887687683,
+    "mean_epoch_time_sec": 3.3886818567911785,
+    "peak_train_vram_gb": 2.7870545387268066
+  },
+  "test_uncalibrated": {
+    "acc": 0.9979381443298969,
+    "macro_f1": 0.9981988067094449,
+    "macro_auc": 1.0,
+    "ece": 0.08053109498368095,
+    "nll": 0.09043196588754654,
+    "brier": 0.01391697504600808
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.2780526280403137,
+    "ece": 0.0019151090346660737,
+    "nll": 0.020033396780490875,
+    "brier": 0.003985469143267465
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 16.44415866666198,
+      "std_batch_ms": 0.8508852399740813,
+      "ms_per_img": 16.44415866666198,
+      "imgs_per_s": 60.81186762247358,
+      "peak_vram_gb": 0.05562591552734375
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 17.490331999986967,
+      "std_batch_ms": 0.595746413098085,
+      "ms_per_img": 0.27328643749979636,
+      "imgs_per_s": 3659.1643886489796,
+      "peak_vram_gb": 0.45407581329345703
+    }
+  }
+}

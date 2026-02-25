@@ -1,0 +1,62 @@
+{
+  "dataset": "NEH_UT_2021",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "efficientnet_b0",
+  "method": "EfficientNet-B0 Full Fine-Tuning (unfrozen)",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.0001
+  },
+  "params": {
+    "total": 4011391,
+    "trainable": 4011391,
+    "trainable_pct": 100.0
+  },
+  "training": {
+    "epochs_ran": 23,
+    "best_val_loss": 0.5732009807920962,
+    "best_val_macro_f1": 0.893953382839764,
+    "total_train_time_sec": 430.84820532798767,
+    "mean_epoch_time_sec": 17.54022543326668,
+    "peak_train_vram_gb": 2.7874674797058105
+  },
+  "test_uncalibrated": {
+    "acc": 0.882282996432818,
+    "macro_f1": 0.8755084387358417,
+    "macro_auc": 0.9548472337138465,
+    "ece": 0.04290795986538031,
+    "nll": 0.35252732038497925,
+    "brier": 0.18314913189896784
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.7445712685585022,
+    "ece": 0.024205634365278318,
+    "nll": 0.3389236330986023,
+    "brier": 0.1821937067585695
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 16.341466666650984,
+      "std_batch_ms": 0.9827915835203301,
+      "ms_per_img": 16.341466666650984,
+      "imgs_per_s": 61.19401767289103,
+      "peak_vram_gb": 0.05599069595336914
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 17.51694199998383,
+      "std_batch_ms": 0.5150688959014839,
+      "ms_per_img": 0.2737022187497473,
+      "imgs_per_s": 3653.6057492260397,
+      "peak_vram_gb": 0.4534640312194824
+    }
+  }
+}

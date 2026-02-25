@@ -1,0 +1,4 @@
+split,CNV,DRUSEN,NORMAL
+test,17,19,30
+train,77,89,139
+val,16,20,30

@@ -1,0 +1,7 @@
+,precision,recall,f1-score,support
+AMD,1.0,1.0,1.0,85.0
+DME,1.0,1.0,1.0,88.0
+NOR,1.0,1.0,1.0,87.0
+accuracy,1.0,1.0,1.0,1.0
+macro avg,1.0,1.0,1.0,260.0
+weighted avg,1.0,1.0,1.0,260.0

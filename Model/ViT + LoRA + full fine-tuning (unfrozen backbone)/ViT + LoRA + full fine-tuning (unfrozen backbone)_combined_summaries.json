@@ -1,0 +1,1600 @@
+{
+  "meta": {
+    "created_utc": "2025-12-27T08:25:01Z",
+    "search_root": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)",
+    "output_file": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\ViT + LoRA + full fine-tuning (unfrozen backbone)_combined_summaries.json",
+    "summary_files_found": 5,
+    "runs_loaded": 5,
+    "runs_failed": 0,
+    "note": "Each run includes (source, facts, raw). facts is normalized for AI; raw preserves original Summary.json."
+  },
+  "runs": [
+    {
+      "source": {
+        "relative_path": "OCT2017/runs/OCT2017/deit_small_lora_unfrozen_4c/20251227-082358/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\OCT2017\\runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\summary.json"
+      },
+      "facts": {
+        "dataset": "OCT2017",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "classes": [
+          "CNV",
+          "DME",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "num_classes": 4,
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816968,
+          "trainable": 21816968,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.5830011367797852,
+          "adapter_only_bytes": 611321
+        },
+        "training": {
+          "epochs_ran": 85,
+          "best_val_loss": 0.4631633682372852,
+          "best_val_macro_f1": 0.9813559870994906,
+          "total_train_time_sec": 14089.364444494247,
+          "mean_epoch_time_sec": 159.9570482674767,
+          "peak_train_vram_gb": 2.623241901397705
+        },
+        "test_uncalibrated": {
+          "acc": 0.917,
+          "macro_f1": 0.9132005433546407,
+          "macro_auc": 0.9865346666666668,
+          "ece": 0.07071393114328388,
+          "nll": 0.3011724650859833,
+          "brier": 0.13896648753893873
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.5515377521514893,
+          "ece": 0.07214624243974684,
+          "nll": 0.37015074491500854,
+          "brier": 0.15470806672745444
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 10.912829999991422,
+            "std_batch_ms": 0.2786797935331326,
+            "ms_per_img": 10.912829999991422,
+            "imgs_per_s": 91.63525868182553,
+            "peak_vram_gb": 0.2279829978942871
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 24.31447399991157,
+            "std_batch_ms": 0.16415804471801884,
+            "ms_per_img": 0.3799136562486183,
+            "imgs_per_s": 2632.177031682148,
+            "peak_vram_gb": 0.41710758209228516
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 10.912829999991422,
+          "b1_imgs_per_s": 91.63525868182553,
+          "b64_ms_per_img": 0.3799136562486183,
+          "b64_imgs_per_s": 2632.177031682148
+        }
+      },
+      "raw": {
+        "dataset": "OCT2017",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+        "classes": [
+          "CNV",
+          "DME",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816968,
+          "trainable": 21816968,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 611321,
+          "adapter_only_mb": 0.5830011367797852
+        },
+        "training": {
+          "epochs_ran": 85,
+          "best_val_loss": 0.4631633682372852,
+          "best_val_macro_f1": 0.9813559870994906,
+          "total_train_time_sec": 14089.364444494247,
+          "mean_epoch_time_sec": 159.9570482674767,
+          "peak_train_vram_gb": 2.623241901397705
+        },
+        "test_uncalibrated": {
+          "acc": 0.917,
+          "macro_f1": 0.9132005433546407,
+          "macro_auc": 0.9865346666666668,
+          "ece": 0.07071393114328388,
+          "nll": 0.3011724650859833,
+          "brier": 0.13896648753893873
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.5515377521514893,
+          "ece": 0.07214624243974684,
+          "nll": 0.37015074491500854,
+          "brier": 0.15470806672745444
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 10.912829999991422,
+            "std_batch_ms": 0.2786797935331326,
+            "ms_per_img": 10.912829999991422,
+            "imgs_per_s": 91.63525868182553,
+            "peak_vram_gb": 0.2279829978942871
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 24.31447399991157,
+            "std_batch_ms": 0.16415804471801884,
+            "ms_per_img": 0.3799136562486183,
+            "imgs_per_s": 2632.177031682148,
+            "peak_vram_gb": 0.41710758209228516
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/C8/deit_small_lora_unfrozen_8c/20251224-165354/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\C8\\deit_small_lora_unfrozen_8c\\20251224-165354\\summary.json"
+      },
+      "facts": {
+        "dataset": "C8",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "classes": [
+          "AMD",
+          "CNV",
+          "CSR",
+          "DME",
+          "DR",
+          "DRUSEN",
+          "MH",
+          "NORMAL"
+        ],
+        "num_classes": 8,
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21820048,
+          "trainable": 21820048,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\C8\\deit_small_lora_unfrozen_8c\\20251224-165354\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.5947198867797852,
+          "adapter_only_bytes": 623609
+        },
+        "training": {
+          "epochs_ran": 18,
+          "best_val_loss": 0.5420712398193748,
+          "best_val_macro_f1": 0.9663558118777291,
+          "total_train_time_sec": 627.9392182826996,
+          "mean_epoch_time_sec": 33.18016469478607,
+          "peak_train_vram_gb": 2.6247663497924805
+        },
+        "test_uncalibrated": {
+          "acc": 0.9685377189846264,
+          "macro_f1": 0.9684625612446112,
+          "macro_auc": 0.9982326517643149,
+          "ece": 0.08805477383693373,
+          "nll": 0.179039865732193,
+          "brier": 0.057520453689086176
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.6307651400566101,
+          "ece": 0.007224125109018904,
+          "nll": 0.10635126382112503,
+          "brier": 0.0502810098936444
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 12.494458000073791,
+            "std_batch_ms": 1.308063100252895,
+            "ms_per_img": 12.494458000073791,
+            "imgs_per_s": 80.0354845319496,
+            "peak_vram_gb": 0.24333953857421875
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 24.935731999842876,
+            "std_batch_ms": 0.4354896523830799,
+            "ms_per_img": 0.38962081249754493,
+            "imgs_per_s": 2566.598004839131,
+            "peak_vram_gb": 0.4311823844909668
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 12.494458000073791,
+          "b1_imgs_per_s": 80.0354845319496,
+          "b64_ms_per_img": 0.38962081249754493,
+          "b64_imgs_per_s": 2566.598004839131
+        }
+      },
+      "raw": {
+        "dataset": "C8",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+        "classes": [
+          "AMD",
+          "CNV",
+          "CSR",
+          "DME",
+          "DR",
+          "DRUSEN",
+          "MH",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21820048,
+          "trainable": 21820048,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\C8\\deit_small_lora_unfrozen_8c\\20251224-165354\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 623609,
+          "adapter_only_mb": 0.5947198867797852
+        },
+        "training": {
+          "epochs_ran": 18,
+          "best_val_loss": 0.5420712398193748,
+          "best_val_macro_f1": 0.9663558118777291,
+          "total_train_time_sec": 627.9392182826996,
+          "mean_epoch_time_sec": 33.18016469478607,
+          "peak_train_vram_gb": 2.6247663497924805
+        },
+        "test_uncalibrated": {
+          "acc": 0.9685377189846264,
+          "macro_f1": 0.9684625612446112,
+          "macro_auc": 0.9982326517643149,
+          "ece": 0.08805477383693373,
+          "nll": 0.179039865732193,
+          "brier": 0.057520453689086176
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.6307651400566101,
+          "ece": 0.007224125109018904,
+          "nll": 0.10635126382112503,
+          "brier": 0.0502810098936444
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 12.494458000073791,
+            "std_batch_ms": 1.308063100252895,
+            "ms_per_img": 12.494458000073791,
+            "imgs_per_s": 80.0354845319496,
+            "peak_vram_gb": 0.24333953857421875
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 24.935731999842876,
+            "std_batch_ms": 0.4354896523830799,
+            "ms_per_img": 0.38962081249754493,
+            "imgs_per_s": 2566.598004839131,
+            "peak_vram_gb": 0.4311823844909668
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/NEH_UT_2021/deit_small_lora_unfrozen_3c/20251224-164134/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\summary.json"
+      },
+      "facts": {
+        "dataset": "NEH_UT_2021",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "classes": [
+          "CNV",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "num_classes": 3,
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816198,
+          "trainable": 21816198,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.5800714492797852,
+          "adapter_only_bytes": 608249
+        },
+        "training": {
+          "epochs_ran": 17,
+          "best_val_loss": 0.571969704400064,
+          "best_val_macro_f1": 0.8865077943979142,
+          "total_train_time_sec": 386.8495466709137,
+          "mean_epoch_time_sec": 21.118476166444665,
+          "peak_train_vram_gb": 2.6247496604919434
+        },
+        "test_uncalibrated": {
+          "acc": 0.8858501783590963,
+          "macro_f1": 0.8766270762931784,
+          "macro_auc": 0.9557391835112359,
+          "ece": 0.08146031442446414,
+          "nll": 0.37300485372543335,
+          "brier": 0.1911139730108444
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.6672316789627075,
+          "ece": 0.016938954969743295,
+          "nll": 0.3360024690628052,
+          "brier": 0.17917529730067303
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 12.71335399998255,
+            "std_batch_ms": 1.9836044715507921,
+            "ms_per_img": 12.71335399998255,
+            "imgs_per_s": 78.65744948196775,
+            "peak_vram_gb": 0.23569917678833008
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 25.034554666805587,
+            "std_batch_ms": 0.32557608526474774,
+            "ms_per_img": 0.3911649166688373,
+            "imgs_per_s": 2556.4664860949338,
+            "peak_vram_gb": 0.42341041564941406
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 12.71335399998255,
+          "b1_imgs_per_s": 78.65744948196775,
+          "b64_ms_per_img": 0.3911649166688373,
+          "b64_imgs_per_s": 2556.4664860949338
+        }
+      },
+      "raw": {
+        "dataset": "NEH_UT_2021",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+        "classes": [
+          "CNV",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816198,
+          "trainable": 21816198,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 608249,
+          "adapter_only_mb": 0.5800714492797852
+        },
+        "training": {
+          "epochs_ran": 17,
+          "best_val_loss": 0.571969704400064,
+          "best_val_macro_f1": 0.8865077943979142,
+          "total_train_time_sec": 386.8495466709137,
+          "mean_epoch_time_sec": 21.118476166444665,
+          "peak_train_vram_gb": 2.6247496604919434
+        },
+        "test_uncalibrated": {
+          "acc": 0.8858501783590963,
+          "macro_f1": 0.8766270762931784,
+          "macro_auc": 0.9557391835112359,
+          "ece": 0.08146031442446414,
+          "nll": 0.37300485372543335,
+          "brier": 0.1911139730108444
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.6672316789627075,
+          "ece": 0.016938954969743295,
+          "nll": 0.3360024690628052,
+          "brier": 0.17917529730067303
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 12.71335399998255,
+            "std_batch_ms": 1.9836044715507921,
+            "ms_per_img": 12.71335399998255,
+            "imgs_per_s": 78.65744948196775,
+            "peak_vram_gb": 0.23569917678833008
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 25.034554666805587,
+            "std_batch_ms": 0.32557608526474774,
+            "ms_per_img": 0.3911649166688373,
+            "imgs_per_s": 2556.4664860949338,
+            "peak_vram_gb": 0.42341041564941406
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/Srinivasan_2014/deit_small_lora_unfrozen_3c/20251224-163617/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\Srinivasan_2014\\deit_small_lora_unfrozen_3c\\20251224-163617\\summary.json"
+      },
+      "facts": {
+        "dataset": "Srinivasan_2014",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "classes": [
+          "AMD",
+          "DME",
+          "NORMAL"
+        ],
+        "num_classes": 3,
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816198,
+          "trainable": 21816198,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\Srinivasan_2014\\deit_small_lora_unfrozen_3c\\20251224-163617\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.5800714492797852,
+          "adapter_only_bytes": 608249
+        },
+        "training": {
+          "epochs_ran": 33,
+          "best_val_loss": 0.3302943889627752,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 149.67863297462463,
+          "mean_epoch_time_sec": 4.196519208676888,
+          "peak_train_vram_gb": 2.623645782470703
+        },
+        "test_uncalibrated": {
+          "acc": 1.0,
+          "macro_f1": 1.0,
+          "macro_auc": 1.0,
+          "ece": 0.07698321797184109,
+          "nll": 0.08040179312229156,
+          "brier": 0.009846299520256683
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.28038644790649414,
+          "ece": 4.392862319946289e-05,
+          "nll": 4.392014670884237e-05,
+          "brier": 5.135066230474895e-09
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.762515333291958,
+            "std_batch_ms": 2.943630844134522,
+            "ms_per_img": 13.762515333291958,
+            "imgs_per_s": 72.66113612102349,
+            "peak_vram_gb": 0.23673772811889648
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 25.288003333480447,
+            "std_batch_ms": 0.4069426048479978,
+            "ms_per_img": 0.395125052085632,
+            "imgs_per_s": 2530.8443357908845,
+            "peak_vram_gb": 0.42450666427612305
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 13.762515333291958,
+          "b1_imgs_per_s": 72.66113612102349,
+          "b64_ms_per_img": 0.395125052085632,
+          "b64_imgs_per_s": 2530.8443357908845
+        }
+      },
+      "raw": {
+        "dataset": "Srinivasan_2014",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+        "classes": [
+          "AMD",
+          "DME",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816198,
+          "trainable": 21816198,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\Srinivasan_2014\\deit_small_lora_unfrozen_3c\\20251224-163617\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 608249,
+          "adapter_only_mb": 0.5800714492797852
+        },
+        "training": {
+          "epochs_ran": 33,
+          "best_val_loss": 0.3302943889627752,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 149.67863297462463,
+          "mean_epoch_time_sec": 4.196519208676888,
+          "peak_train_vram_gb": 2.623645782470703
+        },
+        "test_uncalibrated": {
+          "acc": 1.0,
+          "macro_f1": 1.0,
+          "macro_auc": 1.0,
+          "ece": 0.07698321797184109,
+          "nll": 0.08040179312229156,
+          "brier": 0.009846299520256683
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.28038644790649414,
+          "ece": 4.392862319946289e-05,
+          "nll": 4.392014670884237e-05,
+          "brier": 5.135066230474895e-09
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.762515333291958,
+            "std_batch_ms": 2.943630844134522,
+            "ms_per_img": 13.762515333291958,
+            "imgs_per_s": 72.66113612102349,
+            "peak_vram_gb": 0.23673772811889648
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 25.288003333480447,
+            "std_batch_ms": 0.4069426048479978,
+            "ms_per_img": 0.395125052085632,
+            "imgs_per_s": 2530.8443357908845,
+            "peak_vram_gb": 0.42450666427612305
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/THOCT/deit_small_lora_unfrozen_3c/20251224-163451/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\THOCT\\deit_small_lora_unfrozen_3c\\20251224-163451\\summary.json"
+      },
+      "facts": {
+        "dataset": "THOCT",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "classes": [
+          "AMD",
+          "DME",
+          "NOR"
+        ],
+        "num_classes": 3,
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816198,
+          "trainable": 21816198,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\THOCT\\deit_small_lora_unfrozen_3c\\20251224-163451\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.5800714492797852,
+          "adapter_only_bytes": 608249
+        },
+        "training": {
+          "epochs_ran": 23,
+          "best_val_loss": 0.29382179792110735,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 57.574519872665405,
+          "mean_epoch_time_sec": 2.2660689250282617,
+          "peak_train_vram_gb": 2.623291015625
+        },
+        "test_uncalibrated": {
+          "acc": 0.9923076923076923,
+          "macro_f1": 0.992334972719588,
+          "macro_auc": 0.9997129340108136,
+          "ece": 0.06816898102943714,
+          "nll": 0.09431479126214981,
+          "brier": 0.02051186066145953
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.2784145772457123,
+          "ece": 0.007642895441788866,
+          "nll": 0.06502744555473328,
+          "brier": 0.015359013319883423
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 14.754599999966254,
+            "std_batch_ms": 3.347076473875876,
+            "ms_per_img": 14.754599999966254,
+            "imgs_per_s": 67.77547341183678,
+            "peak_vram_gb": 0.24333477020263672
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 25.164845333250316,
+            "std_batch_ms": 0.43447512602472443,
+            "ms_per_img": 0.3932007083320362,
+            "imgs_per_s": 2543.2304133988373,
+            "peak_vram_gb": 0.43010759353637695
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 14.754599999966254,
+          "b1_imgs_per_s": 67.77547341183678,
+          "b64_ms_per_img": 0.3932007083320362,
+          "b64_imgs_per_s": 2543.2304133988373
+        }
+      },
+      "raw": {
+        "dataset": "THOCT",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+        "classes": [
+          "AMD",
+          "DME",
+          "NOR"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "freeze_backbone": false,
+          "backbone_lr_mult": 0.1,
+          "merged_for_timing": true
+        },
+        "params": {
+          "total": 21816198,
+          "trainable": 21816198,
+          "trainable_pct": 100.0
+        },
+        "storage": {
+          "best_model_path": "runs\\THOCT\\deit_small_lora_unfrozen_3c\\20251224-163451\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 608249,
+          "adapter_only_mb": 0.5800714492797852
+        },
+        "training": {
+          "epochs_ran": 23,
+          "best_val_loss": 0.29382179792110735,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 57.574519872665405,
+          "mean_epoch_time_sec": 2.2660689250282617,
+          "peak_train_vram_gb": 2.623291015625
+        },
+        "test_uncalibrated": {
+          "acc": 0.9923076923076923,
+          "macro_f1": 0.992334972719588,
+          "macro_auc": 0.9997129340108136,
+          "ece": 0.06816898102943714,
+          "nll": 0.09431479126214981,
+          "brier": 0.02051186066145953
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.2784145772457123,
+          "ece": 0.007642895441788866,
+          "nll": 0.06502744555473328,
+          "brier": 0.015359013319883423
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 14.754599999966254,
+            "std_batch_ms": 3.347076473875876,
+            "ms_per_img": 14.754599999966254,
+            "imgs_per_s": 67.77547341183678,
+            "peak_vram_gb": 0.24333477020263672
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 25.164845333250316,
+            "std_batch_ms": 0.43447512602472443,
+            "ms_per_img": 0.3932007083320362,
+            "imgs_per_s": 2543.2304133988373,
+            "peak_vram_gb": 0.43010759353637695
+          }
+        }
+      }
+    }
+  ],
+  "by_dataset": {
+    "OCT2017": [
+      {
+        "source": {
+          "relative_path": "OCT2017/runs/OCT2017/deit_small_lora_unfrozen_4c/20251227-082358/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\OCT2017\\runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\summary.json"
+        },
+        "facts": {
+          "dataset": "OCT2017",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "classes": [
+            "CNV",
+            "DME",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "num_classes": 4,
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816968,
+            "trainable": 21816968,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.5830011367797852,
+            "adapter_only_bytes": 611321
+          },
+          "training": {
+            "epochs_ran": 85,
+            "best_val_loss": 0.4631633682372852,
+            "best_val_macro_f1": 0.9813559870994906,
+            "total_train_time_sec": 14089.364444494247,
+            "mean_epoch_time_sec": 159.9570482674767,
+            "peak_train_vram_gb": 2.623241901397705
+          },
+          "test_uncalibrated": {
+            "acc": 0.917,
+            "macro_f1": 0.9132005433546407,
+            "macro_auc": 0.9865346666666668,
+            "ece": 0.07071393114328388,
+            "nll": 0.3011724650859833,
+            "brier": 0.13896648753893873
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.5515377521514893,
+            "ece": 0.07214624243974684,
+            "nll": 0.37015074491500854,
+            "brier": 0.15470806672745444
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 10.912829999991422,
+              "std_batch_ms": 0.2786797935331326,
+              "ms_per_img": 10.912829999991422,
+              "imgs_per_s": 91.63525868182553,
+              "peak_vram_gb": 0.2279829978942871
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 24.31447399991157,
+              "std_batch_ms": 0.16415804471801884,
+              "ms_per_img": 0.3799136562486183,
+              "imgs_per_s": 2632.177031682148,
+              "peak_vram_gb": 0.41710758209228516
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 10.912829999991422,
+            "b1_imgs_per_s": 91.63525868182553,
+            "b64_ms_per_img": 0.3799136562486183,
+            "b64_imgs_per_s": 2632.177031682148
+          }
+        },
+        "raw": {
+          "dataset": "OCT2017",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+          "classes": [
+            "CNV",
+            "DME",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816968,
+            "trainable": 21816968,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 611321,
+            "adapter_only_mb": 0.5830011367797852
+          },
+          "training": {
+            "epochs_ran": 85,
+            "best_val_loss": 0.4631633682372852,
+            "best_val_macro_f1": 0.9813559870994906,
+            "total_train_time_sec": 14089.364444494247,
+            "mean_epoch_time_sec": 159.9570482674767,
+            "peak_train_vram_gb": 2.623241901397705
+          },
+          "test_uncalibrated": {
+            "acc": 0.917,
+            "macro_f1": 0.9132005433546407,
+            "macro_auc": 0.9865346666666668,
+            "ece": 0.07071393114328388,
+            "nll": 0.3011724650859833,
+            "brier": 0.13896648753893873
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.5515377521514893,
+            "ece": 0.07214624243974684,
+            "nll": 0.37015074491500854,
+            "brier": 0.15470806672745444
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 10.912829999991422,
+              "std_batch_ms": 0.2786797935331326,
+              "ms_per_img": 10.912829999991422,
+              "imgs_per_s": 91.63525868182553,
+              "peak_vram_gb": 0.2279829978942871
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 24.31447399991157,
+              "std_batch_ms": 0.16415804471801884,
+              "ms_per_img": 0.3799136562486183,
+              "imgs_per_s": 2632.177031682148,
+              "peak_vram_gb": 0.41710758209228516
+            }
+          }
+        }
+      }
+    ],
+    "C8": [
+      {
+        "source": {
+          "relative_path": "runs/C8/deit_small_lora_unfrozen_8c/20251224-165354/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\C8\\deit_small_lora_unfrozen_8c\\20251224-165354\\summary.json"
+        },
+        "facts": {
+          "dataset": "C8",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "classes": [
+            "AMD",
+            "CNV",
+            "CSR",
+            "DME",
+            "DR",
+            "DRUSEN",
+            "MH",
+            "NORMAL"
+          ],
+          "num_classes": 8,
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21820048,
+            "trainable": 21820048,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\C8\\deit_small_lora_unfrozen_8c\\20251224-165354\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.5947198867797852,
+            "adapter_only_bytes": 623609
+          },
+          "training": {
+            "epochs_ran": 18,
+            "best_val_loss": 0.5420712398193748,
+            "best_val_macro_f1": 0.9663558118777291,
+            "total_train_time_sec": 627.9392182826996,
+            "mean_epoch_time_sec": 33.18016469478607,
+            "peak_train_vram_gb": 2.6247663497924805
+          },
+          "test_uncalibrated": {
+            "acc": 0.9685377189846264,
+            "macro_f1": 0.9684625612446112,
+            "macro_auc": 0.9982326517643149,
+            "ece": 0.08805477383693373,
+            "nll": 0.179039865732193,
+            "brier": 0.057520453689086176
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.6307651400566101,
+            "ece": 0.007224125109018904,
+            "nll": 0.10635126382112503,
+            "brier": 0.0502810098936444
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 12.494458000073791,
+              "std_batch_ms": 1.308063100252895,
+              "ms_per_img": 12.494458000073791,
+              "imgs_per_s": 80.0354845319496,
+              "peak_vram_gb": 0.24333953857421875
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 24.935731999842876,
+              "std_batch_ms": 0.4354896523830799,
+              "ms_per_img": 0.38962081249754493,
+              "imgs_per_s": 2566.598004839131,
+              "peak_vram_gb": 0.4311823844909668
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 12.494458000073791,
+            "b1_imgs_per_s": 80.0354845319496,
+            "b64_ms_per_img": 0.38962081249754493,
+            "b64_imgs_per_s": 2566.598004839131
+          }
+        },
+        "raw": {
+          "dataset": "C8",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+          "classes": [
+            "AMD",
+            "CNV",
+            "CSR",
+            "DME",
+            "DR",
+            "DRUSEN",
+            "MH",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21820048,
+            "trainable": 21820048,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\C8\\deit_small_lora_unfrozen_8c\\20251224-165354\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 623609,
+            "adapter_only_mb": 0.5947198867797852
+          },
+          "training": {
+            "epochs_ran": 18,
+            "best_val_loss": 0.5420712398193748,
+            "best_val_macro_f1": 0.9663558118777291,
+            "total_train_time_sec": 627.9392182826996,
+            "mean_epoch_time_sec": 33.18016469478607,
+            "peak_train_vram_gb": 2.6247663497924805
+          },
+          "test_uncalibrated": {
+            "acc": 0.9685377189846264,
+            "macro_f1": 0.9684625612446112,
+            "macro_auc": 0.9982326517643149,
+            "ece": 0.08805477383693373,
+            "nll": 0.179039865732193,
+            "brier": 0.057520453689086176
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.6307651400566101,
+            "ece": 0.007224125109018904,
+            "nll": 0.10635126382112503,
+            "brier": 0.0502810098936444
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 12.494458000073791,
+              "std_batch_ms": 1.308063100252895,
+              "ms_per_img": 12.494458000073791,
+              "imgs_per_s": 80.0354845319496,
+              "peak_vram_gb": 0.24333953857421875
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 24.935731999842876,
+              "std_batch_ms": 0.4354896523830799,
+              "ms_per_img": 0.38962081249754493,
+              "imgs_per_s": 2566.598004839131,
+              "peak_vram_gb": 0.4311823844909668
+            }
+          }
+        }
+      }
+    ],
+    "NEH_UT_2021": [
+      {
+        "source": {
+          "relative_path": "runs/NEH_UT_2021/deit_small_lora_unfrozen_3c/20251224-164134/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\summary.json"
+        },
+        "facts": {
+          "dataset": "NEH_UT_2021",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "classes": [
+            "CNV",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "num_classes": 3,
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816198,
+            "trainable": 21816198,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.5800714492797852,
+            "adapter_only_bytes": 608249
+          },
+          "training": {
+            "epochs_ran": 17,
+            "best_val_loss": 0.571969704400064,
+            "best_val_macro_f1": 0.8865077943979142,
+            "total_train_time_sec": 386.8495466709137,
+            "mean_epoch_time_sec": 21.118476166444665,
+            "peak_train_vram_gb": 2.6247496604919434
+          },
+          "test_uncalibrated": {
+            "acc": 0.8858501783590963,
+            "macro_f1": 0.8766270762931784,
+            "macro_auc": 0.9557391835112359,
+            "ece": 0.08146031442446414,
+            "nll": 0.37300485372543335,
+            "brier": 0.1911139730108444
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.6672316789627075,
+            "ece": 0.016938954969743295,
+            "nll": 0.3360024690628052,
+            "brier": 0.17917529730067303
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 12.71335399998255,
+              "std_batch_ms": 1.9836044715507921,
+              "ms_per_img": 12.71335399998255,
+              "imgs_per_s": 78.65744948196775,
+              "peak_vram_gb": 0.23569917678833008
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 25.034554666805587,
+              "std_batch_ms": 0.32557608526474774,
+              "ms_per_img": 0.3911649166688373,
+              "imgs_per_s": 2556.4664860949338,
+              "peak_vram_gb": 0.42341041564941406
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 12.71335399998255,
+            "b1_imgs_per_s": 78.65744948196775,
+            "b64_ms_per_img": 0.3911649166688373,
+            "b64_imgs_per_s": 2556.4664860949338
+          }
+        },
+        "raw": {
+          "dataset": "NEH_UT_2021",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+          "classes": [
+            "CNV",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816198,
+            "trainable": 21816198,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 608249,
+            "adapter_only_mb": 0.5800714492797852
+          },
+          "training": {
+            "epochs_ran": 17,
+            "best_val_loss": 0.571969704400064,
+            "best_val_macro_f1": 0.8865077943979142,
+            "total_train_time_sec": 386.8495466709137,
+            "mean_epoch_time_sec": 21.118476166444665,
+            "peak_train_vram_gb": 2.6247496604919434
+          },
+          "test_uncalibrated": {
+            "acc": 0.8858501783590963,
+            "macro_f1": 0.8766270762931784,
+            "macro_auc": 0.9557391835112359,
+            "ece": 0.08146031442446414,
+            "nll": 0.37300485372543335,
+            "brier": 0.1911139730108444
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.6672316789627075,
+            "ece": 0.016938954969743295,
+            "nll": 0.3360024690628052,
+            "brier": 0.17917529730067303
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 12.71335399998255,
+              "std_batch_ms": 1.9836044715507921,
+              "ms_per_img": 12.71335399998255,
+              "imgs_per_s": 78.65744948196775,
+              "peak_vram_gb": 0.23569917678833008
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 25.034554666805587,
+              "std_batch_ms": 0.32557608526474774,
+              "ms_per_img": 0.3911649166688373,
+              "imgs_per_s": 2556.4664860949338,
+              "peak_vram_gb": 0.42341041564941406
+            }
+          }
+        }
+      }
+    ],
+    "Srinivasan_2014": [
+      {
+        "source": {
+          "relative_path": "runs/Srinivasan_2014/deit_small_lora_unfrozen_3c/20251224-163617/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\Srinivasan_2014\\deit_small_lora_unfrozen_3c\\20251224-163617\\summary.json"
+        },
+        "facts": {
+          "dataset": "Srinivasan_2014",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "classes": [
+            "AMD",
+            "DME",
+            "NORMAL"
+          ],
+          "num_classes": 3,
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816198,
+            "trainable": 21816198,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\Srinivasan_2014\\deit_small_lora_unfrozen_3c\\20251224-163617\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.5800714492797852,
+            "adapter_only_bytes": 608249
+          },
+          "training": {
+            "epochs_ran": 33,
+            "best_val_loss": 0.3302943889627752,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 149.67863297462463,
+            "mean_epoch_time_sec": 4.196519208676888,
+            "peak_train_vram_gb": 2.623645782470703
+          },
+          "test_uncalibrated": {
+            "acc": 1.0,
+            "macro_f1": 1.0,
+            "macro_auc": 1.0,
+            "ece": 0.07698321797184109,
+            "nll": 0.08040179312229156,
+            "brier": 0.009846299520256683
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.28038644790649414,
+            "ece": 4.392862319946289e-05,
+            "nll": 4.392014670884237e-05,
+            "brier": 5.135066230474895e-09
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.762515333291958,
+              "std_batch_ms": 2.943630844134522,
+              "ms_per_img": 13.762515333291958,
+              "imgs_per_s": 72.66113612102349,
+              "peak_vram_gb": 0.23673772811889648
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 25.288003333480447,
+              "std_batch_ms": 0.4069426048479978,
+              "ms_per_img": 0.395125052085632,
+              "imgs_per_s": 2530.8443357908845,
+              "peak_vram_gb": 0.42450666427612305
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 13.762515333291958,
+            "b1_imgs_per_s": 72.66113612102349,
+            "b64_ms_per_img": 0.395125052085632,
+            "b64_imgs_per_s": 2530.8443357908845
+          }
+        },
+        "raw": {
+          "dataset": "Srinivasan_2014",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+          "classes": [
+            "AMD",
+            "DME",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816198,
+            "trainable": 21816198,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\Srinivasan_2014\\deit_small_lora_unfrozen_3c\\20251224-163617\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 608249,
+            "adapter_only_mb": 0.5800714492797852
+          },
+          "training": {
+            "epochs_ran": 33,
+            "best_val_loss": 0.3302943889627752,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 149.67863297462463,
+            "mean_epoch_time_sec": 4.196519208676888,
+            "peak_train_vram_gb": 2.623645782470703
+          },
+          "test_uncalibrated": {
+            "acc": 1.0,
+            "macro_f1": 1.0,
+            "macro_auc": 1.0,
+            "ece": 0.07698321797184109,
+            "nll": 0.08040179312229156,
+            "brier": 0.009846299520256683
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.28038644790649414,
+            "ece": 4.392862319946289e-05,
+            "nll": 4.392014670884237e-05,
+            "brier": 5.135066230474895e-09
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.762515333291958,
+              "std_batch_ms": 2.943630844134522,
+              "ms_per_img": 13.762515333291958,
+              "imgs_per_s": 72.66113612102349,
+              "peak_vram_gb": 0.23673772811889648
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 25.288003333480447,
+              "std_batch_ms": 0.4069426048479978,
+              "ms_per_img": 0.395125052085632,
+              "imgs_per_s": 2530.8443357908845,
+              "peak_vram_gb": 0.42450666427612305
+            }
+          }
+        }
+      }
+    ],
+    "THOCT": [
+      {
+        "source": {
+          "relative_path": "runs/THOCT/deit_small_lora_unfrozen_3c/20251224-163451/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\ViT + LoRA + full fine-tuning (unfrozen backbone)\\runs\\THOCT\\deit_small_lora_unfrozen_3c\\20251224-163451\\summary.json"
+        },
+        "facts": {
+          "dataset": "THOCT",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "classes": [
+            "AMD",
+            "DME",
+            "NOR"
+          ],
+          "num_classes": 3,
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816198,
+            "trainable": 21816198,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\THOCT\\deit_small_lora_unfrozen_3c\\20251224-163451\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.5800714492797852,
+            "adapter_only_bytes": 608249
+          },
+          "training": {
+            "epochs_ran": 23,
+            "best_val_loss": 0.29382179792110735,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 57.574519872665405,
+            "mean_epoch_time_sec": 2.2660689250282617,
+            "peak_train_vram_gb": 2.623291015625
+          },
+          "test_uncalibrated": {
+            "acc": 0.9923076923076923,
+            "macro_f1": 0.992334972719588,
+            "macro_auc": 0.9997129340108136,
+            "ece": 0.06816898102943714,
+            "nll": 0.09431479126214981,
+            "brier": 0.02051186066145953
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.2784145772457123,
+            "ece": 0.007642895441788866,
+            "nll": 0.06502744555473328,
+            "brier": 0.015359013319883423
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 14.754599999966254,
+              "std_batch_ms": 3.347076473875876,
+              "ms_per_img": 14.754599999966254,
+              "imgs_per_s": 67.77547341183678,
+              "peak_vram_gb": 0.24333477020263672
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 25.164845333250316,
+              "std_batch_ms": 0.43447512602472443,
+              "ms_per_img": 0.3932007083320362,
+              "imgs_per_s": 2543.2304133988373,
+              "peak_vram_gb": 0.43010759353637695
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 14.754599999966254,
+            "b1_imgs_per_s": 67.77547341183678,
+            "b64_ms_per_img": 0.3932007083320362,
+            "b64_imgs_per_s": 2543.2304133988373
+          }
+        },
+        "raw": {
+          "dataset": "THOCT",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+          "classes": [
+            "AMD",
+            "DME",
+            "NOR"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+          "lora": {
+            "r": 8,
+            "alpha": 16,
+            "dropout": 0.1,
+            "freeze_backbone": false,
+            "backbone_lr_mult": 0.1,
+            "merged_for_timing": true
+          },
+          "params": {
+            "total": 21816198,
+            "trainable": 21816198,
+            "trainable_pct": 100.0
+          },
+          "storage": {
+            "best_model_path": "runs\\THOCT\\deit_small_lora_unfrozen_3c\\20251224-163451\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 608249,
+            "adapter_only_mb": 0.5800714492797852
+          },
+          "training": {
+            "epochs_ran": 23,
+            "best_val_loss": 0.29382179792110735,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 57.574519872665405,
+            "mean_epoch_time_sec": 2.2660689250282617,
+            "peak_train_vram_gb": 2.623291015625
+          },
+          "test_uncalibrated": {
+            "acc": 0.9923076923076923,
+            "macro_f1": 0.992334972719588,
+            "macro_auc": 0.9997129340108136,
+            "ece": 0.06816898102943714,
+            "nll": 0.09431479126214981,
+            "brier": 0.02051186066145953
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.2784145772457123,
+            "ece": 0.007642895441788866,
+            "nll": 0.06502744555473328,
+            "brier": 0.015359013319883423
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 14.754599999966254,
+              "std_batch_ms": 3.347076473875876,
+              "ms_per_img": 14.754599999966254,
+              "imgs_per_s": 67.77547341183678,
+              "peak_vram_gb": 0.24333477020263672
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 25.164845333250316,
+              "std_batch_ms": 0.43447512602472443,
+              "ms_per_img": 0.3932007083320362,
+              "imgs_per_s": 2543.2304133988373,
+              "peak_vram_gb": 0.43010759353637695
+            }
+          }
+        }
+      }
+    ]
+  },
+  "errors": []
+}

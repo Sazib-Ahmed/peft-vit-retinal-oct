@@ -1,0 +1,13 @@
+split,class,count
+train,CNV,28285
+train,DME,9819
+train,DRUSEN,7000
+train,NORMAL,45054
+val,CNV,3142
+val,DME,1091
+val,DRUSEN,777
+val,NORMAL,5006
+test,CNV,250
+test,DME,250
+test,DRUSEN,250
+test,NORMAL,250

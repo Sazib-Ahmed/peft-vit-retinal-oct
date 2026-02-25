@@ -1,0 +1,4 @@
+split,AMD,DME,NOR,TOTAL
+test,85,88,87,260
+train,392,413,405,1210
+val,84,89,87,260

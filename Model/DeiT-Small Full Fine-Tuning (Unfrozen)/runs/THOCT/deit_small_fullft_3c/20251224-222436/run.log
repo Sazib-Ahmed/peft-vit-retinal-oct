@@ -1,0 +1,84 @@
+
+=== DATASET RUN START: THOCT ===
+
+[DATA] Split/Class counts:
+class  AMD  DME  NOR  TOTAL
+split                      
+test    85   88   87    260
+train  392  413  405   1210
+val     84   89   87    260
+[DATA] Train imbalance: min=392, max=413, ratio=1.05
+[RAM] Caching split='train' images=1210 as uint8 tensors. Estimated RAM ~ 0.17 GB
+[RAM] Cached 1210 images for split='train'
+[RAM] Caching split='val' images=260 as uint8 tensors. Estimated RAM ~ 0.04 GB
+[RAM] Cached 260 images for split='val'
+[RAM] Caching split='test' images=260 as uint8 tensors. Estimated RAM ~ 0.04 GB
+[RAM] Cached 260 images for split='test'
+[IMB] Train class counts: [392, 413, 405]
+[IMB] Class-Balanced weights (mean~1): [1.0279, 0.9766, 0.9955]
+[IMB] Sampler disabled. min=392 max=413 ratio=1.05
+
+[DATASET] THOCT
+ - root: D:\AIUB\DSP\Code\Datasets\THOCT1800\THOCT1800_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (3): ['AMD', 'DME', 'NOR']
+ - split sizes: train=1210 val=260 test=260
+
+[MODEL] Creating deit_small_distilled_patch16_224 (FULL fine-tuning, all params trainable)
+[PARAMS] total=21,668,742 trainable=21,668,742 (100.00%)
+[IMB] Train class counts: [392, 413, 405]
+[IMB] Class-Balanced weights (mean~1): [1.0279, 0.9766, 0.9955]
+[IMB] Sampler disabled. min=392 max=413 ratio=1.05
+[THOCT] Epoch 001/100 | lr=1.00e-04 | train_loss=0.7273 train_acc=73.22% | val_loss=0.4282 val_acc=95.38% val_macroF1=95.34% | ep_time=2.9s peakVRAM=2.45GB
+[ES] New best val_loss=0.428155 -> saved runs\THOCT\deit_small_fullft_3c\20251224-222436\best_model.pth
+[THOCT] Epoch 002/100 | lr=1.50e-04 | train_loss=0.4940 train_acc=87.27% | val_loss=0.3180 val_acc=98.85% val_macroF1=98.85% | ep_time=2.0s peakVRAM=2.45GB
+[ES] New best val_loss=0.317991 -> saved runs\THOCT\deit_small_fullft_3c\20251224-222436\best_model.pth
+[THOCT] Epoch 003/100 | lr=2.00e-04 | train_loss=0.5576 train_acc=85.87% | val_loss=0.3558 val_acc=97.31% val_macroF1=97.27% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 1/10
+[THOCT] Epoch 004/100 | lr=2.50e-04 | train_loss=0.4637 train_acc=90.41% | val_loss=0.3214 val_acc=98.46% val_macroF1=98.46% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 2/10
+[THOCT] Epoch 005/100 | lr=3.00e-04 | train_loss=0.5835 train_acc=85.95% | val_loss=0.3199 val_acc=99.23% val_macroF1=99.23% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 3/10
+[THOCT] Epoch 006/100 | lr=3.50e-04 | train_loss=0.4957 train_acc=88.51% | val_loss=0.3321 val_acc=98.46% val_macroF1=98.45% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 4/10
+[THOCT] Epoch 007/100 | lr=4.00e-04 | train_loss=0.5203 train_acc=87.44% | val_loss=0.3192 val_acc=99.62% val_macroF1=99.62% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 5/10
+[THOCT] Epoch 008/100 | lr=4.50e-04 | train_loss=0.4487 train_acc=91.82% | val_loss=0.3566 val_acc=97.31% val_macroF1=97.32% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 6/10
+[THOCT] Epoch 009/100 | lr=5.00e-04 | train_loss=0.5710 train_acc=83.97% | val_loss=0.3366 val_acc=98.46% val_macroF1=98.46% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 7/10
+[THOCT] Epoch 010/100 | lr=5.00e-04 | train_loss=0.6398 train_acc=80.33% | val_loss=0.3521 val_acc=97.31% val_macroF1=97.30% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 8/10
+[THOCT] Epoch 011/100 | lr=5.00e-04 | train_loss=0.4948 train_acc=88.18% | val_loss=0.3302 val_acc=98.46% val_macroF1=98.46% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 9/10
+[THOCT] Epoch 012/100 | lr=4.99e-04 | train_loss=0.7837 train_acc=75.29% | val_loss=0.4724 val_acc=88.85% val_macroF1=88.46% | ep_time=2.0s peakVRAM=2.45GB
+[ES] No improve 10/10
+[THOCT] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.4810
+
+------------------------------------------------------------------------------------------
+[THOCT] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         AMD     0.9545    0.9882    0.9711        85
+         DME     0.9882    0.9545    0.9711        88
+         NOR     1.0000    1.0000    1.0000        87
+
+    accuracy                         0.9808       260
+   macro avg     0.9809    0.9809    0.9807       260
+weighted avg     0.9812    0.9808    0.9808       260
+
+
+==========================================================================================
+[THOCT] TEST summary (uncalibrated): Acc=98.08% MacroF1=98.07% ECE=0.0692 NLL=0.1129 Brier=0.0348
+[THOCT] Macro-AUC=0.9984
+[THOCT] TEMP-SCALED (T=0.481): ECE=0.0149 NLL=0.0797 Brier=0.0325
+[THOCT] Params trainable: 21,668,742 (100.00%)
+[THOCT] Inference latency (B=1): 12.362 ms/img (80.9 imgs/s), peakVRAM=0.24GB
+[THOCT] Inference throughput (B=64): 2453.1 imgs/s, peakVRAM=0.43GB
+[THOCT] Outputs saved in: runs\THOCT\deit_small_fullft_3c\20251224-222436
+==========================================================================================
+

@@ -1,0 +1,13 @@
+path,rel_path,split,label,patient_uid,sha256,reason,source
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\CNV\cnv_train_2520.jpg,train\CNV\cnv_train_2520.jpg,train,CNV,,dfe2329067cbc73438922921938088f67818b0b78e1af5a6955eccc7f2167715,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\DRUSEN\drusen_train_2364.jpg,train\DRUSEN\drusen_train_2364.jpg,train,DRUSEN,,dfe2329067cbc73438922921938088f67818b0b78e1af5a6955eccc7f2167715,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\CNV\cnv_train_2796.jpg,train\CNV\cnv_train_2796.jpg,train,CNV,,7e01e2d5f413443aeb8cf3ed9eee0190d36f1d94ceb3fb49e7254f840d3f80c4,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\DRUSEN\drusen_train_2583.jpg,train\DRUSEN\drusen_train_2583.jpg,train,DRUSEN,,7e01e2d5f413443aeb8cf3ed9eee0190d36f1d94ceb3fb49e7254f840d3f80c4,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\CNV\cnv_train_2798.jpg,train\CNV\cnv_train_2798.jpg,train,CNV,,3da11e7d57d6dd579ca7d00fde6c8e485e53014c07ef6963e811b75fa118b6bd,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\DRUSEN\drusen_train_2587.jpg,train\DRUSEN\drusen_train_2587.jpg,train,DRUSEN,,3da11e7d57d6dd579ca7d00fde6c8e485e53014c07ef6963e811b75fa118b6bd,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\DRUSEN\drusen_train_1573.jpg,train\DRUSEN\drusen_train_1573.jpg,train,DRUSEN,,cd6496f3b1f375686ddfbcd3328ba77ee4607b40f2846d1642343a07fd2b7a87,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\NORMAL\normal_train_1600.jpg,train\NORMAL\normal_train_1600.jpg,train,NORMAL,,cd6496f3b1f375686ddfbcd3328ba77ee4607b40f2846d1642343a07fd2b7a87,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\DRUSEN\drusen_train_2979.jpg,train\DRUSEN\drusen_train_2979.jpg,train,DRUSEN,,80d11cd5c58c013f1554795e4b9bd991c388b34a03cc8dbcd4f6bd8c1992e7c2,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\val\CNV\cnv_val_1311.jpg,val\CNV\cnv_val_1311.jpg,val,CNV,,80d11cd5c58c013f1554795e4b9bd991c388b34a03cc8dbcd4f6bd8c1992e7c2,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\train\DRUSEN\drusen_train_3003.jpg,train\DRUSEN\drusen_train_3003.jpg,train,DRUSEN,,7fa9498c77f4fd4847b760ebecf04d925e62d4a6c03d1440bab7b60a25ed814c,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset\val\CNV\cnv_val_1310.jpg,val\CNV\cnv_val_1310.jpg,val,CNV,,7fa9498c77f4fd4847b760ebecf04d925e62d4a6c03d1440bab7b60a25ed814c,sha256_label_conflict_drop_all,scan

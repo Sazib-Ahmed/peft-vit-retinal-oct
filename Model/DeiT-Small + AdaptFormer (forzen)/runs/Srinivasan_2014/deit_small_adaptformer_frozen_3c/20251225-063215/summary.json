@@ -1,0 +1,72 @@
+{
+  "dataset": "Srinivasan_2014",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+  "classes": [
+    "AMD",
+    "DME",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "AdaptFormer (AdaptMLP in MLP, frozen backbone)",
+  "adaptformer": {
+    "mid_dim": 64,
+    "scale": 0.1,
+    "dropout": 0.0,
+    "layers": [
+      0,
+      null
+    ]
+  },
+  "params": {
+    "total": 22263942,
+    "trainable": 597510,
+    "trainable_pct": 2.683756542305042
+  },
+  "storage": {
+    "best_model_path": "runs\\Srinivasan_2014\\deit_small_adaptformer_frozen_3c\\20251225-063215\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 2406505,
+    "adapter_only_mb": 2.2950220108032227
+  },
+  "training": {
+    "epochs_ran": 69,
+    "best_val_loss": 0.33054576239635036,
+    "best_val_macro_f1": 1.0,
+    "total_train_time_sec": 230.30834531784058,
+    "mean_epoch_time_sec": 3.002135926398678,
+    "peak_train_vram_gb": 1.6419734954833984
+  },
+  "test_uncalibrated": {
+    "acc": 0.9979381443298969,
+    "macro_f1": 0.9976758796250903,
+    "macro_auc": 1.0,
+    "ece": 0.08118914027803953,
+    "nll": 0.08550729602575302,
+    "brier": 0.011890897287229711
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.2742793560028076,
+    "ece": 0.0011654525688014079,
+    "nll": 0.0016596723580732942,
+    "brier": 0.0012142014548243998
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 19.510243999635957,
+      "std_batch_ms": 3.864605833386652,
+      "ms_per_img": 19.510243999635957,
+      "imgs_per_s": 51.25512525720637,
+      "peak_vram_gb": 0.10852909088134766
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 27.520136000142276,
+      "std_batch_ms": 0.31968703262409104,
+      "ms_per_img": 0.43000212500222307,
+      "imgs_per_s": 2325.569902694853,
+      "peak_vram_gb": 0.29595470428466797
+    }
+  }
+}

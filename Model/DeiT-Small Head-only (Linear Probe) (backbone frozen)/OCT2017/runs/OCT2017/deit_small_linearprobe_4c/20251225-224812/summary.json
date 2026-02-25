@@ -1,0 +1,63 @@
+{
+  "dataset": "OCT2017",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DME",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "method": "DeiT-Small Head-only (Linear Probe) (backbone frozen)",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.0001
+  },
+  "params": {
+    "total": 21669512,
+    "trainable": 3080,
+    "trainable_pct": 0.014213518052460065
+  },
+  "training": {
+    "epochs_ran": 41,
+    "best_val_loss": 0.644864695140729,
+    "best_val_macro_f1": 0.8513378474191764,
+    "total_train_time_sec": 2380.114415168762,
+    "mean_epoch_time_sec": 53.22706104487908,
+    "peak_train_vram_gb": 0.28937244415283203
+  },
+  "test_uncalibrated": {
+    "acc": 0.613,
+    "macro_f1": 0.5534407306640449,
+    "macro_auc": 0.9771026666666667,
+    "ece": 0.13984240269660947,
+    "nll": 0.795212984085083,
+    "brier": 0.4565288619103144
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.5552327632904053,
+    "ece": 0.23560830491781234,
+    "nll": 1.0103518962860107,
+    "brier": 0.5411080687330492
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 13.565423332620412,
+      "std_batch_ms": 3.5273172513783835,
+      "ms_per_img": 13.565423332620412,
+      "imgs_per_s": 73.71682958063879,
+      "peak_vram_gb": 0.10186195373535156
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 24.903780000361923,
+      "std_batch_ms": 0.3642314893131735,
+      "ms_per_img": 0.38912156250565505,
+      "imgs_per_s": 2569.890996429855,
+      "peak_vram_gb": 0.2885260581970215
+    }
+  }
+}

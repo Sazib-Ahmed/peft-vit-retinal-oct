@@ -1,0 +1,3 @@
+path,rel_path,split,label,patient_uid,sha256,reason,source
+D:\AIUB\DSP\Code\Datasets\THOCT1800\THOCT1800\AMD\aligned_amd_binary_cropped_594.jpg,AMD\aligned_amd_binary_cropped_594.jpg,unknown,AMD,aligned_amd_binary_cropped_594.jpg,601ccd8217b5f1e0881e19610a92f60a38c4e2752df695f766b240e727330146,sha256_label_conflict_drop_all,scan
+D:\AIUB\DSP\Code\Datasets\THOCT1800\THOCT1800\NOR\aligned_nor_binary_cropped_510.jpg,NOR\aligned_nor_binary_cropped_510.jpg,unknown,NOR,aligned_nor_binary_cropped_510.jpg,601ccd8217b5f1e0881e19610a92f60a38c4e2752df695f766b240e727330146,sha256_label_conflict_drop_all,scan

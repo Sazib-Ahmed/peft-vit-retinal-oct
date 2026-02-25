@@ -1,0 +1,68 @@
+{
+  "dataset": "NEH_UT_2021",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+  "vpt": {
+    "num_prompts_per_layer": 20,
+    "prompt_dropout": 0.0,
+    "init_std": 0.02
+  },
+  "params": {
+    "total": 21760902,
+    "trainable": 94470,
+    "trainable_pct": 0.4341272250571231
+  },
+  "storage": {
+    "best_model_path": "runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 383649,
+    "adapter_only_mb": 0.3658761978149414
+  },
+  "training": {
+    "epochs_ran": 43,
+    "best_val_loss": 0.5732420572561632,
+    "best_val_macro_f1": 0.882786522687612,
+    "total_train_time_sec": 856.1063275337219,
+    "mean_epoch_time_sec": 18.324076674705328,
+    "peak_train_vram_gb": 1.7353663444519043
+  },
+  "test_uncalibrated": {
+    "acc": 0.890210067380103,
+    "macro_f1": 0.878193919013591,
+    "macro_auc": 0.9554138890013032,
+    "ece": 0.06859057562907821,
+    "nll": 0.3542410433292389,
+    "brier": 0.1830412706898194
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.7185686230659485,
+    "ece": 0.01876100189053629,
+    "nll": 0.32701075077056885,
+    "brier": 0.17544175996989547
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 14.464680666521113,
+      "std_batch_ms": 1.9662307709120264,
+      "ms_per_img": 14.464680666521113,
+      "imgs_per_s": 69.13391474410676,
+      "peak_vram_gb": 0.1035919189453125
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 30.69516600002923,
+      "std_batch_ms": 1.7711966868636302,
+      "ms_per_img": 0.4796119687504567,
+      "imgs_per_s": 2085.018859319381,
+      "peak_vram_gb": 0.31929540634155273
+    }
+  }
+}

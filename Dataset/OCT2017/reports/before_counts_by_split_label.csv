@@ -1,0 +1,9 @@
+split,label,count
+test,CNV,250
+test,DME,250
+test,DRUSEN,250
+test,NORMAL,250
+train,CNV,37205
+train,DME,11348
+train,DRUSEN,8616
+train,NORMAL,51140

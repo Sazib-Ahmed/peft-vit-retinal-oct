@@ -1,0 +1,67 @@
+{
+  "dataset": "C8",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+  "classes": [
+    "AMD",
+    "CNV",
+    "CSR",
+    "DME",
+    "DR",
+    "DRUSEN",
+    "MH",
+    "NORMAL"
+  ],
+  "model": "efficientnet_b0",
+  "method": "EfficientNet-B0 Full Fine-Tuning (unfrozen)",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.0001
+  },
+  "params": {
+    "total": 4017796,
+    "trainable": 4017796,
+    "trainable_pct": 100.0
+  },
+  "training": {
+    "epochs_ran": 19,
+    "best_val_loss": 0.5445897075552006,
+    "best_val_macro_f1": 0.9673644892825418,
+    "total_train_time_sec": 597.1868970394135,
+    "mean_epoch_time_sec": 29.99681184166356,
+    "peak_train_vram_gb": 2.78652286529541
+  },
+  "test_uncalibrated": {
+    "acc": 0.9699678226671433,
+    "macro_f1": 0.9699293152221089,
+    "macro_auc": 0.9980118491349312,
+    "ece": 0.07615242227725487,
+    "nll": 0.16750778257846832,
+    "brier": 0.05441797699706367
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.6525360941886902,
+    "ece": 0.007961177340054998,
+    "nll": 0.10847064852714539,
+    "brier": 0.04886999788126031
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 19.443874666673462,
+      "std_batch_ms": 2.5569665230468637,
+      "ms_per_img": 19.443874666673462,
+      "imgs_per_s": 51.430078476795906,
+      "peak_vram_gb": 0.055785179138183594
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 18.343076666660636,
+      "std_batch_ms": 1.3470973090380516,
+      "ms_per_img": 0.28661057291657244,
+      "imgs_per_s": 3489.0548168684736,
+      "peak_vram_gb": 0.4542231559753418
+    }
+  }
+}

@@ -1,0 +1,104 @@
+
+=== DATASET RUN START: C8 ===
+
+[DATA] Split/Class counts:
+class   AMD   CNV   CSR   DME    DR  DRUSEN    MH  NORMAL  TOTAL
+split                                                           
+test    350   350   350   349   350     349   350     349   2797
+train  2300  2257  2300  2272  2300    2233  2300    2298  18260
+val     350   347   350   349   350     348   350     349   2793
+[DATA] Train imbalance: min=2233, max=2300, ratio=1.03
+[RAM] Caching split='train' images=18260 as uint8 tensors. Estimated RAM ~ 2.56 GB
+[RAM] Cached 18260 images for split='train'
+[RAM] Caching split='val' images=2793 as uint8 tensors. Estimated RAM ~ 0.39 GB
+[RAM] Cached 2793 images for split='val'
+[RAM] Caching split='test' images=2797 as uint8 tensors. Estimated RAM ~ 0.39 GB
+[RAM] Cached 2797 images for split='test'
+[IMB] Train class counts: [2300, 2257, 2300, 2272, 2300, 2233, 2300, 2298]
+[IMB] Class-Balanced weights (mean~1): [0.9931, 1.01, 0.9931, 1.004, 0.9931, 1.0196, 0.9931, 0.9939]
+[IMB] Sampler disabled. min=2233 max=2300 ratio=1.03
+
+[DATASET] C8
+ - root: D:\AIUB\DSP\Code\Datasets\C8\RetinalOCT_Dataset_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (8): ['AMD', 'CNV', 'CSR', 'DME', 'DR', 'DRUSEN', 'MH', 'NORMAL']
+ - split sizes: train=18260 val=2793 test=2797
+
+[MODEL] Creating deit_small_distilled_patch16_224 + Manual LoRA | backbone=UNFROZEN (LoRA + full FT)
+[PARAMS] total=21,820,048 trainable=21,820,048 (100.0000%)
+[WARN] save_adapter_only=True but backbone is UNFROZEN. Adapter-only file will NOT reproduce the full trained model. Use best_model.pth for deployment/repro.
+[IMB] Train class counts: [2300, 2257, 2300, 2272, 2300, 2233, 2300, 2298]
+[IMB] Class-Balanced weights (mean~1): [0.9931, 1.01, 0.9931, 1.004, 0.9931, 1.0196, 0.9931, 0.9939]
+[IMB] Sampler disabled. min=2233 max=2300 ratio=1.03
+[OPT] AdamW param-groups | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 (backbone_lr_mult=0.1)
+[C8] Epoch 001/100 | lr_backbone=1.00e-05 lr_lora+head=1.00e-04 | train_loss=1.0692 train_acc=74.45% | val_loss=0.6672 val_acc=91.80% val_macroF1=91.65% | ep_time=33.4s peakVRAM=2.62GB
+[ES] New best val_loss=0.667227 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 002/100 | lr_backbone=1.50e-05 lr_lora+head=1.50e-04 | train_loss=0.6978 train_acc=90.04% | val_loss=0.5909 val_acc=94.67% val_macroF1=94.65% | ep_time=33.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.590897 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 003/100 | lr_backbone=2.00e-05 lr_lora+head=2.00e-04 | train_loss=0.6683 train_acc=90.93% | val_loss=0.5816 val_acc=94.88% val_macroF1=94.81% | ep_time=33.2s peakVRAM=2.62GB
+[ES] New best val_loss=0.581581 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 004/100 | lr_backbone=2.50e-05 lr_lora+head=2.50e-04 | train_loss=0.6338 train_acc=92.57% | val_loss=0.5677 val_acc=95.85% val_macroF1=95.80% | ep_time=33.2s peakVRAM=2.62GB
+[ES] New best val_loss=0.567741 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 005/100 | lr_backbone=3.00e-05 lr_lora+head=3.00e-04 | train_loss=0.6158 train_acc=93.44% | val_loss=0.5746 val_acc=95.38% val_macroF1=95.33% | ep_time=33.2s peakVRAM=2.62GB
+[ES] No improve 1/10
+[C8] Epoch 006/100 | lr_backbone=3.50e-05 lr_lora+head=3.50e-04 | train_loss=0.6406 train_acc=92.16% | val_loss=0.5663 val_acc=95.60% val_macroF1=95.59% | ep_time=33.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.566304 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 007/100 | lr_backbone=4.00e-05 lr_lora+head=4.00e-04 | train_loss=0.6307 train_acc=92.63% | val_loss=0.5520 val_acc=96.49% val_macroF1=96.48% | ep_time=33.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.552008 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 008/100 | lr_backbone=4.50e-05 lr_lora+head=4.50e-04 | train_loss=0.6212 train_acc=92.91% | val_loss=0.5421 val_acc=96.60% val_macroF1=96.58% | ep_time=33.2s peakVRAM=2.62GB
+[ES] New best val_loss=0.542071 -> saved runs\C8\deit_small_lora_unfrozen_8c\20251224-165354\best_model.pth
+[C8] Epoch 009/100 | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 | train_loss=0.6105 train_acc=93.56% | val_loss=0.5575 val_acc=96.03% val_macroF1=96.01% | ep_time=33.2s peakVRAM=2.62GB
+[ES] No improve 1/10
+[C8] Epoch 010/100 | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 | train_loss=0.6220 train_acc=92.86% | val_loss=0.5608 val_acc=95.95% val_macroF1=95.94% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 2/10
+[C8] Epoch 011/100 | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 | train_loss=0.6065 train_acc=93.51% | val_loss=0.5617 val_acc=96.13% val_macroF1=96.13% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 3/10
+[C8] Epoch 012/100 | lr_backbone=4.99e-05 lr_lora+head=4.99e-04 | train_loss=0.6213 train_acc=92.94% | val_loss=0.5506 val_acc=96.28% val_macroF1=96.27% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 4/10
+[C8] Epoch 013/100 | lr_backbone=4.99e-05 lr_lora+head=4.99e-04 | train_loss=0.6076 train_acc=93.61% | val_loss=0.5496 val_acc=96.28% val_macroF1=96.28% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 5/10
+[C8] Epoch 014/100 | lr_backbone=4.98e-05 lr_lora+head=4.98e-04 | train_loss=0.5932 train_acc=94.17% | val_loss=0.5509 val_acc=96.63% val_macroF1=96.64% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 6/10
+[C8] Epoch 015/100 | lr_backbone=4.96e-05 lr_lora+head=4.96e-04 | train_loss=0.5924 train_acc=94.28% | val_loss=0.5650 val_acc=96.35% val_macroF1=96.34% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 7/10
+[C8] Epoch 016/100 | lr_backbone=4.95e-05 lr_lora+head=4.95e-04 | train_loss=0.5905 train_acc=94.30% | val_loss=0.5583 val_acc=96.06% val_macroF1=96.06% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 8/10
+[C8] Epoch 017/100 | lr_backbone=4.93e-05 lr_lora+head=4.93e-04 | train_loss=0.5939 train_acc=94.24% | val_loss=0.5434 val_acc=96.56% val_macroF1=96.55% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 9/10
+[C8] Epoch 018/100 | lr_backbone=4.90e-05 lr_lora+head=4.90e-04 | train_loss=0.5871 train_acc=94.43% | val_loss=0.5534 val_acc=96.46% val_macroF1=96.46% | ep_time=33.1s peakVRAM=2.62GB
+[ES] No improve 10/10
+[C8] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.6308
+
+------------------------------------------------------------------------------------------
+[C8] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         AMD     1.0000    1.0000    1.0000       350
+         CNV     0.9483    0.9429    0.9456       350
+         CSR     1.0000    1.0000    1.0000       350
+         DME     0.9625    0.9570    0.9598       349
+          DR     1.0000    0.9943    0.9971       350
+      DRUSEN     0.9233    0.8968    0.9099       349
+          MH     0.9943    1.0000    0.9972       350
+      NORMAL     0.9201    0.9570    0.9382       349
+
+    accuracy                         0.9685      2797
+   macro avg     0.9686    0.9685    0.9685      2797
+weighted avg     0.9686    0.9685    0.9685      2797
+
+
+==========================================================================================
+[C8] TEST summary (uncalibrated): Acc=96.85% MacroF1=96.85% ECE=0.0881 NLL=0.1790 Brier=0.0575
+[C8] Macro-AUC=0.9982
+[C8] TEMP-SCALED (T=0.631): ECE=0.0072 NLL=0.1064 Brier=0.0503
+[C8] Params trainable: 21,820,048 (100.0000%)
+[C8] Adapter-only size: 0.59 MB
+[C8] Inference latency (B=1): 12.494 ms/img (80.0 imgs/s), peakVRAM=0.24GB
+[C8] Inference throughput (B=64): 2566.6 imgs/s, peakVRAM=0.43GB
+[C8] Outputs saved in: runs\C8\deit_small_lora_unfrozen_8c\20251224-165354
+==========================================================================================
+

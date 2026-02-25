@@ -1,0 +1,63 @@
+{
+  "dataset": "OCT2017",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DME",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "resnet50",
+  "method": "ResNet-50 Full Fine-Tuning (unfrozen)",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.0001
+  },
+  "params": {
+    "total": 23516228,
+    "trainable": 23516228,
+    "trainable_pct": 100.0
+  },
+  "training": {
+    "epochs_ran": 59,
+    "best_val_loss": 0.46426329845056746,
+    "best_val_macro_f1": 0.9781083788388387,
+    "total_train_time_sec": 12920.343121290207,
+    "mean_epoch_time_sec": 210.83064443782226,
+    "peak_train_vram_gb": 4.0900726318359375
+  },
+  "test_uncalibrated": {
+    "acc": 0.933,
+    "macro_f1": 0.9328024931669194,
+    "macro_auc": 0.9920026666666666,
+    "ece": 0.07496168306469916,
+    "nll": 0.22685100138187408,
+    "brier": 0.10030903928966714
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.5388038754463196,
+    "ece": 0.05049770182371144,
+    "nll": 0.23921310901641846,
+    "brier": 0.10932670130405121
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 12.431921334549164,
+      "std_batch_ms": 0.9147069337217072,
+      "ms_per_img": 12.431921334549164,
+      "imgs_per_s": 80.43808942234305,
+      "peak_vram_gb": 0.24761343002319336
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 45.123823999116816,
+      "std_batch_ms": 0.5183225116690258,
+      "ms_per_img": 0.7050597499862002,
+      "imgs_per_s": 1418.31951124649,
+      "peak_vram_gb": 0.5997185707092285
+    }
+  }
+}

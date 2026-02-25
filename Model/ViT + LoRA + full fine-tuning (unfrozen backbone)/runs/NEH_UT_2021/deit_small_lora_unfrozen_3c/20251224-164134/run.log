@@ -1,0 +1,97 @@
+
+=== DATASET RUN START: NEH_UT_2021 ===
+
+[DATA] Split/Class counts:
+class   CNV  DRUSEN  NORMAL  TOTAL
+split                             
+test    544     687    1292   2523
+train  2188    3525    5791  11504
+val     471     690    1475   2636
+[DATA] Train imbalance: min=2188, max=5791, ratio=2.65
+[RAM] Caching split='train' images=11504 as uint8 tensors. Estimated RAM ~ 1.61 GB
+[RAM] Cached 11504 images for split='train'
+[RAM] Caching split='val' images=2636 as uint8 tensors. Estimated RAM ~ 0.37 GB
+[RAM] Cached 2636 images for split='val'
+[RAM] Caching split='test' images=2523 as uint8 tensors. Estimated RAM ~ 0.35 GB
+[RAM] Cached 2523 images for split='test'
+[IMB] Train class counts: [2188, 3525, 5791]
+[IMB] Class-Balanced weights (mean~1): [1.4228, 0.9412, 0.636]
+[IMB] Sampler disabled. min=2188 max=5791 ratio=2.65
+
+[DATASET] NEH_UT_2021
+ - root: D:\AIUB\DSP\Code\Datasets\NEH_UT_2021RetinalOCTDataset\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (3): ['CNV', 'DRUSEN', 'NORMAL']
+ - split sizes: train=11504 val=2636 test=2523
+
+[MODEL] Creating deit_small_distilled_patch16_224 + Manual LoRA | backbone=UNFROZEN (LoRA + full FT)
+[PARAMS] total=21,816,198 trainable=21,816,198 (100.0000%)
+[WARN] save_adapter_only=True but backbone is UNFROZEN. Adapter-only file will NOT reproduce the full trained model. Use best_model.pth for deployment/repro.
+[IMB] Train class counts: [2188, 3525, 5791]
+[IMB] Class-Balanced weights (mean~1): [1.4228, 0.9412, 0.636]
+[IMB] Sampler disabled. min=2188 max=5791 ratio=2.65
+[OPT] AdamW param-groups | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 (backbone_lr_mult=0.1)
+[NEH_UT_2021] Epoch 001/100 | lr_backbone=1.00e-05 lr_lora+head=1.00e-04 | train_loss=0.8132 train_acc=67.85% | val_loss=0.6859 val_acc=83.69% val_macroF1=81.22% | ep_time=21.5s peakVRAM=2.62GB
+[ES] New best val_loss=0.685873 -> saved runs\NEH_UT_2021\deit_small_lora_unfrozen_3c\20251224-164134\best_model.pth
+[NEH_UT_2021] Epoch 002/100 | lr_backbone=1.50e-05 lr_lora+head=1.50e-04 | train_loss=0.6677 train_acc=79.08% | val_loss=0.6623 val_acc=82.28% val_macroF1=83.22% | ep_time=21.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.662347 -> saved runs\NEH_UT_2021\deit_small_lora_unfrozen_3c\20251224-164134\best_model.pth
+[NEH_UT_2021] Epoch 003/100 | lr_backbone=2.00e-05 lr_lora+head=2.00e-04 | train_loss=0.6372 train_acc=80.95% | val_loss=0.6166 val_acc=86.46% val_macroF1=86.04% | ep_time=21.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.616611 -> saved runs\NEH_UT_2021\deit_small_lora_unfrozen_3c\20251224-164134\best_model.pth
+[NEH_UT_2021] Epoch 004/100 | lr_backbone=2.50e-05 lr_lora+head=2.50e-04 | train_loss=0.6168 train_acc=82.78% | val_loss=0.5810 val_acc=88.81% val_macroF1=87.94% | ep_time=21.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.580981 -> saved runs\NEH_UT_2021\deit_small_lora_unfrozen_3c\20251224-164134\best_model.pth
+[NEH_UT_2021] Epoch 005/100 | lr_backbone=3.00e-05 lr_lora+head=3.00e-04 | train_loss=0.6063 train_acc=82.68% | val_loss=0.5831 val_acc=88.32% val_macroF1=88.23% | ep_time=21.3s peakVRAM=2.62GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 006/100 | lr_backbone=3.50e-05 lr_lora+head=3.50e-04 | train_loss=0.6061 train_acc=83.05% | val_loss=0.6077 val_acc=86.99% val_macroF1=85.45% | ep_time=21.3s peakVRAM=2.62GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 007/100 | lr_backbone=4.00e-05 lr_lora+head=4.00e-04 | train_loss=0.5726 train_acc=85.49% | val_loss=0.5720 val_acc=89.19% val_macroF1=88.65% | ep_time=21.3s peakVRAM=2.62GB
+[ES] New best val_loss=0.571970 -> saved runs\NEH_UT_2021\deit_small_lora_unfrozen_3c\20251224-164134\best_model.pth
+[NEH_UT_2021] Epoch 008/100 | lr_backbone=4.50e-05 lr_lora+head=4.50e-04 | train_loss=0.5969 train_acc=83.15% | val_loss=0.6085 val_acc=87.41% val_macroF1=85.79% | ep_time=21.3s peakVRAM=2.62GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 009/100 | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 | train_loss=0.6046 train_acc=83.31% | val_loss=0.5996 val_acc=86.95% val_macroF1=86.07% | ep_time=21.0s peakVRAM=2.62GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 010/100 | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 | train_loss=0.5690 train_acc=85.23% | val_loss=0.6418 val_acc=83.95% val_macroF1=83.97% | ep_time=21.0s peakVRAM=2.62GB
+[ES] No improve 3/10
+[NEH_UT_2021] Epoch 011/100 | lr_backbone=5.00e-05 lr_lora+head=5.00e-04 | train_loss=0.5624 train_acc=85.44% | val_loss=0.6086 val_acc=87.59% val_macroF1=86.53% | ep_time=20.9s peakVRAM=2.62GB
+[ES] No improve 4/10
+[NEH_UT_2021] Epoch 012/100 | lr_backbone=4.99e-05 lr_lora+head=4.99e-04 | train_loss=0.5586 train_acc=85.73% | val_loss=0.6369 val_acc=84.64% val_macroF1=85.66% | ep_time=21.0s peakVRAM=2.62GB
+[ES] No improve 5/10
+[NEH_UT_2021] Epoch 013/100 | lr_backbone=4.99e-05 lr_lora+head=4.99e-04 | train_loss=0.5489 train_acc=86.07% | val_loss=0.6011 val_acc=87.03% val_macroF1=86.27% | ep_time=20.9s peakVRAM=2.62GB
+[ES] No improve 6/10
+[NEH_UT_2021] Epoch 014/100 | lr_backbone=4.98e-05 lr_lora+head=4.98e-04 | train_loss=0.5471 train_acc=86.71% | val_loss=0.5924 val_acc=86.91% val_macroF1=86.68% | ep_time=20.9s peakVRAM=2.62GB
+[ES] No improve 7/10
+[NEH_UT_2021] Epoch 015/100 | lr_backbone=4.96e-05 lr_lora+head=4.96e-04 | train_loss=0.5528 train_acc=85.74% | val_loss=0.5979 val_acc=88.32% val_macroF1=87.79% | ep_time=20.9s peakVRAM=2.62GB
+[ES] No improve 8/10
+[NEH_UT_2021] Epoch 016/100 | lr_backbone=4.95e-05 lr_lora+head=4.95e-04 | train_loss=0.5369 train_acc=87.25% | val_loss=0.6098 val_acc=85.96% val_macroF1=85.58% | ep_time=20.9s peakVRAM=2.62GB
+[ES] No improve 9/10
+[NEH_UT_2021] Epoch 017/100 | lr_backbone=4.93e-05 lr_lora+head=4.93e-04 | train_loss=0.5323 train_acc=87.33% | val_loss=0.6193 val_acc=85.02% val_macroF1=84.54% | ep_time=21.0s peakVRAM=2.62GB
+[ES] No improve 10/10
+[NEH_UT_2021] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.6672
+
+------------------------------------------------------------------------------------------
+[NEH_UT_2021] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         CNV     0.9269    0.9320    0.9294       544
+      DRUSEN     0.8624    0.7205    0.7851       687
+      NORMAL     0.8795    0.9543    0.9154      1292
+
+    accuracy                         0.8859      2523
+   macro avg     0.8896    0.8689    0.8766      2523
+weighted avg     0.8850    0.8859    0.8829      2523
+
+
+==========================================================================================
+[NEH_UT_2021] TEST summary (uncalibrated): Acc=88.59% MacroF1=87.66% ECE=0.0815 NLL=0.3730 Brier=0.1911
+[NEH_UT_2021] Macro-AUC=0.9557
+[NEH_UT_2021] TEMP-SCALED (T=0.667): ECE=0.0169 NLL=0.3360 Brier=0.1792
+[NEH_UT_2021] Params trainable: 21,816,198 (100.0000%)
+[NEH_UT_2021] Adapter-only size: 0.58 MB
+[NEH_UT_2021] Inference latency (B=1): 12.713 ms/img (78.7 imgs/s), peakVRAM=0.24GB
+[NEH_UT_2021] Inference throughput (B=64): 2556.5 imgs/s, peakVRAM=0.42GB
+[NEH_UT_2021] Outputs saved in: runs\NEH_UT_2021\deit_small_lora_unfrozen_3c\20251224-164134
+==========================================================================================
+

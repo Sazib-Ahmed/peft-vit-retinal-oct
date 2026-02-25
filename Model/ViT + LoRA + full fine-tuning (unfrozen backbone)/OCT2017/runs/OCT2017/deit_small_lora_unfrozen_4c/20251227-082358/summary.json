@@ -1,0 +1,72 @@
+{
+  "dataset": "OCT2017",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DME",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.1,
+    "freeze_backbone": false,
+    "backbone_lr_mult": 0.1,
+    "merged_for_timing": true
+  },
+  "params": {
+    "total": 21816968,
+    "trainable": 21816968,
+    "trainable_pct": 100.0
+  },
+  "storage": {
+    "best_model_path": "runs\\OCT2017\\deit_small_lora_unfrozen_4c\\20251227-082358\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 611321,
+    "adapter_only_mb": 0.5830011367797852
+  },
+  "training": {
+    "epochs_ran": 85,
+    "best_val_loss": 0.4631633682372852,
+    "best_val_macro_f1": 0.9813559870994906,
+    "total_train_time_sec": 14089.364444494247,
+    "mean_epoch_time_sec": 159.9570482674767,
+    "peak_train_vram_gb": 2.623241901397705
+  },
+  "test_uncalibrated": {
+    "acc": 0.917,
+    "macro_f1": 0.9132005433546407,
+    "macro_auc": 0.9865346666666668,
+    "ece": 0.07071393114328388,
+    "nll": 0.3011724650859833,
+    "brier": 0.13896648753893873
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.5515377521514893,
+    "ece": 0.07214624243974684,
+    "nll": 0.37015074491500854,
+    "brier": 0.15470806672745444
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 10.912829999991422,
+      "std_batch_ms": 0.2786797935331326,
+      "ms_per_img": 10.912829999991422,
+      "imgs_per_s": 91.63525868182553,
+      "peak_vram_gb": 0.2279829978942871
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 24.31447399991157,
+      "std_batch_ms": 0.16415804471801884,
+      "ms_per_img": 0.3799136562486183,
+      "imgs_per_s": 2632.177031682148,
+      "peak_vram_gb": 0.41710758209228516
+    }
+  }
+}

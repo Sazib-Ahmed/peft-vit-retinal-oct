@@ -1,0 +1,10 @@
+split,class,count
+train,AMD,506
+train,DME,770
+train,NORMAL,985
+val,AMD,108
+val,DME,166
+val,NORMAL,211
+test,AMD,109
+test,DME,165
+test,NORMAL,211

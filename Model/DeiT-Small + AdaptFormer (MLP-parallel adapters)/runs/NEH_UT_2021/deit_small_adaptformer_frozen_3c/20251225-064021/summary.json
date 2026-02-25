@@ -1,0 +1,72 @@
+{
+  "dataset": "NEH_UT_2021",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "AdaptFormer (AdaptMLP in MLP, frozen backbone)",
+  "adaptformer": {
+    "mid_dim": 64,
+    "scale": 0.1,
+    "dropout": 0.0,
+    "layers": [
+      0,
+      null
+    ]
+  },
+  "params": {
+    "total": 22263942,
+    "trainable": 597510,
+    "trainable_pct": 2.683756542305042
+  },
+  "storage": {
+    "best_model_path": "runs\\NEH_UT_2021\\deit_small_adaptformer_frozen_3c\\20251225-064021\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 2406505,
+    "adapter_only_mb": 2.2950220108032227
+  },
+  "training": {
+    "epochs_ran": 28,
+    "best_val_loss": 0.5660828717380807,
+    "best_val_macro_f1": 0.887790723597202,
+    "total_train_time_sec": 459.7955279350281,
+    "mean_epoch_time_sec": 14.927213592188698,
+    "peak_train_vram_gb": 1.6415362358093262
+  },
+  "test_uncalibrated": {
+    "acc": 0.8870392390011891,
+    "macro_f1": 0.8735519947058151,
+    "macro_auc": 0.9609734894467911,
+    "ece": 0.07122145550051617,
+    "nll": 0.3532322347164154,
+    "brier": 0.18061782960057754
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.6871802806854248,
+    "ece": 0.011701585882200506,
+    "nll": 0.31968268752098083,
+    "brier": 0.1723420160993901
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 17.134546667026978,
+      "std_batch_ms": 2.216067161725002,
+      "ms_per_img": 17.134546667026978,
+      "imgs_per_s": 58.36162575134591,
+      "peak_vram_gb": 0.10856866836547852
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 27.402586666382074,
+      "std_batch_ms": 0.3798314004640438,
+      "ms_per_img": 0.4281654166622199,
+      "imgs_per_s": 2335.5459387531546,
+      "peak_vram_gb": 0.29599428176879883
+    }
+  }
+}

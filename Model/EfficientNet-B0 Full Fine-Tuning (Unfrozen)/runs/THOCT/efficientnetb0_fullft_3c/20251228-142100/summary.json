@@ -1,0 +1,62 @@
+{
+  "dataset": "THOCT",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+  "classes": [
+    "AMD",
+    "DME",
+    "NOR"
+  ],
+  "model": "efficientnet_b0",
+  "method": "EfficientNet-B0 Full Fine-Tuning (unfrozen)",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.0001
+  },
+  "params": {
+    "total": 4011391,
+    "trainable": 4011391,
+    "trainable_pct": 100.0
+  },
+  "training": {
+    "epochs_ran": 46,
+    "best_val_loss": 0.2941962297146137,
+    "best_val_macro_f1": 1.0,
+    "total_train_time_sec": 99.12070155143738,
+    "mean_epoch_time_sec": 1.9738950470219487,
+    "peak_train_vram_gb": 2.788954257965088
+  },
+  "test_uncalibrated": {
+    "acc": 1.0,
+    "macro_f1": 1.0,
+    "macro_auc": 1.0,
+    "ece": 0.06772342301332032,
+    "nll": 0.07051456719636917,
+    "brier": 0.007924386686367
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.2847873866558075,
+    "ece": 0.00011640787124633789,
+    "nll": 0.00011698112939484417,
+    "brier": 2.1188151690790445e-06
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 16.257309999999354,
+      "std_batch_ms": 1.2517856683345026,
+      "ms_per_img": 16.257309999999354,
+      "imgs_per_s": 61.51079114564708,
+      "peak_vram_gb": 0.061975955963134766
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 17.66795933331802,
+      "std_batch_ms": 0.35106287777098216,
+      "ms_per_img": 0.27606186458309406,
+      "imgs_per_s": 3622.37646083493,
+      "peak_vram_gb": 0.45376014709472656
+    }
+  }
+}

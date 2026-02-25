@@ -1,0 +1,71 @@
+{
+  "dataset": "NEH_UT_2021",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "Manual LoRA into qkv + full fine-tuning (unfrozen backbone)",
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.1,
+    "freeze_backbone": false,
+    "backbone_lr_mult": 0.1,
+    "merged_for_timing": true
+  },
+  "params": {
+    "total": 21816198,
+    "trainable": 21816198,
+    "trainable_pct": 100.0
+  },
+  "storage": {
+    "best_model_path": "runs\\NEH_UT_2021\\deit_small_lora_unfrozen_3c\\20251224-164134\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 608249,
+    "adapter_only_mb": 0.5800714492797852
+  },
+  "training": {
+    "epochs_ran": 17,
+    "best_val_loss": 0.571969704400064,
+    "best_val_macro_f1": 0.8865077943979142,
+    "total_train_time_sec": 386.8495466709137,
+    "mean_epoch_time_sec": 21.118476166444665,
+    "peak_train_vram_gb": 2.6247496604919434
+  },
+  "test_uncalibrated": {
+    "acc": 0.8858501783590963,
+    "macro_f1": 0.8766270762931784,
+    "macro_auc": 0.9557391835112359,
+    "ece": 0.08146031442446414,
+    "nll": 0.37300485372543335,
+    "brier": 0.1911139730108444
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.6672316789627075,
+    "ece": 0.016938954969743295,
+    "nll": 0.3360024690628052,
+    "brier": 0.17917529730067303
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 12.71335399998255,
+      "std_batch_ms": 1.9836044715507921,
+      "ms_per_img": 12.71335399998255,
+      "imgs_per_s": 78.65744948196775,
+      "peak_vram_gb": 0.23569917678833008
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 25.034554666805587,
+      "std_batch_ms": 0.32557608526474774,
+      "ms_per_img": 0.3911649166688373,
+      "imgs_per_s": 2556.4664860949338,
+      "peak_vram_gb": 0.42341041564941406
+    }
+  }
+}

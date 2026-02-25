@@ -1,0 +1,16 @@
+{
+  "dataset_root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+  "total_images_scanned": 16663,
+  "bad_or_unreadable_images": 0,
+  "exact_duplicate_groups": 0,
+  "exact_duplicate_images_excluding_canonicals": 0,
+  "exact_groups_cross_split": 0,
+  "visual_duplicate_groups": 0,
+  "visual_duplicate_images_excluding_canonicals": 0,
+  "visual_groups_cross_split": 0,
+  "reports_dir": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY\\dup_reports",
+  "exact_csv": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY\\dup_reports\\duplicates_exact_sha256.csv",
+  "visual_csv": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY\\dup_reports\\duplicates_visual_phash.csv",
+  "combined_csv": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY\\dup_reports\\duplicates_combined.csv",
+  "bad_csv": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY\\dup_reports\\bad_or_unreadable.csv"
+}

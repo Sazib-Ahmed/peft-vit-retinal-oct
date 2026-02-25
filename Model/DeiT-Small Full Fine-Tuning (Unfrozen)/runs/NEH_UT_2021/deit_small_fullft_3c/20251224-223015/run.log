@@ -1,0 +1,82 @@
+
+=== DATASET RUN START: NEH_UT_2021 ===
+
+[DATA] Split/Class counts:
+class   CNV  DRUSEN  NORMAL  TOTAL
+split                             
+test    544     687    1292   2523
+train  2188    3525    5791  11504
+val     471     690    1475   2636
+[DATA] Train imbalance: min=2188, max=5791, ratio=2.65
+[RAM] Caching split='train' images=11504 as uint8 tensors. Estimated RAM ~ 1.61 GB
+[RAM] Cached 11504 images for split='train'
+[RAM] Caching split='val' images=2636 as uint8 tensors. Estimated RAM ~ 0.37 GB
+[RAM] Cached 2636 images for split='val'
+[RAM] Caching split='test' images=2523 as uint8 tensors. Estimated RAM ~ 0.35 GB
+[RAM] Cached 2523 images for split='test'
+[IMB] Train class counts: [2188, 3525, 5791]
+[IMB] Class-Balanced weights (mean~1): [1.4228, 0.9412, 0.636]
+[IMB] Sampler disabled. min=2188 max=5791 ratio=2.65
+
+[DATASET] NEH_UT_2021
+ - root: D:\AIUB\DSP\Code\Datasets\NEH_UT_2021RetinalOCTDataset\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (3): ['CNV', 'DRUSEN', 'NORMAL']
+ - split sizes: train=11504 val=2636 test=2523
+
+[MODEL] Creating deit_small_distilled_patch16_224 (FULL fine-tuning, all params trainable)
+[PARAMS] total=21,668,742 trainable=21,668,742 (100.00%)
+[IMB] Train class counts: [2188, 3525, 5791]
+[IMB] Class-Balanced weights (mean~1): [1.4228, 0.9412, 0.636]
+[IMB] Sampler disabled. min=2188 max=5791 ratio=2.65
+[NEH_UT_2021] Epoch 001/100 | lr=1.00e-04 | train_loss=0.7701 train_acc=71.84% | val_loss=0.6029 val_acc=86.72% val_macroF1=85.61% | ep_time=18.6s peakVRAM=2.45GB
+[ES] New best val_loss=0.602949 -> saved runs\NEH_UT_2021\deit_small_fullft_3c\20251224-223015\best_model.pth
+[NEH_UT_2021] Epoch 002/100 | lr=1.50e-04 | train_loss=0.6891 train_acc=76.78% | val_loss=0.6097 val_acc=87.33% val_macroF1=87.48% | ep_time=18.4s peakVRAM=2.45GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 003/100 | lr=2.00e-04 | train_loss=0.7004 train_acc=76.25% | val_loss=0.6303 val_acc=86.57% val_macroF1=84.82% | ep_time=18.5s peakVRAM=2.45GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 004/100 | lr=2.50e-04 | train_loss=0.6909 train_acc=77.36% | val_loss=0.6093 val_acc=86.19% val_macroF1=84.59% | ep_time=18.4s peakVRAM=2.45GB
+[ES] No improve 3/10
+[NEH_UT_2021] Epoch 005/100 | lr=3.00e-04 | train_loss=0.7151 train_acc=74.90% | val_loss=0.6347 val_acc=85.74% val_macroF1=83.89% | ep_time=18.3s peakVRAM=2.45GB
+[ES] No improve 4/10
+[NEH_UT_2021] Epoch 006/100 | lr=3.50e-04 | train_loss=0.7141 train_acc=74.22% | val_loss=0.6507 val_acc=83.31% val_macroF1=83.18% | ep_time=18.3s peakVRAM=2.45GB
+[ES] No improve 5/10
+[NEH_UT_2021] Epoch 007/100 | lr=4.00e-04 | train_loss=0.7588 train_acc=71.44% | val_loss=0.6367 val_acc=85.51% val_macroF1=83.95% | ep_time=18.4s peakVRAM=2.45GB
+[ES] No improve 6/10
+[NEH_UT_2021] Epoch 008/100 | lr=4.50e-04 | train_loss=0.7519 train_acc=72.69% | val_loss=0.7095 val_acc=80.42% val_macroF1=79.08% | ep_time=18.3s peakVRAM=2.45GB
+[ES] No improve 7/10
+[NEH_UT_2021] Epoch 009/100 | lr=5.00e-04 | train_loss=0.7922 train_acc=69.51% | val_loss=0.6463 val_acc=84.26% val_macroF1=82.13% | ep_time=18.3s peakVRAM=2.45GB
+[ES] No improve 8/10
+[NEH_UT_2021] Epoch 010/100 | lr=5.00e-04 | train_loss=0.7888 train_acc=69.70% | val_loss=0.6778 val_acc=81.68% val_macroF1=78.67% | ep_time=18.3s peakVRAM=2.45GB
+[ES] No improve 9/10
+[NEH_UT_2021] Epoch 011/100 | lr=5.00e-04 | train_loss=0.7720 train_acc=70.31% | val_loss=0.6773 val_acc=83.16% val_macroF1=82.16% | ep_time=18.3s peakVRAM=2.45GB
+[ES] No improve 10/10
+[NEH_UT_2021] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.5662
+
+------------------------------------------------------------------------------------------
+[NEH_UT_2021] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         CNV     0.8344    0.9449    0.8862       544
+      DRUSEN     0.7564    0.7278    0.7418       687
+      NORMAL     0.9222    0.8893    0.9054      1292
+
+    accuracy                         0.8573      2523
+   macro avg     0.8377    0.8540    0.8445      2523
+weighted avg     0.8581    0.8573    0.8567      2523
+
+
+==========================================================================================
+[NEH_UT_2021] TEST summary (uncalibrated): Acc=85.73% MacroF1=84.45% ECE=0.1123 NLL=0.4299 Brier=0.2291
+[NEH_UT_2021] Macro-AUC=0.9573
+[NEH_UT_2021] TEMP-SCALED (T=0.566): ECE=0.0167 NLL=0.3717 Brier=0.2057
+[NEH_UT_2021] Params trainable: 21,668,742 (100.00%)
+[NEH_UT_2021] Inference latency (B=1): 11.931 ms/img (83.8 imgs/s), peakVRAM=0.24GB
+[NEH_UT_2021] Inference throughput (B=64): 2567.7 imgs/s, peakVRAM=0.42GB
+[NEH_UT_2021] Outputs saved in: runs\NEH_UT_2021\deit_small_fullft_3c\20251224-223015
+==========================================================================================
+

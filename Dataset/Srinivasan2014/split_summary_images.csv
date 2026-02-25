@@ -1,0 +1,4 @@
+split,AMD,DME,NORMAL
+test,109,165,211
+train,506,770,985
+val,108,166,211

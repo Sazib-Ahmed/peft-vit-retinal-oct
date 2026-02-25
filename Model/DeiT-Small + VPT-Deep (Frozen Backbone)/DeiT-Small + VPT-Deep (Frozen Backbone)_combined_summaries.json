@@ -1,0 +1,1500 @@
+{
+  "meta": {
+    "created_utc": "2025-12-27T04:08:27Z",
+    "search_root": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)",
+    "output_file": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\DeiT-Small + VPT-Deep (Frozen Backbone)_combined_summaries.json",
+    "summary_files_found": 5,
+    "runs_loaded": 5,
+    "runs_failed": 0,
+    "note": "Each run includes (source, facts, raw). facts is normalized for AI; raw preserves original Summary.json."
+  },
+  "runs": [
+    {
+      "source": {
+        "relative_path": "OCT2017/runs/OCT2017/deit_small_vptdeep_frozen_4c/20251225-190809/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\OCT2017\\runs\\OCT2017\\deit_small_vptdeep_frozen_4c\\20251225-190809\\summary.json"
+      },
+      "facts": {
+        "dataset": "OCT2017",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "classes": [
+          "CNV",
+          "DME",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "num_classes": 4,
+        "lora": null,
+        "params": {
+          "total": 21761672,
+          "trainable": 95240,
+          "trainable_pct": 0.4376501952607318
+        },
+        "storage": {
+          "best_model_path": "runs\\OCT2017\\deit_small_vptdeep_frozen_4c\\20251225-190809\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.3688058853149414,
+          "adapter_only_bytes": 386721
+        },
+        "training": {
+          "epochs_ran": 40,
+          "best_val_loss": 0.4956393837928772,
+          "best_val_macro_f1": 0.9492539827221631,
+          "total_train_time_sec": 5746.060760259628,
+          "mean_epoch_time_sec": 138.04023796319962,
+          "peak_train_vram_gb": 1.734304428100586
+        },
+        "test_uncalibrated": {
+          "acc": 0.896,
+          "macro_f1": 0.8959165356311541,
+          "macro_auc": 0.9957253333333334,
+          "ece": 0.08502405136823654,
+          "nll": 0.3109373152256012,
+          "brier": 0.15415475545484966
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.5476254820823669,
+          "ece": 0.06101900130510332,
+          "nll": 0.29718244075775146,
+          "brier": 0.1649000557257936
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.410318666137755,
+            "std_batch_ms": 0.5415757978446478,
+            "ms_per_img": 13.410318666137755,
+            "imgs_per_s": 74.56944349317281,
+            "peak_vram_gb": 0.10320281982421875
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.075786667487893,
+            "std_batch_ms": 0.5423672037384287,
+            "ms_per_img": 0.46993416667949833,
+            "imgs_per_s": 2127.957639398486,
+            "peak_vram_gb": 0.318662166595459
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 13.410318666137755,
+          "b1_imgs_per_s": 74.56944349317281,
+          "b64_ms_per_img": 0.46993416667949833,
+          "b64_imgs_per_s": 2127.957639398486
+        }
+      },
+      "raw": {
+        "dataset": "OCT2017",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+        "classes": [
+          "CNV",
+          "DME",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "vpt": {
+          "num_prompts_per_layer": 20,
+          "prompt_dropout": 0.0,
+          "init_std": 0.02
+        },
+        "params": {
+          "total": 21761672,
+          "trainable": 95240,
+          "trainable_pct": 0.4376501952607318
+        },
+        "storage": {
+          "best_model_path": "runs\\OCT2017\\deit_small_vptdeep_frozen_4c\\20251225-190809\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 386721,
+          "adapter_only_mb": 0.3688058853149414
+        },
+        "training": {
+          "epochs_ran": 40,
+          "best_val_loss": 0.4956393837928772,
+          "best_val_macro_f1": 0.9492539827221631,
+          "total_train_time_sec": 5746.060760259628,
+          "mean_epoch_time_sec": 138.04023796319962,
+          "peak_train_vram_gb": 1.734304428100586
+        },
+        "test_uncalibrated": {
+          "acc": 0.896,
+          "macro_f1": 0.8959165356311541,
+          "macro_auc": 0.9957253333333334,
+          "ece": 0.08502405136823654,
+          "nll": 0.3109373152256012,
+          "brier": 0.15415475545484966
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.5476254820823669,
+          "ece": 0.06101900130510332,
+          "nll": 0.29718244075775146,
+          "brier": 0.1649000557257936
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.410318666137755,
+            "std_batch_ms": 0.5415757978446478,
+            "ms_per_img": 13.410318666137755,
+            "imgs_per_s": 74.56944349317281,
+            "peak_vram_gb": 0.10320281982421875
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.075786667487893,
+            "std_batch_ms": 0.5423672037384287,
+            "ms_per_img": 0.46993416667949833,
+            "imgs_per_s": 2127.957639398486,
+            "peak_vram_gb": 0.318662166595459
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/C8/deit_small_vptdeep_frozen_8c/20251224-233334/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\summary.json"
+      },
+      "facts": {
+        "dataset": "C8",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "classes": [
+          "AMD",
+          "CNV",
+          "CSR",
+          "DME",
+          "DR",
+          "DRUSEN",
+          "MH",
+          "NORMAL"
+        ],
+        "num_classes": 8,
+        "lora": null,
+        "params": {
+          "total": 21764752,
+          "trainable": 98320,
+          "trainable_pct": 0.45173958334099096
+        },
+        "storage": {
+          "best_model_path": "runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.3805246353149414,
+          "adapter_only_bytes": 399009
+        },
+        "training": {
+          "epochs_ran": 46,
+          "best_val_loss": 0.5550428313505594,
+          "best_val_macro_f1": 0.9615175356752093,
+          "total_train_time_sec": 1394.794669866562,
+          "mean_epoch_time_sec": 28.671538150828816,
+          "peak_train_vram_gb": 1.734703540802002
+        },
+        "test_uncalibrated": {
+          "acc": 0.9603146228101538,
+          "macro_f1": 0.9600976141748976,
+          "macro_auc": 0.9978249348066242,
+          "ece": 0.08142514075600424,
+          "nll": 0.1897648721933365,
+          "brier": 0.06635789944930445
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.6329392790794373,
+          "ece": 0.010585884899593554,
+          "nll": 0.12181954085826874,
+          "brier": 0.06078881081721569
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.393144000049992,
+            "std_batch_ms": 0.48876895684575267,
+            "ms_per_img": 13.393144000049992,
+            "imgs_per_s": 74.66506744019682,
+            "peak_vram_gb": 0.10372304916381836
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.162282666036237,
+            "std_batch_ms": 0.47911762783916756,
+            "ms_per_img": 0.4712856666568162,
+            "imgs_per_s": 2121.8553220465037,
+            "peak_vram_gb": 0.3194265365600586
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 13.393144000049992,
+          "b1_imgs_per_s": 74.66506744019682,
+          "b64_ms_per_img": 0.4712856666568162,
+          "b64_imgs_per_s": 2121.8553220465037
+        }
+      },
+      "raw": {
+        "dataset": "C8",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+        "classes": [
+          "AMD",
+          "CNV",
+          "CSR",
+          "DME",
+          "DR",
+          "DRUSEN",
+          "MH",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "vpt": {
+          "num_prompts_per_layer": 20,
+          "prompt_dropout": 0.0,
+          "init_std": 0.02
+        },
+        "params": {
+          "total": 21764752,
+          "trainable": 98320,
+          "trainable_pct": 0.45173958334099096
+        },
+        "storage": {
+          "best_model_path": "runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 399009,
+          "adapter_only_mb": 0.3805246353149414
+        },
+        "training": {
+          "epochs_ran": 46,
+          "best_val_loss": 0.5550428313505594,
+          "best_val_macro_f1": 0.9615175356752093,
+          "total_train_time_sec": 1394.794669866562,
+          "mean_epoch_time_sec": 28.671538150828816,
+          "peak_train_vram_gb": 1.734703540802002
+        },
+        "test_uncalibrated": {
+          "acc": 0.9603146228101538,
+          "macro_f1": 0.9600976141748976,
+          "macro_auc": 0.9978249348066242,
+          "ece": 0.08142514075600424,
+          "nll": 0.1897648721933365,
+          "brier": 0.06635789944930445
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.6329392790794373,
+          "ece": 0.010585884899593554,
+          "nll": 0.12181954085826874,
+          "brier": 0.06078881081721569
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.393144000049992,
+            "std_batch_ms": 0.48876895684575267,
+            "ms_per_img": 13.393144000049992,
+            "imgs_per_s": 74.66506744019682,
+            "peak_vram_gb": 0.10372304916381836
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.162282666036237,
+            "std_batch_ms": 0.47911762783916756,
+            "ms_per_img": 0.4712856666568162,
+            "imgs_per_s": 2121.8553220465037,
+            "peak_vram_gb": 0.3194265365600586
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/NEH_UT_2021/deit_small_vptdeep_frozen_3c/20251224-231443/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\summary.json"
+      },
+      "facts": {
+        "dataset": "NEH_UT_2021",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "classes": [
+          "CNV",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "num_classes": 3,
+        "lora": null,
+        "params": {
+          "total": 21760902,
+          "trainable": 94470,
+          "trainable_pct": 0.4341272250571231
+        },
+        "storage": {
+          "best_model_path": "runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.3658761978149414,
+          "adapter_only_bytes": 383649
+        },
+        "training": {
+          "epochs_ran": 43,
+          "best_val_loss": 0.5732420572561632,
+          "best_val_macro_f1": 0.882786522687612,
+          "total_train_time_sec": 856.1063275337219,
+          "mean_epoch_time_sec": 18.324076674705328,
+          "peak_train_vram_gb": 1.7353663444519043
+        },
+        "test_uncalibrated": {
+          "acc": 0.890210067380103,
+          "macro_f1": 0.878193919013591,
+          "macro_auc": 0.9554138890013032,
+          "ece": 0.06859057562907821,
+          "nll": 0.3542410433292389,
+          "brier": 0.1830412706898194
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.7185686230659485,
+          "ece": 0.01876100189053629,
+          "nll": 0.32701075077056885,
+          "brier": 0.17544175996989547
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 14.464680666521113,
+            "std_batch_ms": 1.9662307709120264,
+            "ms_per_img": 14.464680666521113,
+            "imgs_per_s": 69.13391474410676,
+            "peak_vram_gb": 0.1035919189453125
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.69516600002923,
+            "std_batch_ms": 1.7711966868636302,
+            "ms_per_img": 0.4796119687504567,
+            "imgs_per_s": 2085.018859319381,
+            "peak_vram_gb": 0.31929540634155273
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 14.464680666521113,
+          "b1_imgs_per_s": 69.13391474410676,
+          "b64_ms_per_img": 0.4796119687504567,
+          "b64_imgs_per_s": 2085.018859319381
+        }
+      },
+      "raw": {
+        "dataset": "NEH_UT_2021",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+        "classes": [
+          "CNV",
+          "DRUSEN",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "vpt": {
+          "num_prompts_per_layer": 20,
+          "prompt_dropout": 0.0,
+          "init_std": 0.02
+        },
+        "params": {
+          "total": 21760902,
+          "trainable": 94470,
+          "trainable_pct": 0.4341272250571231
+        },
+        "storage": {
+          "best_model_path": "runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 383649,
+          "adapter_only_mb": 0.3658761978149414
+        },
+        "training": {
+          "epochs_ran": 43,
+          "best_val_loss": 0.5732420572561632,
+          "best_val_macro_f1": 0.882786522687612,
+          "total_train_time_sec": 856.1063275337219,
+          "mean_epoch_time_sec": 18.324076674705328,
+          "peak_train_vram_gb": 1.7353663444519043
+        },
+        "test_uncalibrated": {
+          "acc": 0.890210067380103,
+          "macro_f1": 0.878193919013591,
+          "macro_auc": 0.9554138890013032,
+          "ece": 0.06859057562907821,
+          "nll": 0.3542410433292389,
+          "brier": 0.1830412706898194
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.7185686230659485,
+          "ece": 0.01876100189053629,
+          "nll": 0.32701075077056885,
+          "brier": 0.17544175996989547
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 14.464680666521113,
+            "std_batch_ms": 1.9662307709120264,
+            "ms_per_img": 14.464680666521113,
+            "imgs_per_s": 69.13391474410676,
+            "peak_vram_gb": 0.1035919189453125
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.69516600002923,
+            "std_batch_ms": 1.7711966868636302,
+            "ms_per_img": 0.4796119687504567,
+            "imgs_per_s": 2085.018859319381,
+            "peak_vram_gb": 0.31929540634155273
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/Srinivasan_2014/deit_small_vptdeep_frozen_3c/20251224-230558/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\Srinivasan_2014\\deit_small_vptdeep_frozen_3c\\20251224-230558\\summary.json"
+      },
+      "facts": {
+        "dataset": "Srinivasan_2014",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "classes": [
+          "AMD",
+          "DME",
+          "NORMAL"
+        ],
+        "num_classes": 3,
+        "lora": null,
+        "params": {
+          "total": 21760902,
+          "trainable": 94470,
+          "trainable_pct": 0.4341272250571231
+        },
+        "storage": {
+          "best_model_path": "runs\\Srinivasan_2014\\deit_small_vptdeep_frozen_3c\\20251224-230558\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.3658761978149414,
+          "adapter_only_bytes": 383649
+        },
+        "training": {
+          "epochs_ran": 84,
+          "best_val_loss": 0.330485013158051,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 327.7444887161255,
+          "mean_epoch_time_sec": 3.5749752748580206,
+          "peak_train_vram_gb": 1.7346348762512207
+        },
+        "test_uncalibrated": {
+          "acc": 0.9979381443298969,
+          "macro_f1": 0.9976758796250903,
+          "macro_auc": 1.0,
+          "ece": 0.08100723532057301,
+          "nll": 0.08740063011646271,
+          "brier": 0.013883057034853716
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.27597472071647644,
+          "ece": 0.0019170163832988862,
+          "nll": 0.014380255714058876,
+          "brier": 0.004125004423958346
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 14.012200666669136,
+            "std_batch_ms": 1.4820696131251343,
+            "ms_per_img": 14.012200666669136,
+            "imgs_per_s": 71.36637732991528,
+            "peak_vram_gb": 0.10355234146118164
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.593100000017632,
+            "std_batch_ms": 0.5723701781066327,
+            "ms_per_img": 0.4780171875002755,
+            "imgs_per_s": 2091.9749878228463,
+            "peak_vram_gb": 0.3192558288574219
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 14.012200666669136,
+          "b1_imgs_per_s": 71.36637732991528,
+          "b64_ms_per_img": 0.4780171875002755,
+          "b64_imgs_per_s": 2091.9749878228463
+        }
+      },
+      "raw": {
+        "dataset": "Srinivasan_2014",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+        "classes": [
+          "AMD",
+          "DME",
+          "NORMAL"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "vpt": {
+          "num_prompts_per_layer": 20,
+          "prompt_dropout": 0.0,
+          "init_std": 0.02
+        },
+        "params": {
+          "total": 21760902,
+          "trainable": 94470,
+          "trainable_pct": 0.4341272250571231
+        },
+        "storage": {
+          "best_model_path": "runs\\Srinivasan_2014\\deit_small_vptdeep_frozen_3c\\20251224-230558\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 383649,
+          "adapter_only_mb": 0.3658761978149414
+        },
+        "training": {
+          "epochs_ran": 84,
+          "best_val_loss": 0.330485013158051,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 327.7444887161255,
+          "mean_epoch_time_sec": 3.5749752748580206,
+          "peak_train_vram_gb": 1.7346348762512207
+        },
+        "test_uncalibrated": {
+          "acc": 0.9979381443298969,
+          "macro_f1": 0.9976758796250903,
+          "macro_auc": 1.0,
+          "ece": 0.08100723532057301,
+          "nll": 0.08740063011646271,
+          "brier": 0.013883057034853716
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.27597472071647644,
+          "ece": 0.0019170163832988862,
+          "nll": 0.014380255714058876,
+          "brier": 0.004125004423958346
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 14.012200666669136,
+            "std_batch_ms": 1.4820696131251343,
+            "ms_per_img": 14.012200666669136,
+            "imgs_per_s": 71.36637732991528,
+            "peak_vram_gb": 0.10355234146118164
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.593100000017632,
+            "std_batch_ms": 0.5723701781066327,
+            "ms_per_img": 0.4780171875002755,
+            "imgs_per_s": 2091.9749878228463,
+            "peak_vram_gb": 0.3192558288574219
+          }
+        }
+      }
+    },
+    {
+      "source": {
+        "relative_path": "runs/THOCT/deit_small_vptdeep_frozen_3c/20251224-230341/summary.json",
+        "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\THOCT\\deit_small_vptdeep_frozen_3c\\20251224-230341\\summary.json"
+      },
+      "facts": {
+        "dataset": "THOCT",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "classes": [
+          "AMD",
+          "DME",
+          "NOR"
+        ],
+        "num_classes": 3,
+        "lora": null,
+        "params": {
+          "total": 21760902,
+          "trainable": 94470,
+          "trainable_pct": 0.4341272250571231
+        },
+        "storage": {
+          "best_model_path": "runs\\THOCT\\deit_small_vptdeep_frozen_3c\\20251224-230341\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_mb": 0.3658761978149414,
+          "adapter_only_bytes": 383649
+        },
+        "training": {
+          "epochs_ran": 46,
+          "best_val_loss": 0.29477232006879955,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 98.65596723556519,
+          "mean_epoch_time_sec": 1.9187121235806008,
+          "peak_train_vram_gb": 1.7351479530334473
+        },
+        "test_uncalibrated": {
+          "acc": 0.9923076923076923,
+          "macro_f1": 0.9923360211997266,
+          "macro_auc": 0.9998891144195522,
+          "ece": 0.07037698076321527,
+          "nll": 0.08222157508134842,
+          "brier": 0.016334773950566844
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.1389695256948471,
+          "ece": 0.006725707191687356,
+          "nll": 0.024786965921521187,
+          "brier": 0.013627467241469522
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.519543333241018,
+            "std_batch_ms": 1.06841478535172,
+            "ms_per_img": 13.519543333241018,
+            "imgs_per_s": 73.96699543402933,
+            "peak_vram_gb": 0.1031794548034668
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.216229999932693,
+            "std_batch_ms": 0.3446992301196107,
+            "ms_per_img": 0.47212859374894833,
+            "imgs_per_s": 2118.0670123355085,
+            "peak_vram_gb": 0.31863880157470703
+          }
+        },
+        "inference_quick": {
+          "b1_ms_per_img": 13.519543333241018,
+          "b1_imgs_per_s": 73.96699543402933,
+          "b64_ms_per_img": 0.47212859374894833,
+          "b64_imgs_per_s": 2118.0670123355085
+        }
+      },
+      "raw": {
+        "dataset": "THOCT",
+        "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+        "classes": [
+          "AMD",
+          "DME",
+          "NOR"
+        ],
+        "model": "deit_small_distilled_patch16_224",
+        "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+        "vpt": {
+          "num_prompts_per_layer": 20,
+          "prompt_dropout": 0.0,
+          "init_std": 0.02
+        },
+        "params": {
+          "total": 21760902,
+          "trainable": 94470,
+          "trainable_pct": 0.4341272250571231
+        },
+        "storage": {
+          "best_model_path": "runs\\THOCT\\deit_small_vptdeep_frozen_3c\\20251224-230341\\best_model.pth",
+          "adapter_only_enabled": true,
+          "adapter_only_bytes": 383649,
+          "adapter_only_mb": 0.3658761978149414
+        },
+        "training": {
+          "epochs_ran": 46,
+          "best_val_loss": 0.29477232006879955,
+          "best_val_macro_f1": 1.0,
+          "total_train_time_sec": 98.65596723556519,
+          "mean_epoch_time_sec": 1.9187121235806008,
+          "peak_train_vram_gb": 1.7351479530334473
+        },
+        "test_uncalibrated": {
+          "acc": 0.9923076923076923,
+          "macro_f1": 0.9923360211997266,
+          "macro_auc": 0.9998891144195522,
+          "ece": 0.07037698076321527,
+          "nll": 0.08222157508134842,
+          "brier": 0.016334773950566844
+        },
+        "test_temp_scaled": {
+          "enabled": true,
+          "T": 0.1389695256948471,
+          "ece": 0.006725707191687356,
+          "nll": 0.024786965921521187,
+          "brier": 0.013627467241469522
+        },
+        "inference_benchmark": {
+          "latency_batch1": {
+            "batch": 1,
+            "mean_batch_ms": 13.519543333241018,
+            "std_batch_ms": 1.06841478535172,
+            "ms_per_img": 13.519543333241018,
+            "imgs_per_s": 73.96699543402933,
+            "peak_vram_gb": 0.1031794548034668
+          },
+          "throughput_batchN": {
+            "batch": 64,
+            "mean_batch_ms": 30.216229999932693,
+            "std_batch_ms": 0.3446992301196107,
+            "ms_per_img": 0.47212859374894833,
+            "imgs_per_s": 2118.0670123355085,
+            "peak_vram_gb": 0.31863880157470703
+          }
+        }
+      }
+    }
+  ],
+  "by_dataset": {
+    "OCT2017": [
+      {
+        "source": {
+          "relative_path": "OCT2017/runs/OCT2017/deit_small_vptdeep_frozen_4c/20251225-190809/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\OCT2017\\runs\\OCT2017\\deit_small_vptdeep_frozen_4c\\20251225-190809\\summary.json"
+        },
+        "facts": {
+          "dataset": "OCT2017",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "classes": [
+            "CNV",
+            "DME",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "num_classes": 4,
+          "lora": null,
+          "params": {
+            "total": 21761672,
+            "trainable": 95240,
+            "trainable_pct": 0.4376501952607318
+          },
+          "storage": {
+            "best_model_path": "runs\\OCT2017\\deit_small_vptdeep_frozen_4c\\20251225-190809\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.3688058853149414,
+            "adapter_only_bytes": 386721
+          },
+          "training": {
+            "epochs_ran": 40,
+            "best_val_loss": 0.4956393837928772,
+            "best_val_macro_f1": 0.9492539827221631,
+            "total_train_time_sec": 5746.060760259628,
+            "mean_epoch_time_sec": 138.04023796319962,
+            "peak_train_vram_gb": 1.734304428100586
+          },
+          "test_uncalibrated": {
+            "acc": 0.896,
+            "macro_f1": 0.8959165356311541,
+            "macro_auc": 0.9957253333333334,
+            "ece": 0.08502405136823654,
+            "nll": 0.3109373152256012,
+            "brier": 0.15415475545484966
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.5476254820823669,
+            "ece": 0.06101900130510332,
+            "nll": 0.29718244075775146,
+            "brier": 0.1649000557257936
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.410318666137755,
+              "std_batch_ms": 0.5415757978446478,
+              "ms_per_img": 13.410318666137755,
+              "imgs_per_s": 74.56944349317281,
+              "peak_vram_gb": 0.10320281982421875
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.075786667487893,
+              "std_batch_ms": 0.5423672037384287,
+              "ms_per_img": 0.46993416667949833,
+              "imgs_per_s": 2127.957639398486,
+              "peak_vram_gb": 0.318662166595459
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 13.410318666137755,
+            "b1_imgs_per_s": 74.56944349317281,
+            "b64_ms_per_img": 0.46993416667949833,
+            "b64_imgs_per_s": 2127.957639398486
+          }
+        },
+        "raw": {
+          "dataset": "OCT2017",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\ZhangLabData\\OCT2017_CLEAN_SHAONLY",
+          "classes": [
+            "CNV",
+            "DME",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "vpt": {
+            "num_prompts_per_layer": 20,
+            "prompt_dropout": 0.0,
+            "init_std": 0.02
+          },
+          "params": {
+            "total": 21761672,
+            "trainable": 95240,
+            "trainable_pct": 0.4376501952607318
+          },
+          "storage": {
+            "best_model_path": "runs\\OCT2017\\deit_small_vptdeep_frozen_4c\\20251225-190809\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 386721,
+            "adapter_only_mb": 0.3688058853149414
+          },
+          "training": {
+            "epochs_ran": 40,
+            "best_val_loss": 0.4956393837928772,
+            "best_val_macro_f1": 0.9492539827221631,
+            "total_train_time_sec": 5746.060760259628,
+            "mean_epoch_time_sec": 138.04023796319962,
+            "peak_train_vram_gb": 1.734304428100586
+          },
+          "test_uncalibrated": {
+            "acc": 0.896,
+            "macro_f1": 0.8959165356311541,
+            "macro_auc": 0.9957253333333334,
+            "ece": 0.08502405136823654,
+            "nll": 0.3109373152256012,
+            "brier": 0.15415475545484966
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.5476254820823669,
+            "ece": 0.06101900130510332,
+            "nll": 0.29718244075775146,
+            "brier": 0.1649000557257936
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.410318666137755,
+              "std_batch_ms": 0.5415757978446478,
+              "ms_per_img": 13.410318666137755,
+              "imgs_per_s": 74.56944349317281,
+              "peak_vram_gb": 0.10320281982421875
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.075786667487893,
+              "std_batch_ms": 0.5423672037384287,
+              "ms_per_img": 0.46993416667949833,
+              "imgs_per_s": 2127.957639398486,
+              "peak_vram_gb": 0.318662166595459
+            }
+          }
+        }
+      }
+    ],
+    "C8": [
+      {
+        "source": {
+          "relative_path": "runs/C8/deit_small_vptdeep_frozen_8c/20251224-233334/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\summary.json"
+        },
+        "facts": {
+          "dataset": "C8",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "classes": [
+            "AMD",
+            "CNV",
+            "CSR",
+            "DME",
+            "DR",
+            "DRUSEN",
+            "MH",
+            "NORMAL"
+          ],
+          "num_classes": 8,
+          "lora": null,
+          "params": {
+            "total": 21764752,
+            "trainable": 98320,
+            "trainable_pct": 0.45173958334099096
+          },
+          "storage": {
+            "best_model_path": "runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.3805246353149414,
+            "adapter_only_bytes": 399009
+          },
+          "training": {
+            "epochs_ran": 46,
+            "best_val_loss": 0.5550428313505594,
+            "best_val_macro_f1": 0.9615175356752093,
+            "total_train_time_sec": 1394.794669866562,
+            "mean_epoch_time_sec": 28.671538150828816,
+            "peak_train_vram_gb": 1.734703540802002
+          },
+          "test_uncalibrated": {
+            "acc": 0.9603146228101538,
+            "macro_f1": 0.9600976141748976,
+            "macro_auc": 0.9978249348066242,
+            "ece": 0.08142514075600424,
+            "nll": 0.1897648721933365,
+            "brier": 0.06635789944930445
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.6329392790794373,
+            "ece": 0.010585884899593554,
+            "nll": 0.12181954085826874,
+            "brier": 0.06078881081721569
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.393144000049992,
+              "std_batch_ms": 0.48876895684575267,
+              "ms_per_img": 13.393144000049992,
+              "imgs_per_s": 74.66506744019682,
+              "peak_vram_gb": 0.10372304916381836
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.162282666036237,
+              "std_batch_ms": 0.47911762783916756,
+              "ms_per_img": 0.4712856666568162,
+              "imgs_per_s": 2121.8553220465037,
+              "peak_vram_gb": 0.3194265365600586
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 13.393144000049992,
+            "b1_imgs_per_s": 74.66506744019682,
+            "b64_ms_per_img": 0.4712856666568162,
+            "b64_imgs_per_s": 2121.8553220465037
+          }
+        },
+        "raw": {
+          "dataset": "C8",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+          "classes": [
+            "AMD",
+            "CNV",
+            "CSR",
+            "DME",
+            "DR",
+            "DRUSEN",
+            "MH",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "vpt": {
+            "num_prompts_per_layer": 20,
+            "prompt_dropout": 0.0,
+            "init_std": 0.02
+          },
+          "params": {
+            "total": 21764752,
+            "trainable": 98320,
+            "trainable_pct": 0.45173958334099096
+          },
+          "storage": {
+            "best_model_path": "runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 399009,
+            "adapter_only_mb": 0.3805246353149414
+          },
+          "training": {
+            "epochs_ran": 46,
+            "best_val_loss": 0.5550428313505594,
+            "best_val_macro_f1": 0.9615175356752093,
+            "total_train_time_sec": 1394.794669866562,
+            "mean_epoch_time_sec": 28.671538150828816,
+            "peak_train_vram_gb": 1.734703540802002
+          },
+          "test_uncalibrated": {
+            "acc": 0.9603146228101538,
+            "macro_f1": 0.9600976141748976,
+            "macro_auc": 0.9978249348066242,
+            "ece": 0.08142514075600424,
+            "nll": 0.1897648721933365,
+            "brier": 0.06635789944930445
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.6329392790794373,
+            "ece": 0.010585884899593554,
+            "nll": 0.12181954085826874,
+            "brier": 0.06078881081721569
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.393144000049992,
+              "std_batch_ms": 0.48876895684575267,
+              "ms_per_img": 13.393144000049992,
+              "imgs_per_s": 74.66506744019682,
+              "peak_vram_gb": 0.10372304916381836
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.162282666036237,
+              "std_batch_ms": 0.47911762783916756,
+              "ms_per_img": 0.4712856666568162,
+              "imgs_per_s": 2121.8553220465037,
+              "peak_vram_gb": 0.3194265365600586
+            }
+          }
+        }
+      }
+    ],
+    "NEH_UT_2021": [
+      {
+        "source": {
+          "relative_path": "runs/NEH_UT_2021/deit_small_vptdeep_frozen_3c/20251224-231443/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\summary.json"
+        },
+        "facts": {
+          "dataset": "NEH_UT_2021",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "classes": [
+            "CNV",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "num_classes": 3,
+          "lora": null,
+          "params": {
+            "total": 21760902,
+            "trainable": 94470,
+            "trainable_pct": 0.4341272250571231
+          },
+          "storage": {
+            "best_model_path": "runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.3658761978149414,
+            "adapter_only_bytes": 383649
+          },
+          "training": {
+            "epochs_ran": 43,
+            "best_val_loss": 0.5732420572561632,
+            "best_val_macro_f1": 0.882786522687612,
+            "total_train_time_sec": 856.1063275337219,
+            "mean_epoch_time_sec": 18.324076674705328,
+            "peak_train_vram_gb": 1.7353663444519043
+          },
+          "test_uncalibrated": {
+            "acc": 0.890210067380103,
+            "macro_f1": 0.878193919013591,
+            "macro_auc": 0.9554138890013032,
+            "ece": 0.06859057562907821,
+            "nll": 0.3542410433292389,
+            "brier": 0.1830412706898194
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.7185686230659485,
+            "ece": 0.01876100189053629,
+            "nll": 0.32701075077056885,
+            "brier": 0.17544175996989547
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 14.464680666521113,
+              "std_batch_ms": 1.9662307709120264,
+              "ms_per_img": 14.464680666521113,
+              "imgs_per_s": 69.13391474410676,
+              "peak_vram_gb": 0.1035919189453125
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.69516600002923,
+              "std_batch_ms": 1.7711966868636302,
+              "ms_per_img": 0.4796119687504567,
+              "imgs_per_s": 2085.018859319381,
+              "peak_vram_gb": 0.31929540634155273
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 14.464680666521113,
+            "b1_imgs_per_s": 69.13391474410676,
+            "b64_ms_per_img": 0.4796119687504567,
+            "b64_imgs_per_s": 2085.018859319381
+          }
+        },
+        "raw": {
+          "dataset": "NEH_UT_2021",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+          "classes": [
+            "CNV",
+            "DRUSEN",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "vpt": {
+            "num_prompts_per_layer": 20,
+            "prompt_dropout": 0.0,
+            "init_std": 0.02
+          },
+          "params": {
+            "total": 21760902,
+            "trainable": 94470,
+            "trainable_pct": 0.4341272250571231
+          },
+          "storage": {
+            "best_model_path": "runs\\NEH_UT_2021\\deit_small_vptdeep_frozen_3c\\20251224-231443\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 383649,
+            "adapter_only_mb": 0.3658761978149414
+          },
+          "training": {
+            "epochs_ran": 43,
+            "best_val_loss": 0.5732420572561632,
+            "best_val_macro_f1": 0.882786522687612,
+            "total_train_time_sec": 856.1063275337219,
+            "mean_epoch_time_sec": 18.324076674705328,
+            "peak_train_vram_gb": 1.7353663444519043
+          },
+          "test_uncalibrated": {
+            "acc": 0.890210067380103,
+            "macro_f1": 0.878193919013591,
+            "macro_auc": 0.9554138890013032,
+            "ece": 0.06859057562907821,
+            "nll": 0.3542410433292389,
+            "brier": 0.1830412706898194
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.7185686230659485,
+            "ece": 0.01876100189053629,
+            "nll": 0.32701075077056885,
+            "brier": 0.17544175996989547
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 14.464680666521113,
+              "std_batch_ms": 1.9662307709120264,
+              "ms_per_img": 14.464680666521113,
+              "imgs_per_s": 69.13391474410676,
+              "peak_vram_gb": 0.1035919189453125
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.69516600002923,
+              "std_batch_ms": 1.7711966868636302,
+              "ms_per_img": 0.4796119687504567,
+              "imgs_per_s": 2085.018859319381,
+              "peak_vram_gb": 0.31929540634155273
+            }
+          }
+        }
+      }
+    ],
+    "Srinivasan_2014": [
+      {
+        "source": {
+          "relative_path": "runs/Srinivasan_2014/deit_small_vptdeep_frozen_3c/20251224-230558/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\Srinivasan_2014\\deit_small_vptdeep_frozen_3c\\20251224-230558\\summary.json"
+        },
+        "facts": {
+          "dataset": "Srinivasan_2014",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "classes": [
+            "AMD",
+            "DME",
+            "NORMAL"
+          ],
+          "num_classes": 3,
+          "lora": null,
+          "params": {
+            "total": 21760902,
+            "trainable": 94470,
+            "trainable_pct": 0.4341272250571231
+          },
+          "storage": {
+            "best_model_path": "runs\\Srinivasan_2014\\deit_small_vptdeep_frozen_3c\\20251224-230558\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.3658761978149414,
+            "adapter_only_bytes": 383649
+          },
+          "training": {
+            "epochs_ran": 84,
+            "best_val_loss": 0.330485013158051,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 327.7444887161255,
+            "mean_epoch_time_sec": 3.5749752748580206,
+            "peak_train_vram_gb": 1.7346348762512207
+          },
+          "test_uncalibrated": {
+            "acc": 0.9979381443298969,
+            "macro_f1": 0.9976758796250903,
+            "macro_auc": 1.0,
+            "ece": 0.08100723532057301,
+            "nll": 0.08740063011646271,
+            "brier": 0.013883057034853716
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.27597472071647644,
+            "ece": 0.0019170163832988862,
+            "nll": 0.014380255714058876,
+            "brier": 0.004125004423958346
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 14.012200666669136,
+              "std_batch_ms": 1.4820696131251343,
+              "ms_per_img": 14.012200666669136,
+              "imgs_per_s": 71.36637732991528,
+              "peak_vram_gb": 0.10355234146118164
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.593100000017632,
+              "std_batch_ms": 0.5723701781066327,
+              "ms_per_img": 0.4780171875002755,
+              "imgs_per_s": 2091.9749878228463,
+              "peak_vram_gb": 0.3192558288574219
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 14.012200666669136,
+            "b1_imgs_per_s": 71.36637732991528,
+            "b64_ms_per_img": 0.4780171875002755,
+            "b64_imgs_per_s": 2091.9749878228463
+          }
+        },
+        "raw": {
+          "dataset": "Srinivasan_2014",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\Srinivasan_2014\\Srinivasan_2014_CLEAN_SHAONLY",
+          "classes": [
+            "AMD",
+            "DME",
+            "NORMAL"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "vpt": {
+            "num_prompts_per_layer": 20,
+            "prompt_dropout": 0.0,
+            "init_std": 0.02
+          },
+          "params": {
+            "total": 21760902,
+            "trainable": 94470,
+            "trainable_pct": 0.4341272250571231
+          },
+          "storage": {
+            "best_model_path": "runs\\Srinivasan_2014\\deit_small_vptdeep_frozen_3c\\20251224-230558\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 383649,
+            "adapter_only_mb": 0.3658761978149414
+          },
+          "training": {
+            "epochs_ran": 84,
+            "best_val_loss": 0.330485013158051,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 327.7444887161255,
+            "mean_epoch_time_sec": 3.5749752748580206,
+            "peak_train_vram_gb": 1.7346348762512207
+          },
+          "test_uncalibrated": {
+            "acc": 0.9979381443298969,
+            "macro_f1": 0.9976758796250903,
+            "macro_auc": 1.0,
+            "ece": 0.08100723532057301,
+            "nll": 0.08740063011646271,
+            "brier": 0.013883057034853716
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.27597472071647644,
+            "ece": 0.0019170163832988862,
+            "nll": 0.014380255714058876,
+            "brier": 0.004125004423958346
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 14.012200666669136,
+              "std_batch_ms": 1.4820696131251343,
+              "ms_per_img": 14.012200666669136,
+              "imgs_per_s": 71.36637732991528,
+              "peak_vram_gb": 0.10355234146118164
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.593100000017632,
+              "std_batch_ms": 0.5723701781066327,
+              "ms_per_img": 0.4780171875002755,
+              "imgs_per_s": 2091.9749878228463,
+              "peak_vram_gb": 0.3192558288574219
+            }
+          }
+        }
+      }
+    ],
+    "THOCT": [
+      {
+        "source": {
+          "relative_path": "runs/THOCT/deit_small_vptdeep_frozen_3c/20251224-230341/summary.json",
+          "absolute_path": "D:\\AIUB\\DSP\\Code\\Models\\DeiT-Small + VPT-Deep (Frozen Backbone)\\runs\\THOCT\\deit_small_vptdeep_frozen_3c\\20251224-230341\\summary.json"
+        },
+        "facts": {
+          "dataset": "THOCT",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "classes": [
+            "AMD",
+            "DME",
+            "NOR"
+          ],
+          "num_classes": 3,
+          "lora": null,
+          "params": {
+            "total": 21760902,
+            "trainable": 94470,
+            "trainable_pct": 0.4341272250571231
+          },
+          "storage": {
+            "best_model_path": "runs\\THOCT\\deit_small_vptdeep_frozen_3c\\20251224-230341\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_mb": 0.3658761978149414,
+            "adapter_only_bytes": 383649
+          },
+          "training": {
+            "epochs_ran": 46,
+            "best_val_loss": 0.29477232006879955,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 98.65596723556519,
+            "mean_epoch_time_sec": 1.9187121235806008,
+            "peak_train_vram_gb": 1.7351479530334473
+          },
+          "test_uncalibrated": {
+            "acc": 0.9923076923076923,
+            "macro_f1": 0.9923360211997266,
+            "macro_auc": 0.9998891144195522,
+            "ece": 0.07037698076321527,
+            "nll": 0.08222157508134842,
+            "brier": 0.016334773950566844
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.1389695256948471,
+            "ece": 0.006725707191687356,
+            "nll": 0.024786965921521187,
+            "brier": 0.013627467241469522
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.519543333241018,
+              "std_batch_ms": 1.06841478535172,
+              "ms_per_img": 13.519543333241018,
+              "imgs_per_s": 73.96699543402933,
+              "peak_vram_gb": 0.1031794548034668
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.216229999932693,
+              "std_batch_ms": 0.3446992301196107,
+              "ms_per_img": 0.47212859374894833,
+              "imgs_per_s": 2118.0670123355085,
+              "peak_vram_gb": 0.31863880157470703
+            }
+          },
+          "inference_quick": {
+            "b1_ms_per_img": 13.519543333241018,
+            "b1_imgs_per_s": 73.96699543402933,
+            "b64_ms_per_img": 0.47212859374894833,
+            "b64_imgs_per_s": 2118.0670123355085
+          }
+        },
+        "raw": {
+          "dataset": "THOCT",
+          "root": "D:\\AIUB\\DSP\\Code\\Datasets\\THOCT1800\\THOCT1800_CLEAN_SHAONLY",
+          "classes": [
+            "AMD",
+            "DME",
+            "NOR"
+          ],
+          "model": "deit_small_distilled_patch16_224",
+          "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+          "vpt": {
+            "num_prompts_per_layer": 20,
+            "prompt_dropout": 0.0,
+            "init_std": 0.02
+          },
+          "params": {
+            "total": 21760902,
+            "trainable": 94470,
+            "trainable_pct": 0.4341272250571231
+          },
+          "storage": {
+            "best_model_path": "runs\\THOCT\\deit_small_vptdeep_frozen_3c\\20251224-230341\\best_model.pth",
+            "adapter_only_enabled": true,
+            "adapter_only_bytes": 383649,
+            "adapter_only_mb": 0.3658761978149414
+          },
+          "training": {
+            "epochs_ran": 46,
+            "best_val_loss": 0.29477232006879955,
+            "best_val_macro_f1": 1.0,
+            "total_train_time_sec": 98.65596723556519,
+            "mean_epoch_time_sec": 1.9187121235806008,
+            "peak_train_vram_gb": 1.7351479530334473
+          },
+          "test_uncalibrated": {
+            "acc": 0.9923076923076923,
+            "macro_f1": 0.9923360211997266,
+            "macro_auc": 0.9998891144195522,
+            "ece": 0.07037698076321527,
+            "nll": 0.08222157508134842,
+            "brier": 0.016334773950566844
+          },
+          "test_temp_scaled": {
+            "enabled": true,
+            "T": 0.1389695256948471,
+            "ece": 0.006725707191687356,
+            "nll": 0.024786965921521187,
+            "brier": 0.013627467241469522
+          },
+          "inference_benchmark": {
+            "latency_batch1": {
+              "batch": 1,
+              "mean_batch_ms": 13.519543333241018,
+              "std_batch_ms": 1.06841478535172,
+              "ms_per_img": 13.519543333241018,
+              "imgs_per_s": 73.96699543402933,
+              "peak_vram_gb": 0.1031794548034668
+            },
+            "throughput_batchN": {
+              "batch": 64,
+              "mean_batch_ms": 30.216229999932693,
+              "std_batch_ms": 0.3446992301196107,
+              "ms_per_img": 0.47212859374894833,
+              "imgs_per_s": 2118.0670123355085,
+              "peak_vram_gb": 0.31863880157470703
+            }
+          }
+        }
+      }
+    ]
+  },
+  "errors": []
+}

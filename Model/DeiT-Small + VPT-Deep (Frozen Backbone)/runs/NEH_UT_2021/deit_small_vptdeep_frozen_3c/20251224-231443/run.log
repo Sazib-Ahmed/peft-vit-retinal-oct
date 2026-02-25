@@ -1,0 +1,147 @@
+
+=== DATASET RUN START: NEH_UT_2021 ===
+
+[DATA] Split/Class counts:
+class   CNV  DRUSEN  NORMAL  TOTAL
+split                             
+test    544     687    1292   2523
+train  2188    3525    5791  11504
+val     471     690    1475   2636
+[DATA] Train imbalance: min=2188, max=5791, ratio=2.65
+[RAM] Caching split='train' images=11504 as uint8 tensors. Estimated RAM ~ 1.61 GB
+[RAM] Cached 11504 images for split='train'
+[RAM] Caching split='val' images=2636 as uint8 tensors. Estimated RAM ~ 0.37 GB
+[RAM] Cached 2636 images for split='val'
+[RAM] Caching split='test' images=2523 as uint8 tensors. Estimated RAM ~ 0.35 GB
+[RAM] Cached 2523 images for split='test'
+[IMB] Train class counts: [2188, 3525, 5791]
+[IMB] Class-Balanced weights (mean~1): [1.4228, 0.9412, 0.636]
+[IMB] Sampler disabled. min=2188 max=5791 ratio=2.65
+
+[DATASET] NEH_UT_2021
+ - root: D:\AIUB\DSP\Code\Datasets\NEH_UT_2021RetinalOCTDataset\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (3): ['CNV', 'DRUSEN', 'NORMAL']
+ - split sizes: train=11504 val=2636 test=2523
+
+[MODEL] Creating deit_small_distilled_patch16_224 + VPT-Deep (frozen=True)
+[PARAMS] total=21,760,902 trainable=94,470 (0.4341%)
+[IMB] Train class counts: [2188, 3525, 5791]
+[IMB] Class-Balanced weights (mean~1): [1.4228, 0.9412, 0.636]
+[IMB] Sampler disabled. min=2188 max=5791 ratio=2.65
+[NEH_UT_2021] Epoch 001/100 | lr=1.00e-04 | train_loss=1.0590 train_acc=48.96% | val_loss=0.8992 val_acc=66.39% val_macroF1=54.57% | ep_time=18.6s peakVRAM=1.74GB
+[ES] New best val_loss=0.899193 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 002/100 | lr=1.50e-04 | train_loss=0.8508 train_acc=64.70% | val_loss=0.7501 val_acc=78.11% val_macroF1=73.81% | ep_time=18.6s peakVRAM=1.74GB
+[ES] New best val_loss=0.750103 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 003/100 | lr=2.00e-04 | train_loss=0.7798 train_acc=70.84% | val_loss=0.6930 val_acc=82.85% val_macroF1=81.43% | ep_time=18.5s peakVRAM=1.73GB
+[ES] New best val_loss=0.693033 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 004/100 | lr=2.50e-04 | train_loss=0.7339 train_acc=74.58% | val_loss=0.6695 val_acc=84.03% val_macroF1=81.59% | ep_time=18.7s peakVRAM=1.73GB
+[ES] New best val_loss=0.669515 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 005/100 | lr=3.00e-04 | train_loss=0.6937 train_acc=77.31% | val_loss=0.6788 val_acc=83.80% val_macroF1=80.65% | ep_time=18.6s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 006/100 | lr=3.50e-04 | train_loss=0.6821 train_acc=78.16% | val_loss=0.6321 val_acc=85.55% val_macroF1=84.11% | ep_time=18.6s peakVRAM=1.73GB
+[ES] New best val_loss=0.632115 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 007/100 | lr=4.00e-04 | train_loss=0.6703 train_acc=79.16% | val_loss=0.6491 val_acc=84.79% val_macroF1=81.38% | ep_time=18.7s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 008/100 | lr=4.50e-04 | train_loss=0.6549 train_acc=79.84% | val_loss=0.6117 val_acc=86.15% val_macroF1=84.11% | ep_time=18.6s peakVRAM=1.73GB
+[ES] New best val_loss=0.611739 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 009/100 | lr=5.00e-04 | train_loss=0.6477 train_acc=80.47% | val_loss=0.6389 val_acc=85.51% val_macroF1=83.17% | ep_time=18.6s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 010/100 | lr=5.00e-04 | train_loss=0.6574 train_acc=79.80% | val_loss=0.6389 val_acc=85.24% val_macroF1=82.16% | ep_time=18.6s peakVRAM=1.73GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 011/100 | lr=5.00e-04 | train_loss=0.6201 train_acc=82.08% | val_loss=0.5950 val_acc=87.63% val_macroF1=86.47% | ep_time=18.6s peakVRAM=1.73GB
+[ES] New best val_loss=0.595041 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 012/100 | lr=4.99e-04 | train_loss=0.6370 train_acc=81.17% | val_loss=0.6044 val_acc=87.18% val_macroF1=85.91% | ep_time=18.6s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 013/100 | lr=4.99e-04 | train_loss=0.6247 train_acc=81.90% | val_loss=0.6175 val_acc=86.68% val_macroF1=84.81% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 014/100 | lr=4.98e-04 | train_loss=0.6192 train_acc=81.88% | val_loss=0.6009 val_acc=86.91% val_macroF1=85.63% | ep_time=18.6s peakVRAM=1.73GB
+[ES] No improve 3/10
+[NEH_UT_2021] Epoch 015/100 | lr=4.96e-04 | train_loss=0.6063 train_acc=82.88% | val_loss=0.6013 val_acc=87.14% val_macroF1=85.51% | ep_time=18.5s peakVRAM=1.73GB
+[ES] No improve 4/10
+[NEH_UT_2021] Epoch 016/100 | lr=4.95e-04 | train_loss=0.5995 train_acc=83.65% | val_loss=0.6080 val_acc=87.25% val_macroF1=86.28% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 5/10
+[NEH_UT_2021] Epoch 017/100 | lr=4.93e-04 | train_loss=0.6109 train_acc=82.95% | val_loss=0.5984 val_acc=87.97% val_macroF1=87.05% | ep_time=18.4s peakVRAM=1.73GB
+[ES] No improve 6/10
+[NEH_UT_2021] Epoch 018/100 | lr=4.90e-04 | train_loss=0.6010 train_acc=83.42% | val_loss=0.5951 val_acc=87.41% val_macroF1=85.91% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 7/10
+[NEH_UT_2021] Epoch 019/100 | lr=4.88e-04 | train_loss=0.5919 train_acc=83.85% | val_loss=0.5937 val_acc=87.90% val_macroF1=86.66% | ep_time=18.3s peakVRAM=1.73GB
+[ES] New best val_loss=0.593719 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 020/100 | lr=4.85e-04 | train_loss=0.5868 train_acc=84.69% | val_loss=0.6142 val_acc=87.18% val_macroF1=86.27% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 021/100 | lr=4.82e-04 | train_loss=0.5810 train_acc=84.66% | val_loss=0.6089 val_acc=87.14% val_macroF1=85.97% | ep_time=18.6s peakVRAM=1.73GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 022/100 | lr=4.78e-04 | train_loss=0.5841 train_acc=84.74% | val_loss=0.6138 val_acc=86.61% val_macroF1=84.43% | ep_time=18.4s peakVRAM=1.73GB
+[ES] No improve 3/10
+[NEH_UT_2021] Epoch 023/100 | lr=4.75e-04 | train_loss=0.5760 train_acc=85.01% | val_loss=0.6021 val_acc=87.37% val_macroF1=86.18% | ep_time=18.4s peakVRAM=1.73GB
+[ES] No improve 4/10
+[NEH_UT_2021] Epoch 024/100 | lr=4.71e-04 | train_loss=0.5875 train_acc=84.34% | val_loss=0.6063 val_acc=87.37% val_macroF1=85.51% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 5/10
+[NEH_UT_2021] Epoch 025/100 | lr=4.67e-04 | train_loss=0.5872 train_acc=84.23% | val_loss=0.6944 val_acc=78.57% val_macroF1=80.95% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 6/10
+[NEH_UT_2021] Epoch 026/100 | lr=4.62e-04 | train_loss=0.5894 train_acc=83.93% | val_loss=0.5877 val_acc=87.90% val_macroF1=86.79% | ep_time=18.4s peakVRAM=1.73GB
+[ES] New best val_loss=0.587670 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 027/100 | lr=4.57e-04 | train_loss=0.5668 train_acc=85.67% | val_loss=0.6001 val_acc=86.72% val_macroF1=86.48% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 028/100 | lr=4.52e-04 | train_loss=0.5610 train_acc=86.22% | val_loss=0.5997 val_acc=86.99% val_macroF1=85.19% | ep_time=18.3s peakVRAM=1.73GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 029/100 | lr=4.47e-04 | train_loss=0.5654 train_acc=85.89% | val_loss=0.6198 val_acc=86.61% val_macroF1=84.77% | ep_time=18.2s peakVRAM=1.73GB
+[ES] No improve 3/10
+[NEH_UT_2021] Epoch 030/100 | lr=4.42e-04 | train_loss=0.5722 train_acc=85.01% | val_loss=0.5805 val_acc=88.28% val_macroF1=87.53% | ep_time=18.0s peakVRAM=1.73GB
+[ES] New best val_loss=0.580545 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 031/100 | lr=4.36e-04 | train_loss=0.5781 train_acc=84.71% | val_loss=0.6230 val_acc=86.42% val_macroF1=84.70% | ep_time=18.0s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 032/100 | lr=4.30e-04 | train_loss=0.5766 train_acc=85.18% | val_loss=0.6029 val_acc=86.87% val_macroF1=85.90% | ep_time=18.1s peakVRAM=1.73GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 033/100 | lr=4.24e-04 | train_loss=0.5556 train_acc=86.39% | val_loss=0.5732 val_acc=88.58% val_macroF1=87.78% | ep_time=18.3s peakVRAM=1.73GB
+[ES] New best val_loss=0.573242 -> saved runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443\best_model.pth
+[NEH_UT_2021] Epoch 034/100 | lr=4.17e-04 | train_loss=0.5657 train_acc=85.54% | val_loss=0.5908 val_acc=87.63% val_macroF1=86.23% | ep_time=18.2s peakVRAM=1.73GB
+[ES] No improve 1/10
+[NEH_UT_2021] Epoch 035/100 | lr=4.11e-04 | train_loss=0.5598 train_acc=85.95% | val_loss=0.5767 val_acc=88.88% val_macroF1=88.28% | ep_time=18.0s peakVRAM=1.73GB
+[ES] No improve 2/10
+[NEH_UT_2021] Epoch 036/100 | lr=4.04e-04 | train_loss=0.5578 train_acc=85.91% | val_loss=0.6098 val_acc=86.53% val_macroF1=86.21% | ep_time=18.0s peakVRAM=1.73GB
+[ES] No improve 3/10
+[NEH_UT_2021] Epoch 037/100 | lr=3.97e-04 | train_loss=0.5433 train_acc=87.04% | val_loss=0.5996 val_acc=87.44% val_macroF1=86.32% | ep_time=17.9s peakVRAM=1.73GB
+[ES] No improve 4/10
+[NEH_UT_2021] Epoch 038/100 | lr=3.90e-04 | train_loss=0.5486 train_acc=87.19% | val_loss=0.5819 val_acc=88.05% val_macroF1=87.56% | ep_time=17.9s peakVRAM=1.73GB
+[ES] No improve 5/10
+[NEH_UT_2021] Epoch 039/100 | lr=3.82e-04 | train_loss=0.5363 train_acc=87.58% | val_loss=0.5958 val_acc=87.14% val_macroF1=86.58% | ep_time=18.0s peakVRAM=1.73GB
+[ES] No improve 6/10
+[NEH_UT_2021] Epoch 040/100 | lr=3.75e-04 | train_loss=0.5468 train_acc=86.64% | val_loss=0.5987 val_acc=86.99% val_macroF1=86.39% | ep_time=18.0s peakVRAM=1.73GB
+[ES] No improve 7/10
+[NEH_UT_2021] Epoch 041/100 | lr=3.67e-04 | train_loss=0.5424 train_acc=87.21% | val_loss=0.6106 val_acc=85.70% val_macroF1=85.71% | ep_time=17.9s peakVRAM=1.73GB
+[ES] No improve 8/10
+[NEH_UT_2021] Epoch 042/100 | lr=3.60e-04 | train_loss=0.5535 train_acc=86.40% | val_loss=0.6072 val_acc=86.57% val_macroF1=85.35% | ep_time=18.0s peakVRAM=1.73GB
+[ES] No improve 9/10
+[NEH_UT_2021] Epoch 043/100 | lr=3.52e-04 | train_loss=0.5555 train_acc=86.14% | val_loss=0.6051 val_acc=85.81% val_macroF1=85.44% | ep_time=18.5s peakVRAM=1.73GB
+[ES] No improve 10/10
+[NEH_UT_2021] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.7186
+
+------------------------------------------------------------------------------------------
+[NEH_UT_2021] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         CNV     0.9134    0.9301    0.9217       544
+      DRUSEN     0.8770    0.7162    0.7885       687
+      NORMAL     0.8864    0.9659    0.9244      1292
+
+    accuracy                         0.8902      2523
+   macro avg     0.8922    0.8707    0.8782      2523
+weighted avg     0.8896    0.8902    0.8868      2523
+
+
+==========================================================================================
+[NEH_UT_2021] TEST summary (uncalibrated): Acc=89.02% MacroF1=87.82% ECE=0.0686 NLL=0.3542 Brier=0.1830
+[NEH_UT_2021] Macro-AUC=0.9554
+[NEH_UT_2021] TEMP-SCALED (T=0.719): ECE=0.0188 NLL=0.3270 Brier=0.1754
+[NEH_UT_2021] Params trainable: 94,470 (0.4341%)
+[NEH_UT_2021] Adapter-only size: 0.37 MB
+[NEH_UT_2021] Inference latency (B=1): 14.465 ms/img (69.1 imgs/s), peakVRAM=0.10GB
+[NEH_UT_2021] Inference throughput (B=64): 2085.0 imgs/s, peakVRAM=0.32GB
+[NEH_UT_2021] Outputs saved in: runs\NEH_UT_2021\deit_small_vptdeep_frozen_3c\20251224-231443
+==========================================================================================
+

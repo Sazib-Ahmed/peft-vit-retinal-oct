@@ -1,0 +1,10 @@
+split,class,count
+train,AMD,392
+train,DME,413
+train,NOR,405
+val,AMD,84
+val,DME,89
+val,NOR,87
+test,AMD,85
+test,DME,88
+test,NOR,87

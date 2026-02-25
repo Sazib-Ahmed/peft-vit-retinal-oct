@@ -1,0 +1,235 @@
+
+=== DATASET RUN START: OCT2017 ===
+
+[DATA] Split/Class counts:
+class    CNV   DME  DRUSEN  NORMAL  TOTAL
+split                                    
+test     250   250     250     250   1000
+train  28285  9819    7000   45054  90158
+val     3142  1091     777    5006  10016
+[DATA] Train imbalance: min=7000, max=45054, ratio=6.44
+[RAM] Caching split='train' images=90158 as uint8 tensors. Estimated RAM ~ 12.64 GB
+[RAM] Cached 90158 images for split='train'
+[RAM] Caching split='val' images=10016 as uint8 tensors. Estimated RAM ~ 1.40 GB
+[RAM] Cached 10016 images for split='val'
+[RAM] Caching split='test' images=1000 as uint8 tensors. Estimated RAM ~ 0.14 GB
+[RAM] Cached 1000 images for split='test'
+[IMB] Train class counts: [28285, 9819, 7000, 45054]
+[IMB] Class-Balanced weights (mean~1): [0.7512, 1.1301, 1.404, 0.7147]
+[IMB] Sampler disabled. min=7000 max=45054 ratio=6.44
+
+[DATASET] OCT2017
+ - root: D:\AIUB\DSP\Code\Datasets\ZhangLabData\OCT2017_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (4): ['CNV', 'DME', 'DRUSEN', 'NORMAL']
+ - split sizes: train=90158 val=10016 test=1000
+
+[MODEL] Creating deit_small_distilled_patch16_224 + AdaptFormer (frozen=True)
+[PARAMS] total=22,264,712 trainable=598,280 (2.6871%)
+[ADAPT] mid_dim=64 scale=0.1 layers=0..None
+[IMB] Train class counts: [28285, 9819, 7000, 45054]
+[IMB] Class-Balanced weights (mean~1): [0.7512, 1.1301, 1.404, 0.7147]
+[IMB] Sampler disabled. min=7000 max=45054 ratio=6.44
+[OCT2017] Epoch 001/100 | lr=1.00e-04 | train_loss=0.7908 train_acc=84.45% | val_loss=0.5826 val_acc=93.22% val_macroF1=88.49% | ep_time=118.1s peakVRAM=1.64GB
+[ES] New best val_loss=0.582631 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 002/100 | lr=1.50e-04 | train_loss=0.6157 train_acc=91.91% | val_loss=0.5376 val_acc=95.32% val_macroF1=91.81% | ep_time=115.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.537601 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 003/100 | lr=2.00e-04 | train_loss=0.5879 train_acc=93.00% | val_loss=0.5328 val_acc=95.41% val_macroF1=92.06% | ep_time=115.5s peakVRAM=1.64GB
+[ES] New best val_loss=0.532841 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 004/100 | lr=2.50e-04 | train_loss=0.5740 train_acc=93.51% | val_loss=0.5309 val_acc=95.03% val_macroF1=91.58% | ep_time=115.3s peakVRAM=1.64GB
+[ES] New best val_loss=0.530942 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 005/100 | lr=3.00e-04 | train_loss=0.5645 train_acc=93.87% | val_loss=0.5167 val_acc=95.95% val_macroF1=92.86% | ep_time=115.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.516666 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 006/100 | lr=3.50e-04 | train_loss=0.5619 train_acc=93.91% | val_loss=0.5125 val_acc=96.32% val_macroF1=93.54% | ep_time=115.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.512488 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 007/100 | lr=4.00e-04 | train_loss=0.5539 train_acc=94.34% | val_loss=0.5060 val_acc=96.46% val_macroF1=93.71% | ep_time=115.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.506010 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 008/100 | lr=4.50e-04 | train_loss=0.5509 train_acc=94.38% | val_loss=0.5002 val_acc=96.78% val_macroF1=94.21% | ep_time=115.0s peakVRAM=1.64GB
+[ES] New best val_loss=0.500174 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 009/100 | lr=5.00e-04 | train_loss=0.5478 train_acc=94.50% | val_loss=0.5028 val_acc=96.70% val_macroF1=94.21% | ep_time=115.0s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 010/100 | lr=5.00e-04 | train_loss=0.5437 train_acc=94.58% | val_loss=0.5103 val_acc=96.41% val_macroF1=93.79% | ep_time=115.4s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 011/100 | lr=5.00e-04 | train_loss=0.5377 train_acc=94.94% | val_loss=0.4996 val_acc=96.97% val_macroF1=94.52% | ep_time=115.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.499609 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 012/100 | lr=4.99e-04 | train_loss=0.5298 train_acc=95.34% | val_loss=0.4949 val_acc=97.11% val_macroF1=94.92% | ep_time=115.3s peakVRAM=1.64GB
+[ES] New best val_loss=0.494930 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 013/100 | lr=4.99e-04 | train_loss=0.5305 train_acc=95.17% | val_loss=0.4919 val_acc=97.43% val_macroF1=95.47% | ep_time=115.2s peakVRAM=1.64GB
+[ES] New best val_loss=0.491878 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 014/100 | lr=4.98e-04 | train_loss=0.5206 train_acc=95.67% | val_loss=0.4937 val_acc=97.10% val_macroF1=94.99% | ep_time=115.2s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 015/100 | lr=4.96e-04 | train_loss=0.5213 train_acc=95.69% | val_loss=0.4877 val_acc=97.57% val_macroF1=95.69% | ep_time=115.2s peakVRAM=1.64GB
+[ES] New best val_loss=0.487719 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 016/100 | lr=4.95e-04 | train_loss=0.5187 train_acc=95.71% | val_loss=0.4979 val_acc=97.09% val_macroF1=94.94% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 017/100 | lr=4.93e-04 | train_loss=0.5169 train_acc=95.77% | val_loss=0.4895 val_acc=97.36% val_macroF1=95.40% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 018/100 | lr=4.90e-04 | train_loss=0.5132 train_acc=95.96% | val_loss=0.4842 val_acc=97.70% val_macroF1=95.88% | ep_time=115.2s peakVRAM=1.64GB
+[ES] New best val_loss=0.484161 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 019/100 | lr=4.88e-04 | train_loss=0.5120 train_acc=96.01% | val_loss=0.4906 val_acc=97.31% val_macroF1=95.27% | ep_time=115.3s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 020/100 | lr=4.85e-04 | train_loss=0.5085 train_acc=96.15% | val_loss=0.4832 val_acc=97.80% val_macroF1=96.02% | ep_time=115.2s peakVRAM=1.64GB
+[ES] New best val_loss=0.483161 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 021/100 | lr=4.82e-04 | train_loss=0.5106 train_acc=96.07% | val_loss=0.4800 val_acc=97.90% val_macroF1=96.18% | ep_time=115.0s peakVRAM=1.64GB
+[ES] New best val_loss=0.479963 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 022/100 | lr=4.78e-04 | train_loss=0.5119 train_acc=95.95% | val_loss=0.4931 val_acc=97.13% val_macroF1=94.99% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 023/100 | lr=4.75e-04 | train_loss=0.5059 train_acc=96.22% | val_loss=0.4827 val_acc=97.68% val_macroF1=95.89% | ep_time=114.7s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 024/100 | lr=4.71e-04 | train_loss=0.5052 train_acc=96.25% | val_loss=0.4843 val_acc=97.62% val_macroF1=95.79% | ep_time=114.6s peakVRAM=1.64GB
+[ES] No improve 3/10
+[OCT2017] Epoch 025/100 | lr=4.67e-04 | train_loss=0.5004 train_acc=96.49% | val_loss=0.4838 val_acc=97.85% val_macroF1=95.94% | ep_time=114.8s peakVRAM=1.64GB
+[ES] No improve 4/10
+[OCT2017] Epoch 026/100 | lr=4.62e-04 | train_loss=0.5052 train_acc=96.24% | val_loss=0.4839 val_acc=97.59% val_macroF1=95.68% | ep_time=114.6s peakVRAM=1.64GB
+[ES] No improve 5/10
+[OCT2017] Epoch 027/100 | lr=4.57e-04 | train_loss=0.4996 train_acc=96.48% | val_loss=0.4758 val_acc=98.22% val_macroF1=96.74% | ep_time=114.7s peakVRAM=1.64GB
+[ES] New best val_loss=0.475751 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 028/100 | lr=4.52e-04 | train_loss=0.4963 train_acc=96.60% | val_loss=0.4780 val_acc=97.92% val_macroF1=96.32% | ep_time=114.6s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 029/100 | lr=4.47e-04 | train_loss=0.4964 train_acc=96.70% | val_loss=0.4799 val_acc=97.94% val_macroF1=96.35% | ep_time=114.5s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 030/100 | lr=4.42e-04 | train_loss=0.4933 train_acc=96.84% | val_loss=0.4750 val_acc=98.19% val_macroF1=96.71% | ep_time=114.3s peakVRAM=1.64GB
+[ES] New best val_loss=0.475011 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 031/100 | lr=4.36e-04 | train_loss=0.4939 train_acc=96.80% | val_loss=0.4730 val_acc=98.26% val_macroF1=96.81% | ep_time=114.7s peakVRAM=1.64GB
+[ES] New best val_loss=0.472991 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 032/100 | lr=4.30e-04 | train_loss=0.4952 train_acc=96.75% | val_loss=0.4804 val_acc=97.89% val_macroF1=96.16% | ep_time=114.0s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 033/100 | lr=4.24e-04 | train_loss=0.4925 train_acc=96.84% | val_loss=0.4878 val_acc=97.49% val_macroF1=95.60% | ep_time=114.9s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 034/100 | lr=4.17e-04 | train_loss=0.4914 train_acc=96.90% | val_loss=0.4759 val_acc=98.11% val_macroF1=96.62% | ep_time=115.0s peakVRAM=1.64GB
+[ES] No improve 3/10
+[OCT2017] Epoch 035/100 | lr=4.11e-04 | train_loss=0.4946 train_acc=96.76% | val_loss=0.4754 val_acc=98.16% val_macroF1=96.65% | ep_time=115.2s peakVRAM=1.64GB
+[ES] No improve 4/10
+[OCT2017] Epoch 036/100 | lr=4.04e-04 | train_loss=0.4870 train_acc=97.08% | val_loss=0.4759 val_acc=97.98% val_macroF1=96.29% | ep_time=115.2s peakVRAM=1.64GB
+[ES] No improve 5/10
+[OCT2017] Epoch 037/100 | lr=3.97e-04 | train_loss=0.4884 train_acc=96.96% | val_loss=0.4763 val_acc=98.12% val_macroF1=96.56% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 6/10
+[OCT2017] Epoch 038/100 | lr=3.90e-04 | train_loss=0.4895 train_acc=96.95% | val_loss=0.4764 val_acc=97.99% val_macroF1=96.36% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 7/10
+[OCT2017] Epoch 039/100 | lr=3.82e-04 | train_loss=0.4881 train_acc=97.02% | val_loss=0.4814 val_acc=97.76% val_macroF1=96.03% | ep_time=115.2s peakVRAM=1.64GB
+[ES] No improve 8/10
+[OCT2017] Epoch 040/100 | lr=3.75e-04 | train_loss=0.4880 train_acc=96.95% | val_loss=0.4730 val_acc=98.28% val_macroF1=96.80% | ep_time=115.1s peakVRAM=1.64GB
+[ES] New best val_loss=0.472954 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 041/100 | lr=3.67e-04 | train_loss=0.4878 train_acc=97.00% | val_loss=0.4712 val_acc=98.34% val_macroF1=96.95% | ep_time=115.2s peakVRAM=1.64GB
+[ES] New best val_loss=0.471197 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 042/100 | lr=3.60e-04 | train_loss=0.4868 train_acc=97.02% | val_loss=0.4759 val_acc=98.06% val_macroF1=96.52% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 043/100 | lr=3.52e-04 | train_loss=0.4876 train_acc=97.03% | val_loss=0.4730 val_acc=98.28% val_macroF1=96.88% | ep_time=114.8s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 044/100 | lr=3.44e-04 | train_loss=0.4809 train_acc=97.34% | val_loss=0.4758 val_acc=98.07% val_macroF1=96.53% | ep_time=115.0s peakVRAM=1.64GB
+[ES] No improve 3/10
+[OCT2017] Epoch 045/100 | lr=3.36e-04 | train_loss=0.4849 train_acc=97.24% | val_loss=0.4772 val_acc=97.98% val_macroF1=96.34% | ep_time=114.9s peakVRAM=1.64GB
+[ES] No improve 4/10
+[OCT2017] Epoch 046/100 | lr=3.27e-04 | train_loss=0.4820 train_acc=97.28% | val_loss=0.4745 val_acc=98.04% val_macroF1=96.47% | ep_time=114.8s peakVRAM=1.64GB
+[ES] No improve 5/10
+[OCT2017] Epoch 047/100 | lr=3.19e-04 | train_loss=0.4811 train_acc=97.37% | val_loss=0.4725 val_acc=98.20% val_macroF1=96.75% | ep_time=114.7s peakVRAM=1.64GB
+[ES] No improve 6/10
+[OCT2017] Epoch 048/100 | lr=3.10e-04 | train_loss=0.4800 train_acc=97.37% | val_loss=0.4757 val_acc=98.09% val_macroF1=96.59% | ep_time=115.0s peakVRAM=1.64GB
+[ES] No improve 7/10
+[OCT2017] Epoch 049/100 | lr=3.02e-04 | train_loss=0.4800 train_acc=97.36% | val_loss=0.4733 val_acc=98.32% val_macroF1=96.94% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 8/10
+[OCT2017] Epoch 050/100 | lr=2.93e-04 | train_loss=0.4780 train_acc=97.44% | val_loss=0.4706 val_acc=98.40% val_macroF1=97.03% | ep_time=115.1s peakVRAM=1.64GB
+[ES] New best val_loss=0.470588 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 051/100 | lr=2.85e-04 | train_loss=0.4790 train_acc=97.41% | val_loss=0.4729 val_acc=98.26% val_macroF1=96.83% | ep_time=115.1s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 052/100 | lr=2.76e-04 | train_loss=0.4767 train_acc=97.52% | val_loss=0.4723 val_acc=98.28% val_macroF1=96.87% | ep_time=115.0s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 053/100 | lr=2.67e-04 | train_loss=0.4780 train_acc=97.48% | val_loss=0.4712 val_acc=98.32% val_macroF1=96.91% | ep_time=114.9s peakVRAM=1.64GB
+[ES] No improve 3/10
+[OCT2017] Epoch 054/100 | lr=2.59e-04 | train_loss=0.4788 train_acc=97.43% | val_loss=0.4731 val_acc=98.07% val_macroF1=96.50% | ep_time=114.7s peakVRAM=1.64GB
+[ES] No improve 4/10
+[OCT2017] Epoch 055/100 | lr=2.50e-04 | train_loss=0.4757 train_acc=97.52% | val_loss=0.4710 val_acc=98.29% val_macroF1=96.85% | ep_time=114.7s peakVRAM=1.64GB
+[ES] No improve 5/10
+[OCT2017] Epoch 056/100 | lr=2.41e-04 | train_loss=0.4765 train_acc=97.54% | val_loss=0.4711 val_acc=98.34% val_macroF1=96.95% | ep_time=114.7s peakVRAM=1.64GB
+[ES] No improve 6/10
+[OCT2017] Epoch 057/100 | lr=2.33e-04 | train_loss=0.4742 train_acc=97.66% | val_loss=0.4726 val_acc=98.23% val_macroF1=96.77% | ep_time=114.8s peakVRAM=1.64GB
+[ES] No improve 7/10
+[OCT2017] Epoch 058/100 | lr=2.24e-04 | train_loss=0.4753 train_acc=97.57% | val_loss=0.4717 val_acc=98.27% val_macroF1=96.77% | ep_time=114.6s peakVRAM=1.64GB
+[ES] No improve 8/10
+[OCT2017] Epoch 059/100 | lr=2.15e-04 | train_loss=0.4731 train_acc=97.64% | val_loss=0.4713 val_acc=98.28% val_macroF1=96.82% | ep_time=114.7s peakVRAM=1.64GB
+[ES] No improve 9/10
+[OCT2017] Epoch 060/100 | lr=2.07e-04 | train_loss=0.4743 train_acc=97.62% | val_loss=0.4700 val_acc=98.31% val_macroF1=96.80% | ep_time=114.8s peakVRAM=1.64GB
+[ES] New best val_loss=0.469963 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 061/100 | lr=1.98e-04 | train_loss=0.4723 train_acc=97.70% | val_loss=0.4713 val_acc=98.39% val_macroF1=97.08% | ep_time=114.8s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 062/100 | lr=1.90e-04 | train_loss=0.4709 train_acc=97.79% | val_loss=0.4686 val_acc=98.43% val_macroF1=97.12% | ep_time=114.8s peakVRAM=1.64GB
+[ES] New best val_loss=0.468605 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 063/100 | lr=1.81e-04 | train_loss=0.4731 train_acc=97.64% | val_loss=0.4702 val_acc=98.42% val_macroF1=97.14% | ep_time=114.5s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 064/100 | lr=1.73e-04 | train_loss=0.4732 train_acc=97.67% | val_loss=0.4683 val_acc=98.47% val_macroF1=97.17% | ep_time=114.1s peakVRAM=1.64GB
+[ES] New best val_loss=0.468292 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 065/100 | lr=1.64e-04 | train_loss=0.4701 train_acc=97.80% | val_loss=0.4688 val_acc=98.42% val_macroF1=97.10% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 066/100 | lr=1.56e-04 | train_loss=0.4685 train_acc=97.89% | val_loss=0.4724 val_acc=98.24% val_macroF1=96.80% | ep_time=114.1s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 067/100 | lr=1.48e-04 | train_loss=0.4701 train_acc=97.80% | val_loss=0.4709 val_acc=98.31% val_macroF1=96.92% | ep_time=114.2s peakVRAM=1.64GB
+[ES] No improve 3/10
+[OCT2017] Epoch 068/100 | lr=1.40e-04 | train_loss=0.4684 train_acc=97.87% | val_loss=0.4693 val_acc=98.41% val_macroF1=97.12% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 4/10
+[OCT2017] Epoch 069/100 | lr=1.33e-04 | train_loss=0.4711 train_acc=97.71% | val_loss=0.4703 val_acc=98.41% val_macroF1=97.13% | ep_time=114.3s peakVRAM=1.64GB
+[ES] No improve 5/10
+[OCT2017] Epoch 070/100 | lr=1.25e-04 | train_loss=0.4657 train_acc=97.96% | val_loss=0.4688 val_acc=98.47% val_macroF1=97.16% | ep_time=114.3s peakVRAM=1.64GB
+[ES] No improve 6/10
+[OCT2017] Epoch 071/100 | lr=1.18e-04 | train_loss=0.4685 train_acc=97.88% | val_loss=0.4678 val_acc=98.51% val_macroF1=97.25% | ep_time=114.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.467803 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 072/100 | lr=1.10e-04 | train_loss=0.4671 train_acc=97.94% | val_loss=0.4695 val_acc=98.50% val_macroF1=97.27% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 073/100 | lr=1.03e-04 | train_loss=0.4687 train_acc=97.84% | val_loss=0.4681 val_acc=98.40% val_macroF1=97.07% | ep_time=114.5s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 074/100 | lr=9.61e-05 | train_loss=0.4677 train_acc=97.85% | val_loss=0.4675 val_acc=98.57% val_macroF1=97.38% | ep_time=114.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.467473 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 075/100 | lr=8.93e-05 | train_loss=0.4678 train_acc=97.85% | val_loss=0.4675 val_acc=98.47% val_macroF1=97.20% | ep_time=114.9s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 076/100 | lr=8.27e-05 | train_loss=0.4650 train_acc=98.01% | val_loss=0.4673 val_acc=98.51% val_macroF1=97.26% | ep_time=114.4s peakVRAM=1.64GB
+[ES] New best val_loss=0.467330 -> saved runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830\best_model.pth
+[OCT2017] Epoch 077/100 | lr=7.63e-05 | train_loss=0.4646 train_acc=98.03% | val_loss=0.4677 val_acc=98.48% val_macroF1=97.21% | ep_time=114.5s peakVRAM=1.64GB
+[ES] No improve 1/10
+[OCT2017] Epoch 078/100 | lr=7.02e-05 | train_loss=0.4622 train_acc=98.15% | val_loss=0.4680 val_acc=98.41% val_macroF1=97.11% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 2/10
+[OCT2017] Epoch 079/100 | lr=6.42e-05 | train_loss=0.4660 train_acc=97.96% | val_loss=0.4691 val_acc=98.44% val_macroF1=97.13% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 3/10
+[OCT2017] Epoch 080/100 | lr=5.85e-05 | train_loss=0.4639 train_acc=98.06% | val_loss=0.4680 val_acc=98.53% val_macroF1=97.32% | ep_time=114.3s peakVRAM=1.64GB
+[ES] No improve 4/10
+[OCT2017] Epoch 081/100 | lr=5.30e-05 | train_loss=0.4644 train_acc=98.03% | val_loss=0.4686 val_acc=98.44% val_macroF1=97.13% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 5/10
+[OCT2017] Epoch 082/100 | lr=4.77e-05 | train_loss=0.4647 train_acc=98.02% | val_loss=0.4674 val_acc=98.49% val_macroF1=97.23% | ep_time=114.6s peakVRAM=1.64GB
+[ES] No improve 6/10
+[OCT2017] Epoch 083/100 | lr=4.27e-05 | train_loss=0.4642 train_acc=98.00% | val_loss=0.4675 val_acc=98.52% val_macroF1=97.30% | ep_time=114.8s peakVRAM=1.64GB
+[ES] No improve 7/10
+[OCT2017] Epoch 084/100 | lr=3.80e-05 | train_loss=0.4618 train_acc=98.13% | val_loss=0.4679 val_acc=98.48% val_macroF1=97.21% | ep_time=114.6s peakVRAM=1.64GB
+[ES] No improve 8/10
+[OCT2017] Epoch 085/100 | lr=3.35e-05 | train_loss=0.4613 train_acc=98.17% | val_loss=0.4677 val_acc=98.50% val_macroF1=97.25% | ep_time=114.4s peakVRAM=1.64GB
+[ES] No improve 9/10
+[OCT2017] Epoch 086/100 | lr=2.93e-05 | train_loss=0.4643 train_acc=98.04% | val_loss=0.4681 val_acc=98.53% val_macroF1=97.29% | ep_time=114.5s peakVRAM=1.64GB
+[ES] No improve 10/10
+[OCT2017] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.5312
+
+------------------------------------------------------------------------------------------
+[OCT2017] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         CNV     0.7114    0.9960    0.8300       250
+         DME     0.9958    0.9440    0.9692       250
+      DRUSEN     1.0000    0.6040    0.7531       250
+      NORMAL     0.9542    1.0000    0.9766       250
+
+    accuracy                         0.8860      1000
+   macro avg     0.9154    0.8860    0.8822      1000
+weighted avg     0.9154    0.8860    0.8822      1000
+
+
+==========================================================================================
+[OCT2017] TEST summary (uncalibrated): Acc=88.60% MacroF1=88.22% ECE=0.0558 NLL=0.3731 Brier=0.1809
+[OCT2017] Macro-AUC=0.9727
+[OCT2017] TEMP-SCALED (T=0.531): ECE=0.0903 NLL=0.4813 Brier=0.2017
+[OCT2017] Params trainable: 598,280 (2.6871%)
+[OCT2017] Adapter-only size: 2.30 MB
+[OCT2017] Inference latency (B=1): 16.030 ms/img (62.4 imgs/s), peakVRAM=0.11GB
+[OCT2017] Inference throughput (B=64): 2354.6 imgs/s, peakVRAM=0.29GB
+[OCT2017] Outputs saved in: runs\OCT2017\deit_small_adaptformer_frozen_4c\20251225-133830
+==========================================================================================
+

@@ -1,0 +1,73 @@
+{
+  "dataset": "C8",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\C8\\RetinalOCT_Dataset_CLEAN_SHAONLY",
+  "classes": [
+    "AMD",
+    "CNV",
+    "CSR",
+    "DME",
+    "DR",
+    "DRUSEN",
+    "MH",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "VPT-Deep (per-layer prompts) frozen backbone",
+  "vpt": {
+    "num_prompts_per_layer": 20,
+    "prompt_dropout": 0.0,
+    "init_std": 0.02
+  },
+  "params": {
+    "total": 21764752,
+    "trainable": 98320,
+    "trainable_pct": 0.45173958334099096
+  },
+  "storage": {
+    "best_model_path": "runs\\C8\\deit_small_vptdeep_frozen_8c\\20251224-233334\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 399009,
+    "adapter_only_mb": 0.3805246353149414
+  },
+  "training": {
+    "epochs_ran": 46,
+    "best_val_loss": 0.5550428313505594,
+    "best_val_macro_f1": 0.9615175356752093,
+    "total_train_time_sec": 1394.794669866562,
+    "mean_epoch_time_sec": 28.671538150828816,
+    "peak_train_vram_gb": 1.734703540802002
+  },
+  "test_uncalibrated": {
+    "acc": 0.9603146228101538,
+    "macro_f1": 0.9600976141748976,
+    "macro_auc": 0.9978249348066242,
+    "ece": 0.08142514075600424,
+    "nll": 0.1897648721933365,
+    "brier": 0.06635789944930445
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.6329392790794373,
+    "ece": 0.010585884899593554,
+    "nll": 0.12181954085826874,
+    "brier": 0.06078881081721569
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 13.393144000049992,
+      "std_batch_ms": 0.48876895684575267,
+      "ms_per_img": 13.393144000049992,
+      "imgs_per_s": 74.66506744019682,
+      "peak_vram_gb": 0.10372304916381836
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 30.162282666036237,
+      "std_batch_ms": 0.47911762783916756,
+      "ms_per_img": 0.4712856666568162,
+      "imgs_per_s": 2121.8553220465037,
+      "peak_vram_gb": 0.3194265365600586
+    }
+  }
+}

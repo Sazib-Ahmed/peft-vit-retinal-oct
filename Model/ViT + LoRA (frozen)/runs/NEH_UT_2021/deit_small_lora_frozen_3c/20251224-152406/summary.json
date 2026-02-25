@@ -1,0 +1,69 @@
+{
+  "dataset": "NEH_UT_2021",
+  "root": "D:\\AIUB\\DSP\\Code\\Datasets\\NEH_UT_2021RetinalOCTDataset\\NEH_UT_2021RetinalOCTDataset_V2_CLEAN_SHAONLY",
+  "classes": [
+    "CNV",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "model": "deit_small_distilled_patch16_224",
+  "peft": "Manual LoRA into qkv (frozen backbone)",
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.1,
+    "merged_for_timing": true
+  },
+  "params": {
+    "total": 21816198,
+    "trainable": 149766,
+    "trainable_pct": 0.6864899190958937
+  },
+  "storage": {
+    "best_model_path": "runs\\NEH_UT_2021\\deit_small_lora_frozen_3c\\20251224-152406\\best_model.pth",
+    "adapter_only_enabled": true,
+    "adapter_only_bytes": 608249,
+    "adapter_only_mb": 0.5800714492797852
+  },
+  "training": {
+    "epochs_ran": 22,
+    "best_val_loss": 0.5826475243557567,
+    "best_val_macro_f1": 0.878483127341198,
+    "total_train_time_sec": 395.15614581108093,
+    "mean_epoch_time_sec": 16.328915780240838,
+    "peak_train_vram_gb": 1.7484803199768066
+  },
+  "test_uncalibrated": {
+    "acc": 0.8771304003170829,
+    "macro_f1": 0.8619417225225732,
+    "macro_auc": 0.9564786996804191,
+    "ece": 0.07150406064705579,
+    "nll": 0.37574586272239685,
+    "brier": 0.19546066995533004
+  },
+  "test_temp_scaled": {
+    "enabled": true,
+    "T": 0.6801462173461914,
+    "ece": 0.015057973584342568,
+    "nll": 0.34299054741859436,
+    "brier": 0.18662561682306394
+  },
+  "inference_benchmark": {
+    "latency_batch1": {
+      "batch": 1,
+      "mean_batch_ms": 13.6389680000381,
+      "std_batch_ms": 1.433001584369978,
+      "ms_per_img": 13.6389680000381,
+      "imgs_per_s": 73.3193303186287,
+      "peak_vram_gb": 0.10200691223144531
+    },
+    "throughput_batchN": {
+      "batch": 64,
+      "mean_batch_ms": 25.295106666708307,
+      "std_batch_ms": 0.5782085397849618,
+      "ms_per_img": 0.3952360416673173,
+      "imgs_per_s": 2530.133627949173,
+      "peak_vram_gb": 0.28925085067749023
+    }
+  }
+}

@@ -1,0 +1,153 @@
+
+=== DATASET RUN START: Srinivasan_2014 ===
+
+[DATA] Split/Class counts:
+class  AMD  DME  NORMAL  TOTAL
+split                         
+test   109  165     211    485
+train  506  770     985   2261
+val    108  166     211    485
+[DATA] Train imbalance: min=506, max=985, ratio=1.95
+[RAM] Caching split='train' images=2261 as uint8 tensors. Estimated RAM ~ 0.32 GB
+[RAM] Cached 2261 images for split='train'
+[RAM] Caching split='val' images=485 as uint8 tensors. Estimated RAM ~ 0.07 GB
+[RAM] Cached 485 images for split='val'
+[RAM] Caching split='test' images=485 as uint8 tensors. Estimated RAM ~ 0.07 GB
+[RAM] Cached 485 images for split='test'
+[IMB] Train class counts: [506, 770, 985]
+[IMB] Class-Balanced weights (mean~1): [1.3687, 0.9113, 0.72]
+[IMB] Sampler disabled. min=506 max=985 ratio=1.95
+
+[DATASET] Srinivasan_2014
+ - root: D:\AIUB\DSP\Code\Datasets\Srinivasan_2014\Srinivasan_2014_CLEAN_SHAONLY
+ - pad_to_square: True
+ - cache_in_ram: True
+ - classes (3): ['AMD', 'DME', 'NORMAL']
+ - split sizes: train=2261 val=485 test=485
+
+[MODEL] Creating deit_small_distilled_patch16_224 + Manual LoRA (frozen=True)
+[PARAMS] total=21,816,198 trainable=149,766 (0.6865%)
+[IMB] Train class counts: [506, 770, 985]
+[IMB] Class-Balanced weights (mean~1): [1.3687, 0.9113, 0.72]
+[IMB] Sampler disabled. min=506 max=985 ratio=1.95
+[Srinivasan_2014] Epoch 001/100 | lr=1.00e-04 | train_loss=1.0051 train_acc=57.32% | val_loss=0.8629 val_acc=74.85% val_macroF1=72.29% | ep_time=3.5s peakVRAM=1.75GB
+[ES] New best val_loss=0.862942 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 002/100 | lr=1.50e-04 | train_loss=0.7168 train_acc=80.50% | val_loss=0.6088 val_acc=84.12% val_macroF1=82.70% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.608811 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 003/100 | lr=2.00e-04 | train_loss=0.5206 train_acc=89.83% | val_loss=0.4136 val_acc=97.94% val_macroF1=97.96% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.413642 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 004/100 | lr=2.50e-04 | train_loss=0.4005 train_acc=96.24% | val_loss=0.3684 val_acc=99.18% val_macroF1=99.13% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.368378 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 005/100 | lr=3.00e-04 | train_loss=0.4167 train_acc=95.22% | val_loss=0.3765 val_acc=98.35% val_macroF1=98.26% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 006/100 | lr=3.50e-04 | train_loss=0.3682 train_acc=97.04% | val_loss=0.3503 val_acc=99.18% val_macroF1=99.06% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.350312 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 007/100 | lr=4.00e-04 | train_loss=0.3614 train_acc=97.48% | val_loss=0.3479 val_acc=99.79% val_macroF1=99.82% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.347878 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 008/100 | lr=4.50e-04 | train_loss=0.3653 train_acc=97.83% | val_loss=0.3564 val_acc=99.18% val_macroF1=99.13% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 009/100 | lr=5.00e-04 | train_loss=0.3412 train_acc=98.41% | val_loss=0.3358 val_acc=99.79% val_macroF1=99.82% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.335820 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 010/100 | lr=5.00e-04 | train_loss=0.4022 train_acc=95.49% | val_loss=0.3350 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.335007 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 011/100 | lr=5.00e-04 | train_loss=0.3501 train_acc=97.74% | val_loss=0.3389 val_acc=99.59% val_macroF1=99.64% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 012/100 | lr=4.99e-04 | train_loss=0.3465 train_acc=98.45% | val_loss=0.3318 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] New best val_loss=0.331785 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 013/100 | lr=4.99e-04 | train_loss=0.3455 train_acc=98.10% | val_loss=0.3373 val_acc=99.79% val_macroF1=99.82% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 014/100 | lr=4.98e-04 | train_loss=0.3484 train_acc=97.97% | val_loss=0.3445 val_acc=99.18% val_macroF1=99.06% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 015/100 | lr=4.96e-04 | train_loss=0.3431 train_acc=98.41% | val_loss=0.3429 val_acc=99.38% val_macroF1=99.39% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 016/100 | lr=4.95e-04 | train_loss=0.3409 train_acc=98.50% | val_loss=0.3328 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 017/100 | lr=4.93e-04 | train_loss=0.3760 train_acc=96.37% | val_loss=0.3370 val_acc=99.79% val_macroF1=99.82% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 018/100 | lr=4.90e-04 | train_loss=0.3240 train_acc=99.34% | val_loss=0.3316 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.331630 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 019/100 | lr=4.88e-04 | train_loss=0.3729 train_acc=95.84% | val_loss=0.3317 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 020/100 | lr=4.85e-04 | train_loss=0.3451 train_acc=98.19% | val_loss=0.3458 val_acc=99.18% val_macroF1=98.97% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 021/100 | lr=4.82e-04 | train_loss=0.3365 train_acc=98.45% | val_loss=0.3314 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.331411 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 022/100 | lr=4.78e-04 | train_loss=0.3256 train_acc=99.12% | val_loss=0.3312 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.331167 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 023/100 | lr=4.75e-04 | train_loss=0.3367 train_acc=98.67% | val_loss=0.3312 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 024/100 | lr=4.71e-04 | train_loss=0.3460 train_acc=98.05% | val_loss=0.3313 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 025/100 | lr=4.67e-04 | train_loss=0.3344 train_acc=99.03% | val_loss=0.3316 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 026/100 | lr=4.62e-04 | train_loss=0.3202 train_acc=99.38% | val_loss=0.3313 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 027/100 | lr=4.57e-04 | train_loss=0.3278 train_acc=99.03% | val_loss=0.3327 val_acc=99.79% val_macroF1=99.82% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 028/100 | lr=4.52e-04 | train_loss=0.3415 train_acc=98.23% | val_loss=0.3341 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 6/10
+[Srinivasan_2014] Epoch 029/100 | lr=4.47e-04 | train_loss=0.3278 train_acc=99.07% | val_loss=0.3313 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 7/10
+[Srinivasan_2014] Epoch 030/100 | lr=4.42e-04 | train_loss=0.3162 train_acc=99.78% | val_loss=0.3309 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.330949 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 031/100 | lr=4.36e-04 | train_loss=0.3374 train_acc=98.89% | val_loss=0.3331 val_acc=99.79% val_macroF1=99.77% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 032/100 | lr=4.30e-04 | train_loss=0.3544 train_acc=97.66% | val_loss=0.3356 val_acc=99.79% val_macroF1=99.77% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 033/100 | lr=4.24e-04 | train_loss=0.3368 train_acc=98.45% | val_loss=0.3360 val_acc=99.79% val_macroF1=99.77% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 034/100 | lr=4.17e-04 | train_loss=0.3157 train_acc=99.78% | val_loss=0.3307 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] New best val_loss=0.330652 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 035/100 | lr=4.11e-04 | train_loss=0.3148 train_acc=99.73% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] New best val_loss=0.330496 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 036/100 | lr=4.04e-04 | train_loss=0.3165 train_acc=99.73% | val_loss=0.3303 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] New best val_loss=0.330302 -> saved runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655\best_model.pth
+[Srinivasan_2014] Epoch 037/100 | lr=3.97e-04 | train_loss=0.3213 train_acc=99.56% | val_loss=0.3324 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 1/10
+[Srinivasan_2014] Epoch 038/100 | lr=3.90e-04 | train_loss=0.3357 train_acc=98.89% | val_loss=0.3316 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 2/10
+[Srinivasan_2014] Epoch 039/100 | lr=3.82e-04 | train_loss=0.3223 train_acc=99.25% | val_loss=0.3306 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 3/10
+[Srinivasan_2014] Epoch 040/100 | lr=3.75e-04 | train_loss=0.3155 train_acc=99.73% | val_loss=0.3304 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 4/10
+[Srinivasan_2014] Epoch 041/100 | lr=3.67e-04 | train_loss=0.3243 train_acc=99.20% | val_loss=0.3306 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 5/10
+[Srinivasan_2014] Epoch 042/100 | lr=3.60e-04 | train_loss=0.3321 train_acc=98.72% | val_loss=0.3305 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 6/10
+[Srinivasan_2014] Epoch 043/100 | lr=3.52e-04 | train_loss=0.3238 train_acc=99.29% | val_loss=0.3308 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 7/10
+[Srinivasan_2014] Epoch 044/100 | lr=3.44e-04 | train_loss=0.3744 train_acc=96.06% | val_loss=0.3307 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 8/10
+[Srinivasan_2014] Epoch 045/100 | lr=3.36e-04 | train_loss=0.3311 train_acc=99.03% | val_loss=0.3313 val_acc=100.00% val_macroF1=100.00% | ep_time=3.3s peakVRAM=1.75GB
+[ES] No improve 9/10
+[Srinivasan_2014] Epoch 046/100 | lr=3.27e-04 | train_loss=0.3269 train_acc=99.12% | val_loss=0.3308 val_acc=100.00% val_macroF1=100.00% | ep_time=3.2s peakVRAM=1.75GB
+[ES] No improve 10/10
+[Srinivasan_2014] Early stopping triggered.
+[CAL] Fitting temperature scaling on VAL set...
+[CAL] Learned temperature T = 0.2784
+
+------------------------------------------------------------------------------------------
+[Srinivasan_2014] TEST classification report (uncalibrated)
+------------------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+         AMD     1.0000    0.9908    0.9954       109
+         DME     1.0000    1.0000    1.0000       165
+      NORMAL     0.9953    1.0000    0.9976       211
+
+    accuracy                         0.9979       485
+   macro avg     0.9984    0.9969    0.9977       485
+weighted avg     0.9979    0.9979    0.9979       485
+
+
+==========================================================================================
+[Srinivasan_2014] TEST summary (uncalibrated): Acc=99.79% MacroF1=99.77% ECE=0.0778 NLL=0.0888 Brier=0.0142
+[Srinivasan_2014] Macro-AUC=1.0000
+[Srinivasan_2014] TEMP-SCALED (T=0.278): ECE=0.0023 NLL=0.0187 Brier=0.0042
+[Srinivasan_2014] Params trainable: 149,766 (0.6865%)
+[Srinivasan_2014] Adapter-only size: 0.58 MB
+[Srinivasan_2014] Inference latency (B=1): 12.245 ms/img (81.7 imgs/s), peakVRAM=0.10GB
+[Srinivasan_2014] Inference throughput (B=64): 2530.8 imgs/s, peakVRAM=0.29GB
+[Srinivasan_2014] Outputs saved in: runs\Srinivasan_2014\deit_small_lora_frozen_3c\20251224-151655
+==========================================================================================
+
