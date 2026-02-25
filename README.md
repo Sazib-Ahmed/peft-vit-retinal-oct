@@ -88,12 +88,6 @@ Model/
 
 Training assumes an **ImageFolder-style** dataset layout (class subfolders). You will likely need to point notebooks/scripts to the location where you store raw dataset images (not included in this repository).
 
-Example (illustrative):
-```
-data/OCT2017/train/<class_name>/*.jpg
-data/OCT2017/val/<class_name>/*.jpg
-data/OCT2017/test/<class_name>/*.jpg
-```
 
 ---
 
@@ -229,31 +223,11 @@ Experiments were run on a single-GPU workstation (Windows 11 Pro) with:
 - NVIDIA GeForce RTX 5060 Ti (~16GB)
 - ~32 GB RAM
 
-(See `System Information Report.html` for full details.)
-
----
-
-## Citation
-
-If you use this work, please cite:
-
-```bibtex
-@inproceedings{ahmed2026peftoct,
-  title     = {Parameter-Efficient Adaptation of Vision Transformers for Retinal OCT Classification},
-  author    = {Ahmed, Md. Sazib and Ahmed, Firoz},
-  booktitle = {2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN)},
-  year      = {2026},
-  address   = {Chittagong, Bangladesh},
-  month     = apr
-}
-```
-
 ---
 
 ## License
 
-Add your intended license here (e.g., MIT, Apache-2.0).  
-If you plan to distribute trained weights/adapters, ensure dataset licensing allows it.
+MIT
 
 ---
 
