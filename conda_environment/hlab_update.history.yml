@@ -1,0 +1,27 @@
+name: base
+channels:
+  - defaults
+dependencies:
+  - _anaconda_depends
+  - python=3.13
+  - setuptools
+  - pip
+  - wheel
+  - anaconda-anon-usage
+  - anaconda-catalogs
+  - anaconda-client
+  - anaconda-project
+  - anaconda-navigator=2.7.0
+  - conda
+  - conda-anaconda-telemetry
+  - conda-anaconda-tos[version='>=0.2.0']
+  - conda-build
+  - conda-content-trust
+  - conda-libmamba-solver
+  - conda-pack
+  - conda-package-handling
+  - conda-package-streaming
+  - anaconda-auth
+  - anaconda_prompt
+  - anaconda_powershell_prompt
+prefix: C:\ProgramData\anaconda3
